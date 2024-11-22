@@ -1,0 +1,45 @@
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Fri Nov 22 20:44:59 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              26
+    Cells do not drive (LINT-1)                                    26
+
+Nets                                                                2
+    Unloaded nets (LINT-2)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'conv', cell 'B_62' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_63' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_64' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_65' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_66' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_67' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_68' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_69' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_70' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_71' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_72' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_73' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_74' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_75' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_76' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_77' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_78' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_79' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_80' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_81' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_82' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_83' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_84' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_85' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_86' does not drive any nets. (LINT-1)
+Warning: In design 'conv', cell 'B_88' does not drive any nets. (LINT-1)
+Warning: In design 'conv', net 'net176' driven by pin 'C2012/Z' has no loads. (LINT-2)
+Warning: In design 'conv', net 'net175' driven by pin 'C1855/Z' has no loads. (LINT-2)
+1

@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : conv
+Version: K-2015.06
+Date   : Fri Nov 22 20:50:11 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_v1p08_125c   Library: scc55nll_vhs_rvt_ss_v1p08_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: cnt2_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: ovalid (output port)
+  Path Group: (none)
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                        Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------
+  cnt2_reg_7_/CK (DVHSV1)                  0.10      0.00       0.00 r
+  cnt2_reg_7_/Q (DVHSV1)                   0.06      0.21       0.21 f
+  cnt2[7] (net)                  3                   0.00       0.21 f
+  U992/ZN (NOR4VHSV1)                      0.15      0.16       0.37 r
+  n130 (net)                     1                   0.00       0.37 r
+  U993/ZN (OAI211VHSV1)                    0.11      0.12       0.50 f
+  n1574 (net)                    2                   0.00       0.50 f
+  U994/ZN (INVHSV1)                        0.04      0.06       0.55 r
+  n131 (net)                     1                   0.00       0.55 r
+  U874/Z (AND2VHSV1)                       0.04      0.10       0.65 r
+  n38 (net)                      1                   0.00       0.65 r
+  U890/Z (AND2VHSV1)                       0.04      0.11       0.76 r
+  n1898 (net)                    1                   0.00       0.76 r
+  U888/ZN (INVHSV1)                        0.44      0.28       1.04 f
+  n1851 (net)                    1                   0.00       1.04 f
+  U889/ZN (LVT_INVHSV64)                   2.14      1.30       2.35 r
+  ovalid (net)                   1                   0.00       2.35 r
+  ovalid (out)                             2.14      0.00       2.35 r
+  data arrival time                                             2.35
+  ------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

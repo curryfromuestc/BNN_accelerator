@@ -1,0 +1,741 @@
+Warning: Duplicate library /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ss_v1p08_125c_basic.db specified.
+Warning: Duplicate library /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_LVT_V2.1/SCC55NLL_VHS_LVT_V2p1/liberty/1.2v/scc55nll_vhs_lvt_ss_v1p08_125c_basic.db specified.
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              scc55nll_vhs_rvt_ss_v1p08_125c_basic
+    File name                 /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ss_v1p08_125c_basic.db
+    Library type              pg_pin based db
+    Library Version           1.0
+    Tool Created              G-2012.06-SP5
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1uW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:54 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (scc55nll_vhs_rvt_ss_v1p08_125c_basic):
+PG checking passed.
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 948)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              scc55nll_vhs_lvt_ss_v1p08_125c_basic
+    File name                 /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_LVT_V2.1/SCC55NLL_VHS_LVT_V2p1/liberty/1.2v/scc55nll_vhs_lvt_ss_v1p08_125c_basic.db
+    Library type              pg_pin based db
+    Library Version           1.0
+    Tool Created              G-2012.06-SP5
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1uW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:55 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (scc55nll_vhs_lvt_ss_v1p08_125c_basic):
+PG checking passed.
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 948)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              scc55nll_vhs_rvt_ff_v1p32_-40c_basic
+    File name                 /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ff_v1p32_-40c_basic.db
+    Library type              pg_pin based db
+    Library Version           1.0
+    Tool Created              G-2012.06-SP5
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1uW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:55 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (scc55nll_vhs_rvt_ff_v1p32_-40c_basic):
+PG checking passed.
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 948)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              scc55nll_vhs_lvt_ff_v1p32_-40c_basic
+    File name                 /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_LVT_V2.1/SCC55NLL_VHS_LVT_V2p1/liberty/1.2v/scc55nll_vhs_lvt_ff_v1p32_-40c_basic.db
+    Library type              pg_pin based db
+    Library Version           1.0
+    Tool Created              G-2012.06-SP5
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1uW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (scc55nll_vhs_lvt_ff_v1p32_-40c_basic):
+PG checking passed.
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 948)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              SP55NLLD2P_3P3V_V0p3_ss_v1p08_125C
+    File name                 /home/app/PDK/SMIC/SMIC55LL/IO/SP55NLLD2P_3P3V_V0p5/SP55NLLD2P_3P3V_V0p5/syn/3p3v/SP55NLLD2P_3P3V_V0p3_ss_v1p08_125C.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              E-2010.12-SP5
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1uW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (SP55NLLD2P_3P3V_V0p3_ss_v1p08_125C):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                SP55NLLD2P_3P3V_V0p3_ss_v1p08_125C(lib#1)
+------------------------------------------------------------------------------
+Total number                153
+Inverter                    0
+Buffer                      10
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 153)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              SP55NLLD2P_3P3V_V0p3_ff_v1p32_-40C
+    File name                 /home/app/PDK/SMIC/SMIC55LL/IO/SP55NLLD2P_3P3V_V0p5/SP55NLLD2P_3P3V_V0p5/syn/3p3v/SP55NLLD2P_3P3V_V0p3_ff_v1p32_-40C.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              E-2010.12-SP5
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1uW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (SP55NLLD2P_3P3V_V0p3_ff_v1p32_-40C):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                SP55NLLD2P_3P3V_V0p3_ff_v1p32_-40C(lib#1)
+------------------------------------------------------------------------------
+Total number                153
+Inverter                    0
+Buffer                      10
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 153)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library scheduler128x32_ss_1.08_125 ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              scheduler128x32_ss_1.08_125
+    File name                 /home/lyh/Desktop/qua_backend/power/smic_lib/scheduler128x32/db/scheduler128x32_ss_1.08_125.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              J-2014.09-SP3
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1mW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (scheduler128x32_ss_1.08_125):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                scheduler128x32_ss_1.08_125(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library scheduler128x32_ff_1.32_0 ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              scheduler128x32_ff_1.32_0
+    File name                 /home/lyh/Desktop/qua_backend/power/smic_lib/scheduler128x32/db/scheduler128x32_ff_1.32_0.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              J-2014.09-SP3
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1mW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (scheduler128x32_ff_1.32_0):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                scheduler128x32_ff_1.32_0(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library sram127x1024_ss_1.08_-40 ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              sram127x1024_ss_1.08_-40
+    File name                 /home/lyh/Desktop/qua_backend/power/smic_lib/sram127x1024/db/sram127x1024_ss_1.08_-40.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              J-2014.09-SP3
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1mW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (sram127x1024_ss_1.08_-40):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                sram127x1024_ss_1.08_-40(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library sram127x1024_ff_1.32_0 ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              sram127x1024_ff_1.32_0
+    File name                 /home/lyh/Desktop/qua_backend/power/smic_lib/sram127x1024/db/sram127x1024_ff_1.32_0.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              J-2014.09-SP3
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1mW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (sram127x1024_ff_1.32_0):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                sram127x1024_ff_1.32_0(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library sum8x1024_ss_1.08_125 ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              sum8x1024_ss_1.08_125
+    File name                 /home/lyh/Desktop/qua_backend/power/smic_lib/sum8x1024/db/sum8x1024_ss_1.08_125.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              J-2014.09-SP3
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1mW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (sum8x1024_ss_1.08_125):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                sum8x1024_ss_1.08_125(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Checking library sum8x1024_ff_1.32_-40 ...
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              sum8x1024_ff_1.32_-40
+    File name                 /home/lyh/Desktop/qua_backend/power/smic_lib/sum8x1024/db/sum8x1024_ff_1.32_-40.db
+    Library type              non-pg_pin based db
+    Library Version           Not Specified
+    Tool Created              J-2014.09-SP3
+    Data Created              Not Specified
+    Time unit                 1ns
+    Capacitance unit          1000ff
+    Leakage power unit        1mW
+    Current unit              1mA
+check_library options        Version                       K-2015.06
+Check date and time           Fri Nov 22 20:44:56 2024
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (sum8x1024_ff_1.32_-40):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+
+Information: List of cell classification (LIBCHK-312)
+------------------------------------------------------------------------------
+Library name                sum8x1024_ff_1.32_-40(lib#1)
+------------------------------------------------------------------------------
+Total number                1
+Inverter                    0
+Buffer                      0
+Level shifter               0
+Differential level shifter  0
+Isolation cell              0
+Clock Isolation cell        0
+Retention cell              0
+Switch cell                 0
+Always on cell              0
+------------------------------------------------------------------------------
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 1)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+1

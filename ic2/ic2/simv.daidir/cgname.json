@@ -11,16 +11,16 @@
         "module",
         2
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        4
-    ],
     "conv_tb": [
         "conv_tb",
         "IaMsy",
         "module",
         3
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        4
     ]
 }

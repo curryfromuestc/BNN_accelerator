@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : area
+Design : conv
+Version: K-2015.06
+Date   : Fri Nov 22 20:50:11 2024
+****************************************
+
+Library(s) Used:
+
+    scc55nll_vhs_rvt_ss_v1p08_125c_basic (File: /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ss_v1p08_125c_basic.db)
+    scc55nll_vhs_lvt_ss_v1p08_125c_basic (File: /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_LVT_V2.1/SCC55NLL_VHS_LVT_V2p1/liberty/1.2v/scc55nll_vhs_lvt_ss_v1p08_125c_basic.db)
+
+Number of ports:                          220
+Number of nets:                          6901
+Number of cells:                         5914
+Number of combinational cells:           3244
+Number of sequential cells:              2665
+Number of macros/black boxes:               0
+Number of buf/inv:                        106
+Number of references:                      39
+
+Combinational area:              13071.839932
+Buf/Inv area:                      790.559999
+Noncombinational area:           26998.079783
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 40069.919715
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------
+conv                              40069.9197    100.0  13071.8399  26957.2798  0.0000  conv
+clk_gate_cnt2_reg_9_                  8.1600      0.0      0.0000      8.1600  0.0000  SNPS_CLOCK_GATE_HIGH_conv_4
+clk_gate_k00_reg                      8.1600      0.0      0.0000      8.1600  0.0000  SNPS_CLOCK_GATE_HIGH_conv_2
+clk_gate_k02_reg                      8.1600      0.0      0.0000      8.1600  0.0000  SNPS_CLOCK_GATE_HIGH_conv_1
+clk_gate_sum_valid_reg                8.1600      0.0      0.0000      8.1600  0.0000  SNPS_CLOCK_GATE_HIGH_conv_3
+clk_gate_weight_addr_reg_7_           8.1600      0.0      0.0000      8.1600  0.0000  SNPS_CLOCK_GATE_HIGH_conv_0
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------
+Total                                                  13071.8399  26998.0798  0.0000
+
+1

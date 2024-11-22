@@ -53,13 +53,13 @@ line+cond+fsm
 75
 uvm_home=/app/cadence/INCISIVE151/tools/uvm
 username=ygl
-sysc_uni_pwd=/home/ygl/code/ic2
+sysc_uni_pwd=/home/ygl/code/BNN_accelerator/ic2/ic2
 syn_inst=/app/EDA
 ml_uvm=/app/cadence/INCISIVE151/tools/uvm/uvm_lib/uvm_ml/sc/ml_uvm
 ml_seq_dir=/app/cadence/INCISIVE151/specman/src
 duid=1051
 dgid=1057
-cur_path=/home/ygl/code/ic2
+cur_path=/home/ygl/code/BNN_accelerator/ic2/ic2
 XKEYSYMDB=/app/cadence/IC617/tools/plot/etc/XKeysymDB
 VMR_MODE_FLAG=64
 VMANAGER_PATH=/app/cadence/INCISIVE151/kits/VerificationKit/soc_verification_lib:/app/cadence/INCISIVE151/kits/VerificationKit/soc_verification_lib/e_ex_lib/cdn_vm_ext/e
@@ -128,12 +128,12 @@ ARCH=amd64
 ABVIP_ISNT_DIR=/app/cadence/VIPCAT113/tools/abvip
 0
 8
-1732268053 ./testbench/conv_tb.v
-1732266708 ./rtl/window.v
-1732266683 ./rtl/conv.v
-1732266626 ./tsk/timescale.v
+1732269418 ./testbench/conv_tb.v
+1732269418 ./rtl/window.v
+1732276268 ./rtl/conv.v
+1732269418 ./tsk/timescale.v
 1551421444 /app/EDA/vcs_O-2018.09-SP2/include/cm_vcsd.tab
-1732267500 simfile/simfile_rtl.f
+1732269418 simfile/simfile_rtl.f
 1551421246 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/vcsdp.tab
 1550753332 /app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab
 5
@@ -142,5 +142,5 @@ ABVIP_ISNT_DIR=/app/cadence/VIPCAT113/tools/abvip
 1551421768 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libsnpsmalloc.so
 1551421789 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libvfs.so
 1550752033 /app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a
-1732268069 simv.daidir
+1732276286 simv.daidir
 -1 partitionlib

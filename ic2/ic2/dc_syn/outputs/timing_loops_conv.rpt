@@ -1,0 +1,18 @@
+ 
+****************************************
+Report : timing
+        -loops
+        -max_paths 1000
+        -sort_by slack
+Design : conv
+Version: K-2015.06
+Date   : Fri Nov 22 20:50:11 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_v1p08_125c   Library: scc55nll_vhs_rvt_ss_v1p08_125c_basic
+Wire Load Model Mode: top
+No loops.
+
+1

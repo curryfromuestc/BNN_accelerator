@@ -71,72 +71,296 @@ always @(posedge clk) begin
 end
 //------------------------读取权重矩阵---------------------------------
 always @(posedge clk or negedge rstn) begin
-    if(!rstn||!start)begin
+    if(!rstn)begin
         weight_addr <= 8'd0;
     end
     else begin
-        if(weight_addr == 8'd25||!weight_en)
-            weight_addr <= weight_addr;
-        else
-            weight_addr <= weight_addr + 8'd1; 
+        if(start)begin
+            if(weight_addr == 8'd25||!weight_en)
+                weight_addr <= weight_addr;
+            else
+                weight_addr <= weight_addr + 8'd1; 
+        end
+        else 
+            weight_addr <= 8'd0;
     end
 end
-always @(posedge clk) begin
-   case(weight_addr)
-       8'd0: k00 <= weight;
-       8'd1: k01 <= weight;
-       8'd2: k02 <= weight;
-       8'd3: k03 <= weight;
-       8'd4: k04 <= weight;
-       8'd5: k10 <= weight;
-       8'd6: k11 <= weight;
-       8'd7: k12 <= weight;
-       8'd8: k13 <= weight;
-       8'd9: k14 <= weight;
-       8'd10: k20 <= weight;
-       8'd11: k21 <= weight;
-       8'd12: k22 <= weight;
-       8'd13: k23 <= weight;
-       8'd14: k24 <= weight;
-       8'd15: k30 <= weight;
-       8'd16: k31 <= weight;
-       8'd17: k32 <= weight;
-       8'd18: k33 <= weight;
-       8'd19: k34 <= weight;
-       8'd20: k40 <= weight;
-       8'd21: k41 <= weight;
-       8'd22: k42 <= weight;
-       8'd23: k43 <= weight;
-       8'd24: k44 <= weight;
-       default:begin
+
+//----------------------------权重赋值----------------------------
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k00 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd0)
+            k00 <= weight;
+        else
             k00 <= k00;
-			k01 <= k01;
-			k02 <= k02;
-			k03 <= k03;
-			k04 <= k04;
-			k10 <= k10;
-			k11 <= k11;
-			k12 <= k12;
-			k13 <= k13;
-			k14 <= k14;
-			k20 <= k20;
-			k21 <= k21;
-			k22 <= k22;
-			k23 <= k23;
-			k24 <= k24;
-			k30 <= k30;
-			k31 <= k31;
-			k32 <= k32;
-			k33 <= k33;
-			k34 <= k34;
-			k40 <= k40;
-			k41 <= k41;
-			k42 <= k42;
-			k43 <= k43;
-			k44 <= k44;
-       end
-   endcase
+    end
 end
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k01 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd1)
+            k01 <= weight;
+        else
+            k01 <= k01;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k02 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd2)
+            k02 <= weight;
+        else
+            k02 <= k02;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k03 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd3)
+            k03 <= weight;
+        else
+            k03 <= k03;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k04 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd4)
+            k04 <= weight;
+        else
+            k04 <= k04;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k10 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd5)
+            k10 <= weight;
+        else
+            k10 <= k10;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k11 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd6)
+            k11 <= weight;
+        else
+            k11 <= k11;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k12 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd7)
+            k12 <= weight;
+        else
+            k12 <= k12;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k13 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd8)
+            k13 <= weight;
+        else
+            k13 <= k13;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k14 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd9)
+            k14 <= weight;
+        else
+            k14 <= k14;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k20 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd10)
+            k20 <= weight;
+        else
+            k20 <= k20;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k21 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd11)
+            k21 <= weight;
+        else
+            k21 <= k21;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k22 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd12)
+            k22 <= weight;
+        else
+            k22 <= k22;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k23 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd13)
+            k23 <= weight;
+        else
+            k23 <= k23;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k24 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd14)
+            k24 <= weight;
+        else
+            k24 <= k24;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k30 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd15)
+            k30 <= weight;
+        else
+            k30 <= k30;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k31 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd16)
+            k31 <= weight;
+        else
+            k31 <= k31;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k32 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd17)
+            k32 <= weight;
+        else
+            k32 <= k32;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k33 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd18)
+            k33 <= weight;
+        else
+            k33 <= k33;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k34 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd19)
+            k34 <= weight;
+        else
+            k34 <= k34;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k40 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd20)
+            k40 <= weight;
+        else
+            k40 <= k40;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k41 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd21)
+            k41 <= weight;
+        else
+            k41 <= k41;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k42 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd22)
+            k42 <= weight;
+        else
+            k42 <= k42;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k43 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd23)
+            k43 <= weight;
+        else
+            k43 <= k43;
+    end
+end
+
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)
+        k44 <= 1'b0;
+    else begin
+        if(weight_addr == 8'd24)
+            k44 <= weight;
+        else
+            k44 <= k44;
+    end
+end
+
 //------------------------流水线第一级---------------------------------
 always @(posedge clk) begin
     if(k00 == 1'b1)

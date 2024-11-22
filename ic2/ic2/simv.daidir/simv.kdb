@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/home/ygl/code/ic2
+COMPILE_PATH=/home/ygl/code/BNN_accelerator/ic2/ic2
 SystemC=FALSE
 UUM=FALSE
 KDB=FALSE
