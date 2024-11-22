@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_fsm.dtd">
+  <fsm count="0"  noconst="0"  >
+    <ucapi_version  major_ver="13"  minor_ver="1"  patch_str="O-2018.09-SP2"  />
+          <metric_sig chksum="65346B85311F2B356F944DB142EE5F5060E09C14"  />
+    </fsm>

@@ -1,0 +1,1 @@
+/home/public/eda_script/Frontend_makefile/sc_rpt.tcl

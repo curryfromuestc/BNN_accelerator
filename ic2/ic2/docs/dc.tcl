@@ -1,0 +1,1 @@
+/home/public/eda_script/Frontend_makefile/dc.tcl

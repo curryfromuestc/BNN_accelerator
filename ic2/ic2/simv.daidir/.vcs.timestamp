@@ -1,0 +1,146 @@
+0 
+50
++DUMP
++FSDB=fsdb/RTL.fsdb
++args=
++cli+1
++define+DUMP
++evalorder
++incdir+rtl/
++incdir+testbench/
++itf+/app/EDA/vcs_O-2018.09-SP2/linux64/lib/vcsdp.tab
++memcbk
++no_notifier
++notimingcheck
++ntb_random_seed_automatic
++plusarg_save
++v2k
++vc
++vcsd
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/app/EDA/vcs_O-2018.09-SP2/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libvirsim.so /app/EDA/vcs_O-2018.09-SP2/linux64/lib/liberrorinf.so /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libsnpsmalloc.so /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libvfs.so /app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a
+-Mout=simv
+-Msaverestoreobj=/app/EDA/vcs_O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl -lm
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/app/EDA/vcs_O-2018.09-SP2/include
+-P
+-Xcbug=0x1
+-Xvcs_run_simv=1
+-cm
+-cm_name
+-debug=1
+-f simfile/simfile_rtl.f
+-full64
+-gen_obj
+-picarchive
+-sverilog
+./tsk/timescale.v
+/app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab
+/app/EDA/vcs_O-2018.09-SP2/linux64/bin/vcs1
+RTL
+line+cond+fsm
+75
+uvm_home=/app/cadence/INCISIVE151/tools/uvm
+username=ygl
+sysc_uni_pwd=/home/ygl/code/ic2
+syn_inst=/app/EDA
+ml_uvm=/app/cadence/INCISIVE151/tools/uvm/uvm_lib/uvm_ml/sc/ml_uvm
+ml_seq_dir=/app/cadence/INCISIVE151/specman/src
+duid=1051
+dgid=1057
+cur_path=/home/ygl/code/ic2
+XKEYSYMDB=/app/cadence/IC617/tools/plot/etc/XKeysymDB
+VMR_MODE_FLAG=64
+VMANAGER_PATH=/app/cadence/INCISIVE151/kits/VerificationKit/soc_verification_lib:/app/cadence/INCISIVE151/kits/VerificationKit/soc_verification_lib/e_ex_lib/cdn_vm_ext/e
+VERDI_HOME=/app/EDA/Verdi_O-2018.09-SP2
+VCS_MODE_FLAG=64
+VCS_HOME=/app/EDA/vcs_O-2018.09-SP2
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+USE_CALIBRE_64=YES
+UNAME=/bin/uname
+TSMC_ASU_DFM_PATH=/opt/PDKs/tsmc/CRNxxG/Assura/lvs_rcx/DFM
+TOOL_HOME=/app/EDA/vcs_O-2018.09-SP2/linux64
+SYNOPSYS_ROOT=/app/EDA/syn_vO-2018.06-SP1
+SPECMAN_PATH=/app/EDA/wv/O-2018.09-SP2/bin:/app/EDA/identify_O-2018.09-SP1/bin:/app/EDA/fpga_O-2018.09-SP1/bin:/app/EDA/finesim_O-2018.09-SP2/bin:/app/EDA/waveviewer_O-2018.09-SP2/bin:/app/EDA/hspice_O-2018.09-SP2/hspice/bin:/app/EDA/fm_vO-2018.06-SP1/bin:/app/EDA/nlint1412/bin:/app/EDA/Verdi_O-2018.09-SP2/bin:/app/EDA/vcs_O-2018.09-SP2/bin:/app/EDA/starrc_vO-2018.06-SP1/bin:/app/EDA/pts_vO-2018.06-SP1/bin:/app/EDA/syn_vO-2018.06-SP1/bin:/app/EDA/icc2_O-2018.06-SP1/bin:/app/EDA/icc_vO-2018.06-SP5/bin:/app/EDA/scl_2018.06-SP1/linux64/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/mentor/calibre2016/aoi_calibre2016/aoi_cal_2016.3_28.17/bin:/app/mentor/tessent_2015_4/bin:/app/cadence/IC617/tools/dfII/bin:/app/cadence/IC617/tools/plot/bin:/app/cadence/MMSIM151/bin:/app/cadence/MMSIM151/tools/relxpert/bin:/app/cadence/EXT151/bin:/app/cadence/PVS151/bin:/app/cadence/PVS151/tools/bin:/app/cadence/PVS151/tools/K2/MaskCompose/bin:/app/cadence/GENUS152/tools/bin:/app/cadence/JLS151/bin:/app/cadence/INNOVUS201/bin:/app/cadence/CTOS142/bin:/app/cadence/CONFRML171/bin:/app/cadence/STRATUS2202/bin:/app/cadence/SSV152/tools/bin:/app/cadence/INCISIVE151/bin:/app/cadence/INCISIVE151/tools/bin:/app/cadence/INCISIVE151/tools/vtools/vfault/bin:/app/cadence/INCISIVE151/kits/VerificationKit/bin:/app/cadence/VIPCAT113/utils:/app/cadence/VIPCAT113/packages:/app/cadence/VIPCAT113/vips/enet/vr_enet
+SOCV_KIT_HOME=/app/cadence/INCISIVE151/kits/VerificationKit
+SNS_HOME=/app/EDA/nlint1412
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_X11_NO_MITSHM=1
+QRC_MOS_LW_PRECISION=Y
+QRC_HOME=/app/cadence/EXT151
+OVA_UUM=0
+OA_UNSUPPORTED_PLAT=linux_rhel50_gcc44x
+NOVAS_HOME=/app/EDA/Verdi_O-2018.09-SP2
+NCPROTECT_KEYDB=/app/cadence/INCISIVE151/kits/VerificationKit/misc/ip_keys
+MOZILLA_HOME=/usr/bin/firefox
+MMSIMHOME=/app/cadence/MMSIM151
+MGLS_LICENSE_FILE=/app/EDA/license_synopsys.dat:/app/mentor/calibre2016/license.dat:/app/mentor/calibre2016/license.dat
+MGC_PDF_READER=evince
+MGC_LIB_PATH=/app/mentor/calibre2016/aoi_calibre2016/aoi_cal_2016.3_28.17/lib
+MGC_HOME=/app/mentor/calibre2016/aoi_calibre2016/aoi_cal_2016.3_28.17
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+LC_ALL=C
+KIT_SETUP_SAVE=/app/cadence/INCISIVE151/kits/VerificationKit
+K2_VIEWER_HOME=/app/cadence/PVS151/tools/K2/Viewer
+K2_MC_DATA=/home/ygl/Projects
+K2_MASKCOMPOSE_HOME=/app/cadence/PVS151/tools/K2/MaskCompose
+K2_HOME=/app/cadence/PVS151/tools/K2
+GOSU_VERSION=1.10
+DMS_DESIGN=/app/cadence/INCISIVE151/kits/VerificationKit/designs/socv/ams
+DENALI=/app/cadence/VIPCAT113/tools/denali_64bit
+CalibrePath=/app/mentor/calibre2016/aoi_calibre2016/aoi_cal_2016.3_28.17/bin
+CDS_ROOT=/app/cadence/IC617
+CDS_Netlisting_Mode=Analog
+CDS_LOAD_ENV=CWD
+CDS_LIC_ONLY=1
+CDS_LIC_FILE=5280@docker
+CDS_INST_DIR=/app/cadence/IC617
+CDS_ENABLE_VMS=1
+CDS_AUTO_64BIT=ALL
+CDSROOT=/app/cadence/IC617
+CDSHOME=/app/cadence/IC617
+CDSDIR=/app/cadence/IC617
+CDS=/app/cadence/IC617
+CDN_VIP_ROOT=/app/cadence/VIPCAT113
+CDK_DIR=/opt/PDKs/ncsu-cdk-1.6.0.beta
+CALIBRE_HOME=/app/mentor/calibre2016/aoi_calibre2016/aoi_cal_2016.3_28.17
+CADHOME=/app/cadence
+CADENCE_VIP_LIC_ORDER=newrev:soc:portfolio:alacarte
+CADENCE_DIR=/app/cadence/IC617
+ARCH=amd64
+ABVIP_ISNT_DIR=/app/cadence/VIPCAT113/tools/abvip
+0
+8
+1732268053 ./testbench/conv_tb.v
+1732266708 ./rtl/window.v
+1732266683 ./rtl/conv.v
+1732266626 ./tsk/timescale.v
+1551421444 /app/EDA/vcs_O-2018.09-SP2/include/cm_vcsd.tab
+1732267500 simfile/simfile_rtl.f
+1551421246 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/vcsdp.tab
+1550753332 /app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab
+5
+1551422344 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libvirsim.so
+1551421792 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/liberrorinf.so
+1551421768 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libsnpsmalloc.so
+1551421789 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libvfs.so
+1550752033 /app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a
+1732268069 simv.daidir
+-1 partitionlib

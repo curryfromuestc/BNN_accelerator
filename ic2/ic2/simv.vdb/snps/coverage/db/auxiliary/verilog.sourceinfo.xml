@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_srcinfo.dtd">
+  <srcinfo name="/home/ygl/code/ic2"  >
+    <ucapi_version  major_ver="13"  minor_ver="1"  patch_str="O-2018.09-SP2"  />
+      <fileinfo name="./tsk/timescale.v"  id="0"  />
+      <fileinfo name="./rtl/conv.v"  id="1"  />
+      <fileinfo name="./rtl/window.v"  id="2"  />
+      <fileinfo name="./testbench/conv_tb.v"  id="3"  />
+    </srcinfo>

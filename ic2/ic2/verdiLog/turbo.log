@@ -1,0 +1,9 @@
+Command Line: /app/EDA/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/Novas -sv -nologo -ssf ./fsdb/RTL.fsdb ./tsk/timescale.v -f simfile/simfile_rtl.f
+uname(Linux docker 4.15.0-142-generic #146~16.04.1-Ubuntu SMP Tue Apr 13 09:27:15 UTC 2021 x86_64)
+type= DS_SCOPE element= 1 field= 1
+VERILOG conv_tb
+VERILOG conv_inst
+-----
+second field= DebussyLib
+third field= conv
+au time 1149.047215 15.193845 13.176913 delta 1718996992 1718996992 total 2138611712 2138611712

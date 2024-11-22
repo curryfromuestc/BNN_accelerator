@@ -1,0 +1,95 @@
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Fri Nov 22 17:34:22 2024
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[RSPAI] Run simv switch found in command line
+  Directly run simulation switch '-R' found in commmand line, and all plus 
+  arguments specified will be passed to run-time.
+  So the switch 'plusarg_save' will be ignored.
+
+Parsing design file './tsk/timescale.v'
+Parsing design file './rtl/conv.v'
+Parsing design file './rtl/window.v'
+Parsing design file './testbench/conv_tb.v'
+Top Level Modules:
+       conv_tb
+TimeScale is 1 ns / 1 ps
+VCS Coverage Metrics Release O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module conv_tb
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory `/home/ygl/code/ic2/csrc'
+make[1]: Leaving directory `/home/ygl/code/ic2/csrc'
+make[1]: Entering directory `/home/ygl/code/ic2/csrc'
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic  -o .//../simv.daidir//_csrc0.so objs/amcQw_d.o 
+rm -f _csrc0.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv    -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic  -Wl,-rpath=/app/EDA/vcs_O-2018.09-SP2/linux64/lib -L/app/EDA/vcs_O-2018.09-SP2/linux64/lib     _848_archive_1.so _prev_archive_1.so _csrc0.so   _csrc0.so     rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          -lzerosoft_rt_stubs -lvirsim -lerrorinf -lsnpsmalloc -lvfs /app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a    -lvcsnew -lsimprofile -lreader_common /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libBA.a -luclinative /app/EDA/vcs_O-2018.09-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive        _vcs_pli_stub_.o   /app/EDA/vcs_O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o -ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/ygl/code/ic2/csrc'
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 22 17:34 2024
+NOTE: automatic random seed used: 257811650
+
+ VCS Coverage Metrics Release O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+dump_file = fsdb/RTL.fsdb
+*Verdi* Loading libsscore_vcs201809.so
+FSDB Dumper for VCS, Release Verdi_O-2018.09-SP2, Linux x86_64/64bit, 02/21/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'fsdb/RTL.fsdb'
+*Verdi* : Begin traversing the scope (conv_tb), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+image read done
+conv complete
+          0 :          0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0  
+          1 :          0           0           0           0           0           0           0           0          -3         -21         -33         -15        -105        -208        -149          79         245         -84        -135          73         541         629         374         127  
+          2 :          0           0           0           0         -30         -66        -100        -182        -167        -154         -85          92         101         297         404         791         603         403         588         975        1421        1130         633         191  
+          3 :          0           0           0         -49        -317        -448        -247          40         385         475         710         887        1112        1330        1675        1875        1712        1707        1728        1800        1726        1225         672         191  
+          4 :          0           0           0         -67        -396        -354         178         838        1450        1734        1988        2200        2285        2127        2417        2165        1944        1590         986         618         136         -33         -76         -63  
+          5 :          0           0           0          31          36         294         875        1406        1665        1860        2019        2106        1471         846         611         506         167        -460       -1214       -1360       -1372       -1035        -594        -191  
+          6 :          0           0           0          67         316         300         410          91         -46         189         652         516         -39        -710       -1078       -1057       -1068       -1202       -1361       -1185        -931        -596        -298         -64  
+          7 :          0           0           0         -31          -6        -302        -674       -1218       -1602       -1022        -552        -241        -604       -1207       -1761       -1405       -1052        -651        -352        -259        -177         -95         -39           0  
+          8 :          0           0           0         -18        -157        -400        -857       -1067       -1467       -1547       -1061        -396        -258        -621       -1004        -867        -685        -395           0           0           0           0           0           0  
+          9 :          0           0           0           0         -80        -222        -356        -329        -587       -1052        -790        -220         336         529         356          72         -88        -153           0           0           0           0           0           0  
+         10 :          0           0           0           0           0         -14         -15         -19        -142        -547        -824        -628          93         976        1164         869         506         145          25           0           0           0           0           0  
+         11 :          0           0           0           0           0           0           0        -128        -178        -335        -671        -610        -262         653        1343        1434        1135         575         202          27           0           0           0           0  
+         12 :          0           0           0           0           0           0           0         -11        -166        -167        -299        -448        -370        -208         517        1117        1382        1265         642         214           0           0           0           0  
+         13 :          0           0           0           0           0           0           0           0         -35        -195        -297        -514        -683       -1098        -841         124        1151        1664        1158         527          64           0           0           0  
+         14 :          0           0           0           0           0           0           0           0           0         -81        -322        -593        -963       -1325       -1014        -305         872        1644        1266         682          66           0           0           0  
+         15 :          0           0           0           0           0           0           0           0         -39        -187        -429        -594        -504        -115          98         394         815        1093         843         490          66           0           0           0  
+         16 :          0           0           0           0           0           0         -24        -138        -350        -445        -143         405         887        1435        1473        1428         896         172         -34        -109         -62           0           0           0  
+         17 :          0           0           0           0         -23         -89        -280        -467        -248         319        1034        1649        2136        2213        1789         894        -156        -564        -518        -340         -66           0           0           0  
+         18 :          0           0         -18        -189        -395        -326        -198         324         919        1564        2064        2181        1853        1038          58        -778       -1221       -1119        -816        -391          -2           0           0           0  
+         19 :        -55        -227        -361        -405         -60         389         960        1550        1959        2168        1943        1113          70        -865       -1497       -1686       -1387        -962        -510        -182           0           0           0           0  
+         20 :       -191        -506        -351         272        1061        1767        2197        2182        1903        1218         239        -714       -1428       -1701       -1483       -1057        -615        -281         -78           0           0           0           0           0  
+         21 :        -81         110         607        1248        1649        1749        1249         774          98        -678       -1310       -1578       -1431       -1060        -623        -290         -83          -2           0           0           0           0           0           0  
+         22 :        191         506         623         506         246        -206        -661       -1169       -1606       -1796       -1527       -1162        -681        -295         -89          -9           0           0           0           0           0           0           0           0  
+         23 :         81        -110        -589       -1095       -1642       -1993       -1959       -1972       -1631       -1177        -789        -404        -144         -11           0           0           0           0           0           0           0           0           0           0  
+         24 :$finish called from file "./testbench/conv_tb.v", line 132.
+$finish at simulation time             16600000
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 16600000 ps
+CPU Time:      0.590 seconds;       Data structure size:   0.0Mb
+Fri Nov 22 17:34:29 2024
+CPU time: .636 seconds to compile + .595 seconds to elab + .204 seconds to link + .649 seconds in simulation

@@ -1,0 +1,13 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -sv
+    -f simfile/simfile_rtl.f
+        ./rtl/conv.v
+        ./rtl/window.v
+        ./testbench/conv_tb.v
+
+Highest level modules:
+conv_tb
+
+Total	0 error(s),   0 warning(s)
