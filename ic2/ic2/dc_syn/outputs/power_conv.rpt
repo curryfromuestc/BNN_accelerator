@@ -9,7 +9,7 @@ Report : power
         -verbose
 Design : conv
 Version: K-2015.06
-Date   : Fri Nov 22 20:50:13 2024
+Date   : Sat Nov 23 09:00:15 2024
 ****************************************
 
 
@@ -36,5 +36,5 @@ Power-specific unit information :
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-conv                                      0.949    0.660   17.698    1.626 100.0
+conv                                      0.482    0.338    9.297    0.829 100.0
 1

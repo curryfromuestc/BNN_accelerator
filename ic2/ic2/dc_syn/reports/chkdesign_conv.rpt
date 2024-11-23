@@ -2,7 +2,7 @@
 ****************************************
 check_design summary:
 Version:     K-2015.06
-Date:        Fri Nov 22 20:44:59 2024
+Date:        Sat Nov 23 08:57:50 2024
 ****************************************
 
                    Name                                            Total
@@ -40,6 +40,6 @@ Warning: In design 'conv', cell 'B_84' does not drive any nets. (LINT-1)
 Warning: In design 'conv', cell 'B_85' does not drive any nets. (LINT-1)
 Warning: In design 'conv', cell 'B_86' does not drive any nets. (LINT-1)
 Warning: In design 'conv', cell 'B_88' does not drive any nets. (LINT-1)
-Warning: In design 'conv', net 'net176' driven by pin 'C2012/Z' has no loads. (LINT-2)
-Warning: In design 'conv', net 'net175' driven by pin 'C1855/Z' has no loads. (LINT-2)
+Warning: In design 'conv', net 'net176' driven by pin 'C1612/Z' has no loads. (LINT-2)
+Warning: In design 'conv', net 'net175' driven by pin 'C1455/Z' has no loads. (LINT-2)
 1

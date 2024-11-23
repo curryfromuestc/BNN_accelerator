@@ -3,7 +3,7 @@ module conv
    parameter K = 5,
 //   parameter Ni = 28, //！ 28 for the first layer, 12 for the second layer
 //   parameter N1 = 12,
-   parameter S = 1 
+   parameter S = 1
 )
 (
     input wire clk,

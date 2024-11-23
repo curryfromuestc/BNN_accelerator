@@ -9,7 +9,7 @@ Report : timing
         -sort_by slack
 Design : conv
 Version: K-2015.06
-Date   : Fri Nov 22 20:50:10 2024
+Date   : Sat Nov 23 09:00:13 2024
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -27,15 +27,12 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   cnt2_reg_7_/CK (DVHSV1)                  0.00       0.00 r
   cnt2_reg_7_/Q (DVHSV1)                   0.21       0.21 f
-  U992/ZN (NOR4VHSV1)                      0.16       0.37 r
-  U993/ZN (OAI211VHSV1)                    0.12       0.50 f
-  U994/ZN (INVHSV1)                        0.06       0.55 r
-  U874/Z (AND2VHSV1)                       0.10       0.65 r
-  U890/Z (AND2VHSV1)                       0.11       0.76 r
-  U888/ZN (INVHSV1)                        0.28       1.04 f
-  U889/ZN (LVT_INVHSV64)                   1.30       2.35 r
-  ovalid (out)                             0.00       2.35 r
-  data arrival time                                   2.35
+  U1527/ZN (NOR4VHSV1)                     0.17       0.38 r
+  U1529/ZN (NAND4VHSV1)                    0.10       0.48 f
+  U1487/Z (AO21VHSV1)                      0.39       0.87 f
+  U1482/ZN (LVT_INVHSV64)                  1.28       2.16 r
+  ovalid (out)                             0.00       2.16 r
+  data arrival time                                   2.16
   -----------------------------------------------------------
   (Path is unconstrained)
 
@@ -50,283 +47,11 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   sum_valid_reg/CK (EDQVHSV1)              0.00       0.00 r
   sum_valid_reg/Q (EDQVHSV1)               0.27       0.27 f
-  U873/ZN (NOR2BVHSV1)                     0.08       0.35 r
-  U936/ZN (INVHSV1)                        0.29       0.64 f
-  U930/ZN (LVT_INVHSV64)                   1.30       1.94 r
+  U1408/ZN (NOR2BVHSV1)                    0.08       0.35 r
+  U1488/ZN (INVHSV1)                       0.29       0.64 f
+  U1480/ZN (LVT_INVHSV64)                  1.30       1.94 r
   done (out)                               0.00       1.94 r
   data arrival time                                   1.94
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_31_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[31] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_31_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_31_/QN (DVHSV1)              0.44       0.44 f
-  U899/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[31] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_30_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[30] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_30_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_30_/QN (DVHSV1)              0.44       0.44 f
-  U898/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[30] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_29_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[29] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_29_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_29_/QN (DVHSV1)              0.44       0.44 f
-  U897/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[29] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_28_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[28] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_28_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_28_/QN (DVHSV1)              0.44       0.44 f
-  U904/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[28] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_27_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[27] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_27_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_27_/QN (DVHSV1)              0.44       0.44 f
-  U903/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[27] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_26_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[26] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_26_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_26_/QN (DVHSV1)              0.44       0.44 f
-  U902/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[26] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_25_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[25] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_25_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_25_/QN (DVHSV1)              0.44       0.44 f
-  U901/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[25] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_24_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[24] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_24_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_24_/QN (DVHSV1)              0.44       0.44 f
-  U908/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[24] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_23_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[23] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_23_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_23_/QN (DVHSV1)              0.44       0.44 f
-  U907/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[23] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_22_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[22] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_22_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_22_/QN (DVHSV1)              0.44       0.44 f
-  U906/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[22] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_21_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[21] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_21_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_21_/QN (DVHSV1)              0.44       0.44 f
-  U905/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[21] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_20_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[20] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_20_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_20_/QN (DVHSV1)              0.44       0.44 f
-  U912/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[20] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_19_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[19] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_19_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_19_/QN (DVHSV1)              0.44       0.44 f
-  U911/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[19] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_18_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[18] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_18_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_18_/QN (DVHSV1)              0.44       0.44 f
-  U910/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[18] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_17_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[17] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_17_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_17_/QN (DVHSV1)              0.44       0.44 f
-  U909/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[17] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
-  -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-  Startpoint: wt_data_reg_16_
-              (rising edge-triggered flip-flop)
-  Endpoint: dout[16] (output port)
-  Path Group: (none)
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wt_data_reg_16_/CK (DVHSV1)              0.00 #     0.00 r
-  wt_data_reg_16_/QN (DVHSV1)              0.44       0.44 f
-  U916/ZN (LVT_INVHSV64)                   1.27       1.71 r
-  dout[16] (out)                           0.00       1.71 r
-  data arrival time                                   1.71
   -----------------------------------------------------------
   (Path is unconstrained)
 
@@ -341,7 +66,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_15_/CK (DVHSV1)              0.00 #     0.00 r
   wt_data_reg_15_/QN (DVHSV1)              0.44       0.44 f
-  U915/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1464/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[15] (out)                           0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -358,7 +83,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_14_/CK (DVHSV1)              0.00 #     0.00 r
   wt_data_reg_14_/QN (DVHSV1)              0.44       0.44 f
-  U914/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1467/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[14] (out)                           0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -375,7 +100,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_13_/CK (DVHSV1)              0.00 #     0.00 r
   wt_data_reg_13_/QN (DVHSV1)              0.44       0.44 f
-  U913/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1466/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[13] (out)                           0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -392,7 +117,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_12_/CK (DVHSV1)              0.00 #     0.00 r
   wt_data_reg_12_/QN (DVHSV1)              0.44       0.44 f
-  U920/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1469/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[12] (out)                           0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -409,7 +134,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_11_/CK (DVHSV1)              0.00 #     0.00 r
   wt_data_reg_11_/QN (DVHSV1)              0.44       0.44 f
-  U919/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1468/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[11] (out)                           0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -426,7 +151,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_10_/CK (DVHSV1)              0.00 #     0.00 r
   wt_data_reg_10_/QN (DVHSV1)              0.44       0.44 f
-  U918/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1471/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[10] (out)                           0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -443,7 +168,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_9_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_9_/QN (DVHSV1)               0.44       0.44 f
-  U917/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1470/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[9] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -460,7 +185,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_8_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_8_/QN (DVHSV1)               0.44       0.44 f
-  U924/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1473/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[8] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -477,7 +202,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_7_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_7_/QN (DVHSV1)               0.44       0.44 f
-  U923/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1472/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[7] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -494,7 +219,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_6_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_6_/QN (DVHSV1)               0.44       0.44 f
-  U922/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1475/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[6] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -511,7 +236,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_5_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_5_/QN (DVHSV1)               0.44       0.44 f
-  U921/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1474/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[5] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -528,7 +253,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_4_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_4_/QN (DVHSV1)               0.44       0.44 f
-  U928/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1477/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[4] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -545,7 +270,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_3_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_3_/QN (DVHSV1)               0.44       0.44 f
-  U927/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1476/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[3] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -562,7 +287,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_2_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_2_/QN (DVHSV1)               0.44       0.44 f
-  U926/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1479/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[2] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -579,7 +304,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_1_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_1_/QN (DVHSV1)               0.44       0.44 f
-  U925/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1478/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[1] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
@@ -596,7 +321,7 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   wt_data_reg_0_/CK (DVHSV1)               0.00 #     0.00 r
   wt_data_reg_0_/QN (DVHSV1)               0.44       0.44 f
-  U931/ZN (LVT_INVHSV64)                   1.27       1.71 r
+  U1481/ZN (LVT_INVHSV64)                  1.27       1.71 r
   dout[0] (out)                            0.00       1.71 r
   data arrival time                                   1.71
   -----------------------------------------------------------
