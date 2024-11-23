@@ -3,16 +3,16 @@ module maxpool(
     input wire rstn,
     input wire ivalid,
     input wire state,
-    input wire signed [31:0] din,
+    input wire signed [15:0] din,
     output ovalid,
-    output wire signed[31:0] dout  
+    output wire signed[15:0] dout  
 );
 
-reg signed [31:0] data [0:23] ;
+reg signed [15:0] data [0:23] ;
 reg [6:0] ptr;
 reg cnt;
-reg signed [31:0] data_reg_0 ;
-reg signed [31:0] data_reg_1 ;
+reg signed [15:0] data_reg_0 ;
+reg signed [15:0] data_reg_1 ;
 
 //----------------------ptr地址指针递增----------------------
 always @(posedge clk or negedge rstn) begin

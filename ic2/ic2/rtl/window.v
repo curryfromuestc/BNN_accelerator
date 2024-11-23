@@ -1,13 +1,13 @@
 module window (
     input wire clk,
     input wire start,
-    input wire signed[31:0] din,
+    input wire signed[15:0] din,
     input wire state,
-    output wire [159:0]taps
+    output wire [79:0]taps
 );
 
 // 声明一个ram
-reg signed[31:0] mem [0:139];
+reg signed[15:0] mem [0:139];
 always @(posedge clk) begin
     if (start) begin
         mem[0] <= din;

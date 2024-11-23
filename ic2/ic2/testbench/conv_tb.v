@@ -4,14 +4,14 @@ module conv_tb();
     reg clk;
     reg rstn;
     reg start_conv;
-    reg signed[31:0] image_in;
+    reg signed[15:0] image_in;
     reg start_window;
     reg state;
-    wire [159:0] taps;
+    wire [79:0] taps;
     reg weight_en;
     reg weight_c;
-    reg signed[31:0] weight;
-    wire [31:0] conv_result;
+    reg weight;
+    wire [15:0] conv_result;
     wire conv_done;
     wire conv_ovalid;
 
@@ -20,7 +20,7 @@ module conv_tb();
 
     reg [10:0] cnt_line;
     reg [10:0] cnt_conv;
-    reg signed [31:0] conv_result_r [0:599];
+    reg signed [15:0] conv_result_r [0:599];
     
     conv conv_inst(
         .clk(clk),

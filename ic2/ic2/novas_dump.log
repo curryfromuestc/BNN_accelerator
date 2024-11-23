@@ -248,7 +248,7 @@ CDS_Netlisting_Mode=Analog
 QRC_MOS_LW_PRECISION=Y
 DENALI=/app/cadence/VIPCAT113/tools/denali_64bit
 VCS_ARG_ADDED_FOR_TMP=1
-SNPS_VCS_TMPDIR=/tmp/vcs_20241122122835_29
+SNPS_VCS_TMPDIR=/tmp/vcs_20241122151232_29
 NCPROTECT_KEYDB=/app/cadence/INCISIVE151/kits/VerificationKit/misc/ip_keys
 DMS_DESIGN=/app/cadence/INCISIVE151/kits/VerificationKit/designs/socv/ams
 HOME=/home/ygl
@@ -301,8 +301,8 @@ argv[13]=-cm
 argv[14]=line+cond+fsm
 argv[15]=+notimingcheck
 302 profile - 100
-          CPU/Mem usage: 0.260 sys,  0.280 user,  252.76M mem
-303 Fri Nov 22 20:28:40 2024
+          CPU/Mem usage: 0.290 sys,  0.230 user,  248.57M mem
+303 Fri Nov 22 23:12:39 2024
 304 pliAppInit
 305 FSDB_GATE is set.
 306 FSDB_RTL is set.
@@ -314,46 +314,45 @@ argv[15]=+notimingcheck
 312 (C) 1996 - 2019 by Synopsys, Inc.
 313 sps_call_fsdbDumpfile_main at 0 : ./testbench/conv_tb.v(50)
 314 argv[0]: (handle) conv_tb.dump_file
-315 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-316 *Verdi* : Create FSDB file 'fsdb/RTL.fsdb'
-317 compile option from '/home/ygl/code/BNN_accelerator/ic2/ic2/simv.daidir/vcs_rebuild'.
-318   "vcs '-debug_pp' '-full64' '+plusarg_save' '+v2k' '-sverilog' '+evalorder' '+no_notifier' '+vc' '+incdir+rtl/' '+incdir+testbench/' '+ntb_random_seed_automatic' '+define+DUMP' '+FSDB=fsdb/RTL.fsdb' '+DUMP' '-P' '/app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab' '/app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a' '+args=' '-cm_name' 'RTL' '-cm' 'line+cond+fsm' '+notimingcheck' './tsk/timescale.v' '-f' 'simfile/simfile_rtl.f' '-R' 2>&1"
-319 FSDB_VCS_ENABLE_FAST_VC is enable
-320 sps_call_fsdbDumpvars_vd_main at 0 : ./testbench/conv_tb.v(51)
-321 argv[0]: (0)
-322 argv[1]: (handle) conv_tb
-323 [spi_vcs_vd_ppi_create_root]: no upf option
-324 FSDB dumper cannot dump UPF related power signal ($power_tree): no ppiPowerNetwork.
-325 *Verdi* : Begin traversing the scope (conv_tb), layer (0).
-326 *Verdi* : End of traversing.
-327 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.270 sys,  0.290 user,  347.73M mem
-                   incr: 0.010 sys,  0.000 user,  7.20M mem
-                   accu: 0.010 sys,  0.000 user,  7.20M mem
-              accu incr: 0.010 sys,  0.000 user,  7.20M mem
+315 *Verdi* : Create FSDB file 'fsdb/RTL.fsdb'
+316 compile option from '/home/ygl/code/BNN_accelerator/ic2/ic2/simv.daidir/vcs_rebuild'.
+317   "vcs '-debug_pp' '-full64' '+plusarg_save' '+v2k' '-sverilog' '+evalorder' '+no_notifier' '+vc' '+incdir+rtl/' '+incdir+testbench/' '+ntb_random_seed_automatic' '+define+DUMP' '+FSDB=fsdb/RTL.fsdb' '+DUMP' '-P' '/app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab' '/app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a' '+args=' '-cm_name' 'RTL' '-cm' 'line+cond+fsm' '+notimingcheck' './tsk/timescale.v' '-f' 'simfile/simfile_rtl.f' '-R' 2>&1"
+318 FSDB_VCS_ENABLE_FAST_VC is enable
+319 sps_call_fsdbDumpvars_vd_main at 0 : ./testbench/conv_tb.v(51)
+320 argv[0]: (0)
+321 argv[1]: (handle) conv_tb
+322 [spi_vcs_vd_ppi_create_root]: no upf option
+323 FSDB dumper cannot dump UPF related power signal ($power_tree): no ppiPowerNetwork.
+324 *Verdi* : Begin traversing the scope (conv_tb), layer (0).
+325 *Verdi* : End of traversing.
+326 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.290 sys,  0.230 user,  343.54M mem
+                   incr: 0.000 sys,  0.000 user,  7.20M mem
+                   accu: 0.000 sys,  0.000 user,  7.20M mem
+              accu incr: 0.000 sys,  0.000 user,  7.20M mem
 
           Count usage: 153 var,  149 idcode,  128 callback
                  incr: 153 var,  149 idcode,  128 callback
                  accu: 153 var,  149 idcode,  128 callback
             accu incr: 153 var,  149 idcode,  128 callback
-328 Fri Nov 22 20:28:40 2024
-329 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.270 sys,  0.290 user,  348.79M mem
-                   incr: 0.000 sys,  0.000 user,  1.05M mem
+327 Fri Nov 22 23:12:39 2024
+328 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.300 sys,  0.230 user,  344.59M mem
+                   incr: 0.010 sys,  0.000 user,  1.05M mem
                    accu: 0.010 sys,  0.000 user,  8.26M mem
-              accu incr: 0.000 sys,  0.000 user,  1.05M mem
+              accu incr: 0.010 sys,  0.000 user,  1.05M mem
 
           Count usage: 153 var,  149 idcode,  128 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 153 var,  149 idcode,  128 callback
             accu incr: 0 var,  0 idcode,  0 callback
-330 Fri Nov 22 20:28:40 2024
-331 sps_call_fsdbDumpMDA_vd_main at 0 : ./testbench/conv_tb.v(52)
-332 *Verdi* : Begin traversing the MDAs, layer (0).
-333 *Verdi* : Enable +mda and +packedmda dumping.
-334 *Verdi* : End of traversing the MDAs.
-335 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.270 sys,  0.290 user,  348.79M mem
+329 Fri Nov 22 23:12:39 2024
+330 sps_call_fsdbDumpMDA_vd_main at 0 : ./testbench/conv_tb.v(52)
+331 *Verdi* : Begin traversing the MDAs, layer (0).
+332 *Verdi* : Enable +mda and +packedmda dumping.
+333 *Verdi* : End of traversing the MDAs.
+334 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.300 sys,  0.230 user,  344.59M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -362,26 +361,26 @@ argv[15]=+notimingcheck
                  incr: 740 var,  740 idcode,  2 callback
                  accu: 740 var,  740 idcode,  2 callback
             accu incr: 740 var,  740 idcode,  2 callback
-336 Fri Nov 22 20:28:40 2024
-337 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.270 sys,  0.290 user,  348.79M mem
-                   incr: 0.000 sys,  0.000 user,  0.00M mem
-                   accu: 0.000 sys,  0.000 user,  0.00M mem
-              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+335 Fri Nov 22 23:12:39 2024
+336 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.300 sys,  0.240 user,  344.59M mem
+                   incr: 0.000 sys,  0.010 user,  0.00M mem
+                   accu: 0.000 sys,  0.010 user,  0.00M mem
+              accu incr: 0.000 sys,  0.010 user,  0.00M mem
 
           Count usage: 893 var,  889 idcode,  130 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 740 var,  740 idcode,  2 callback
             accu incr: 0 var,  0 idcode,  0 callback
-338 Fri Nov 22 20:28:40 2024
-339 End of simulation at 16600000
-340 Fri Nov 22 20:28:40 2024
-341 Begin FSDB profile info:
-342 FSDB Writer : bc1(1743) bcn(135310) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.169845) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+337 Fri Nov 22 23:12:39 2024
+338 End of simulation at 16600000
+339 Fri Nov 22 23:12:39 2024
+340 Begin FSDB profile info:
+341 FSDB Writer : bc1(1749) bcn(135304) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.048511) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-343 End FSDB profile info
-344 Parallel profile    -  Flush:4 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-345                        ProduceTime:0.603743444 ConsumerTime:0.011484826 Buffer:64MB
-346 SimExit
-347 Sim process exit
+342 End FSDB profile info
+343 Parallel profile    -  Flush:4 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
+344                        ProduceTime:0.582645713 ConsumerTime:0.000000000 Buffer:64MB
+345 SimExit
+346 Sim process exit

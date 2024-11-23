@@ -1,5 +1,5 @@
                          Chronologic VCS (TM)
-       Version O-2018.09-SP2_Full64 -- Fri Nov 22 20:28:36 2024
+       Version O-2018.09-SP2_Full64 -- Fri Nov 22 23:12:33 2024
                Copyright (c) 1991-2018 by Synopsys Inc.
                          ALL RIGHTS RESERVED
 
@@ -13,28 +13,3180 @@ Warning-[RSPAI] Run simv switch found in command line
   arguments specified will be passed to run-time.
   So the switch 'plusarg_save' will be ignored.
 
-The design hasn't changed and need not be recompiled. 
-If you really want to, delete file simv.daidir/.vcs.timestamp and
-run VCS again.
-
+Parsing design file './tsk/timescale.v'
+Parsing design file './rtl/conv.v'
+Parsing design file './rtl/window.v'
+Parsing design file './testbench/conv_tb.v'
+Top Level Modules:
+       conv_tb
+TimeScale is 1 ns / 1 ps
+VCS Coverage Metrics Release O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module window
+recompiling module conv_tb
+Both modules done.
+make[1]: Entering directory `/home/ygl/code/BNN_accelerator/ic2/ic2/csrc'
+make[1]: Leaving directory `/home/ygl/code/BNN_accelerator/ic2/ic2/csrc'
+make[1]: Entering directory `/home/ygl/code/BNN_accelerator/ic2/ic2/csrc'
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv    -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic  -Wl,-rpath=/app/EDA/vcs_O-2018.09-SP2/linux64/lib -L/app/EDA/vcs_O-2018.09-SP2/linux64/lib   objs/amcQw_d.o   _847_archive_1.so        rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          -lzerosoft_rt_stubs -lvirsim -lerrorinf -lsnpsmalloc -lvfs /app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a    -lvcsnew -lsimprofile -lreader_common /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libBA.a -luclinative /app/EDA/vcs_O-2018.09-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive        _vcs_pli_stub_.o   /app/EDA/vcs_O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o -ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/ygl/code/BNN_accelerator/ic2/ic2/csrc'
 Notice: timing checks disabled with +notimingcheck at compile-time
 Chronologic VCS simulator copyright 1991-2018
 Contains Synopsys proprietary information.
-Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 22 20:28 2024
-NOTE: automatic random seed used: 4037708634
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Nov 22 23:12 2024
+NOTE: automatic random seed used: 151323201
 
  VCS Coverage Metrics Release O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
 dump_file = fsdb/RTL.fsdb
 *Verdi* Loading libsscore_vcs201809.so
 FSDB Dumper for VCS, Release Verdi_O-2018.09-SP2, Linux x86_64/64bit, 02/21/2019
 (C) 1996 - 2019 by Synopsys, Inc.
-*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
 *Verdi* : Create FSDB file 'fsdb/RTL.fsdb'
 *Verdi* : Begin traversing the scope (conv_tb), layer (0).
 *Verdi* : End of traversing.
 *Verdi* : Begin traversing the MDAs, layer (0).
 *Verdi* : Enable +mda and +packedmda dumping.
 *Verdi* : End of traversing the MDAs.
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 1980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 2980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000011', truncating to target size 16 bits
+  at time 3260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000010010', truncating to target size 16 bits
+  at time 3280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000010010', truncating to target size 16 bits
+  at time 3300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000010010', truncating to target size 16 bits
+  at time 3320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001111110', truncating to target size 16 bits
+  at time 3340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010001000', truncating to target size 16 bits
+  at time 3360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010101111', truncating to target size 16 bits
+  at time 3380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000011010', truncating to target size 16 bits
+  at time 3400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010100110', truncating to target size 16 bits
+  at time 3420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111111', truncating to target size 16 bits
+  at time 3440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011110111', truncating to target size 16 bits
+  at time 3460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001111111', truncating to target size 16 bits
+  at time 3480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 3720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000011110', truncating to target size 16 bits
+  at time 3740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000100100', truncating to target size 16 bits
+  at time 3760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001011110', truncating to target size 16 bits
+  at time 3780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010011010', truncating to target size 16 bits
+  at time 3800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010101010', truncating to target size 16 bits
+  at time 3820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 3840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 3860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 3880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 3900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 3920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011100001', truncating to target size 16 bits
+  at time 3940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010101100', truncating to target size 16 bits
+  at time 3960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 3980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011110010', truncating to target size 16 bits
+  at time 4000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011000011', truncating to target size 16 bits
+  at time 4020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001000000', truncating to target size 16 bits
+  at time 4040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000110001', truncating to target size 16 bits
+  at time 4280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011101110', truncating to target size 16 bits
+  at time 4300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111011', truncating to target size 16 bits
+  at time 4480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001011101', truncating to target size 16 bits
+  at time 4500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001010010', truncating to target size 16 bits
+  at time 4520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001010010', truncating to target size 16 bits
+  at time 4540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000111000', truncating to target size 16 bits
+  at time 4560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000100111', truncating to target size 16 bits
+  at time 4580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 4820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000010010', truncating to target size 16 bits
+  at time 4840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011011011', truncating to target size 16 bits
+  at time 4860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 4960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011000110', truncating to target size 16 bits
+  at time 4980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010110110', truncating to target size 16 bits
+  at time 5000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011110111', truncating to target size 16 bits
+  at time 5020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011110001', truncating to target size 16 bits
+  at time 5040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001010000', truncating to target size 16 bits
+  at time 5420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010011100', truncating to target size 16 bits
+  at time 5440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001101011', truncating to target size 16 bits
+  at time 5460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 5480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 5500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011001101', truncating to target size 16 bits
+  at time 5520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000001011', truncating to target size 16 bits
+  at time 5540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000101011', truncating to target size 16 bits
+  at time 5580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010011010', truncating to target size 16 bits
+  at time 5600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 5980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000001110', truncating to target size 16 bits
+  at time 6000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000001', truncating to target size 16 bits
+  at time 6020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010011010', truncating to target size 16 bits
+  at time 6040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 6060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001011010', truncating to target size 16 bits
+  at time 6080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010001011', truncating to target size 16 bits
+  at time 6600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 6620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010111110', truncating to target size 16 bits
+  at time 6640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000010', truncating to target size 16 bits
+  at time 6660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 6980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000001011', truncating to target size 16 bits
+  at time 7160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010111110', truncating to target size 16 bits
+  at time 7180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 7200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001000110', truncating to target size 16 bits
+  at time 7220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000100011', truncating to target size 16 bits
+  at time 7740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011110001', truncating to target size 16 bits
+  at time 7760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011100001', truncating to target size 16 bits
+  at time 7780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010100000', truncating to target size 16 bits
+  at time 7800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001101100', truncating to target size 16 bits
+  at time 7820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000001', truncating to target size 16 bits
+  at time 7840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 7980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001010001', truncating to target size 16 bits
+  at time 8320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011110000', truncating to target size 16 bits
+  at time 8340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 8360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 8380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001110111', truncating to target size 16 bits
+  at time 8400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000011001', truncating to target size 16 bits
+  at time 8420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 8880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000101101', truncating to target size 16 bits
+  at time 8900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010111010', truncating to target size 16 bits
+  at time 8920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 8940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 8960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010010110', truncating to target size 16 bits
+  at time 8980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000011011', truncating to target size 16 bits
+  at time 9000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000010000', truncating to target size 16 bits
+  at time 9480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001011101', truncating to target size 16 bits
+  at time 9500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111100', truncating to target size 16 bits
+  at time 9520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 9540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010111011', truncating to target size 16 bits
+  at time 9560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 9980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111001', truncating to target size 16 bits
+  at time 10080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 10100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111001', truncating to target size 16 bits
+  at time 10120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001000000', truncating to target size 16 bits
+  at time 10140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000101110', truncating to target size 16 bits
+  at time 10580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010000010', truncating to target size 16 bits
+  at time 10600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010110111', truncating to target size 16 bits
+  at time 10620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 10640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 10660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011001111', truncating to target size 16 bits
+  at time 10680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000010', truncating to target size 16 bits
+  at time 10700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 10980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000100111', truncating to target size 16 bits
+  at time 11100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010010100', truncating to target size 16 bits
+  at time 11120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011100101', truncating to target size 16 bits
+  at time 11140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 11160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 11180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 11200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111010', truncating to target size 16 bits
+  at time 11220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010110110', truncating to target size 16 bits
+  at time 11240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000011000', truncating to target size 16 bits
+  at time 11620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001110010', truncating to target size 16 bits
+  at time 11640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011011101', truncating to target size 16 bits
+  at time 11660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 11680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 11700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 11720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 11740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011001001', truncating to target size 16 bits
+  at time 11760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001001110', truncating to target size 16 bits
+  at time 11780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 11980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000010111', truncating to target size 16 bits
+  at time 12140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001000010', truncating to target size 16 bits
+  at time 12160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011010101', truncating to target size 16 bits
+  at time 12180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 12200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 12220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 12240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 12260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011000110', truncating to target size 16 bits
+  at time 12280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001010001', truncating to target size 16 bits
+  at time 12300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000010', truncating to target size 16 bits
+  at time 12320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000010010', truncating to target size 16 bits
+  at time 12660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010101011', truncating to target size 16 bits
+  at time 12680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011011011', truncating to target size 16 bits
+  at time 12700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 12720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 12740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 12760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 12780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011000011', truncating to target size 16 bits
+  at time 12800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000001010000', truncating to target size 16 bits
+  at time 12820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000001001', truncating to target size 16 bits
+  at time 12840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 12980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000110111', truncating to target size 16 bits
+  at time 13180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010101100', truncating to target size 16 bits
+  at time 13200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011100010', truncating to target size 16 bits
+  at time 13220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 13240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 13260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 13280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 13300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011110100', truncating to target size 16 bits
+  at time 13320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010000101', truncating to target size 16 bits
+  at time 13340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000001011', truncating to target size 16 bits
+  at time 13360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010001000', truncating to target size 16 bits
+  at time 13740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 13760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 13780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011111101', truncating to target size 16 bits
+  at time 13800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000011010100', truncating to target size 16 bits
+  at time 13820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010000111', truncating to target size 16 bits
+  at time 13840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000010000100', truncating to target size 16 bits
+  at time 13860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000010000', truncating to target size 16 bits
+  at time 13880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 13980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14880000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14900000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14920000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14940000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14960000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 14980000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15000000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15020000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15040000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15060000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15080000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15100000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15120000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15140000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15160000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15180000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15200000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15220000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15240000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15260000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15280000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15300000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15320000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15340000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15360000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15380000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15400000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15420000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15440000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15460000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15480000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15500000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15520000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15540000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15560000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15580000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15600000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15620000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15640000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15660000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15680000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15700000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15720000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15740000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15760000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15780000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15800000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15820000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15840000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15860000 in file ./testbench/conv_tb.v line 97
+
+
+Warning: Too many digits in binary number '00000000000000000000000000000000', truncating to target size 16 bits
+  at time 15880000 in file ./testbench/conv_tb.v line 97
+
 image read done
 conv complete
           0 :          0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0  
@@ -72,6 +3224,6 @@ VCS Coverage Metrics: during simulation line, cond, FSM was monitored
 
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 16600000 ps
-CPU Time:      0.600 seconds;       Data structure size:   0.0Mb
-Fri Nov 22 20:28:41 2024
-CPU time: .663 seconds in simulation
+CPU Time:      0.580 seconds;       Data structure size:   0.0Mb
+Fri Nov 22 23:12:39 2024
+CPU time: .640 seconds to compile + .580 seconds to elab + .196 seconds to link + .624 seconds in simulation

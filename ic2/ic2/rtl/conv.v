@@ -11,16 +11,16 @@ module conv
     input wire start,//！启动信号，注意跟滑窗模块的启动信号时间不一样
     input wire weight_en,//！ 权重有效信号
     input weight,//！ 以比特权重
-    input [159:0] taps,//！ 滑窗模块输入
+    input [79:0] taps,//！ 滑窗模块输入
     input state,//！选择信号，为第一个卷积层或者是第二个卷积层
-    output signed [31:0] dout,//！ 卷积输出
+    output signed [15:0] dout,//！ 卷积输出
     output ovalid,//！ 输出有效信号
     output done//！ 卷积运算完成信号
 );
 //------------------------变量定义----------------------------
 wire [7:0] Ni;
 reg [7:0] weight_addr = 8'd0;
-reg [31:0] wt_data;
+reg [15:0] wt_data;
 
 reg [19:0] cnt1;//! 用于计数，工作时钟
 reg [9:0] cnt2;//！ 用于同步滑窗模块以及卷积模块
@@ -30,43 +30,43 @@ reg sum_valid_ff;
 reg k00, k01, k02, k03, k04,
     k10, k11, k12, k13, k14,
     k20, k21, k22, k23, k24,
-    k30, k31, k32, k33, k34,
+    k30, k15, k32, k33, k34,
     k40, k41, k42, k43, k44;//! 25个卷积核的权重，全是1bit
-wire signed [31:0] m04,m14,m24,m34,m44;
-reg signed [31:0] m00,m01,m02,m03,
+wire signed [15:0] m04,m14,m24,m34,m44;
+reg signed [15:0] m00,m01,m02,m03,
     m10,m11,m12,m13,
     m20,m21,m22,m23,
-    m30,m31,m32,m33,
+    m30,m15,m32,m33,
     m40,m41,m42,m43;//! 缓存输入数据与权重矩阵重叠部分
-reg signed [31:0] p00,p01,p02,p03,p04,
+reg signed [15:0] p00,p01,p02,p03,p04,
     p10,p11,p12,p13,p14,
     p20,p21,p22,p23,p24,
-    p30,p31,p32,p33,p34,
+    p30,p15,p32,p33,p34,
     p40,p41,p42,p43,p44;//! 相乘的结果，流水线第一级
-reg signed [31:0] sum000,sum001,sum002,sum003,sum004,
+reg signed [15:0] sum000,sum001,sum002,sum003,sum004,
     sum010,sum011,sum012,sum013,sum014,
     sum020,sum021,sum022,sum023,sum024;//！ 流水线第二级
-reg signed [31:0] sum100,sum101,sum102,sum103,sum104,
+reg signed [15:0] sum100,sum101,sum102,sum103,sum104,
     sum110,sum111,sum112,sum113,sum114;//！ 流水线第三级
-reg signed [31:0] sum200,sum201,sum202,sum203,sum204;//！ 流水线第四级
-reg signed [31:0] sum30,sum21,sum32;//！ 流水线第五级
-reg signed [31:0] sum40,sum41;//！ 流水线第六级
+reg signed [15:0] sum200,sum201,sum202,sum203,sum204;//！ 流水线第四级
+reg signed [15:0] sum30,sum21,sum32;//！ 流水线第五级
+reg signed [15:0] sum40,sum41;//！ 流水线第六级
 
 
 assign Ni = (state)?12:28;
 
 //----------------------------对输入矩阵进行赋值----------------------------
-assign m04 = taps[159:128];
-assign m14 = taps[127:96];
-assign m24 = taps[95:64];
-assign m34 = taps[63:32];
-assign m44 = taps[31:0];
+assign m04 = taps[79:64];
+assign m14 = taps[63:48];
+assign m24 = taps[47:32];
+assign m34 = taps[31:16];
+assign m44 = taps[15:0];
 
 always @(posedge clk) begin
     {m00,m01,m02,m03} <= {m01,m02,m03,m04};
     {m10,m11,m12,m13} <= {m11,m12,m13,m14};
     {m20,m21,m22,m23} <= {m21,m22,m23,m24};
-    {m30,m31,m32,m33} <= {m31,m32,m33,m34};
+    {m30,m15,m32,m33} <= {m15,m32,m33,m34};
     {m40,m41,m42,m43} <= {m41,m42,m43,m44};
 end
 //------------------------读取权重矩阵---------------------------------
@@ -264,12 +264,12 @@ end
 
 always @(posedge clk or negedge rstn)begin
     if(!rstn)
-        k31 <= 1'b0;
+        k15 <= 1'b0;
     else begin
         if(weight_addr == 8'd16)
-            k31 <= weight;
+            k15 <= weight;
         else
-            k31 <= k31;
+            k15 <= k15;
     end
 end
 
@@ -459,10 +459,10 @@ always @(posedge clk) begin
         p30 <= -m30;
 end
 always @(posedge clk) begin
-    if(k31 == 1'b1)
-        p31 <=m31;
+    if(k15 == 1'b1)
+        p15 <=m15;
     else
-        p31 <= -m31;
+        p15 <= -m15;
 end
 always @(posedge clk) begin
     if(k32 == 1'b1)
@@ -522,7 +522,7 @@ always @(posedge clk) begin
     sum003 <= p03 + p13;
     sum004 <= p04 + p14;
     sum010 <= p20 + p30;
-    sum011 <= p21 + p31;
+    sum011 <= p21 + p15;
     sum012 <= p22 + p32;
     sum013 <= p23 + p33;
     sum014 <= p24 + p34;
