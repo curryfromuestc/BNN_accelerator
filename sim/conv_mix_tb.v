@@ -1,4 +1,4 @@
-module conv_tb();
+module conv_mix_tb();
 
     parameter cycle = 20;
     reg clk;
@@ -22,26 +22,18 @@ module conv_tb();
     reg [10:0] cnt_conv;
     reg signed [15:0] conv_result_r [0:599];
     
-    conv conv_inst(
+    conv_mix conv_mix_inst(
         .clk(clk),
+        .din(image_in),
         .rstn(rstn),
         .start(start_conv),
+        .state(state),
         .weight_en(weight_en),
         .weight(weight_c),
-        .taps(taps),
-        .state(state),
         .dout(conv_result),
         .ovalid(conv_ovalid),
         .done(conv_done)
     );
-    window window_inst(
-        .clk(clk),
-        .start(start_window),
-        .din(image_in),
-        .state(state),
-        .taps(taps)
-    );
-
 //    string dump_file;
 //    initial begin
 //    `ifdef DUMP
