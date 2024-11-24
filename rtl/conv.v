@@ -11,9 +11,9 @@ module conv
     input wire start,//！启动信号，注意跟滑窗模块的启动信号时间不一样
     input wire weight_en,//！ 权重有效信号
     input weight,//！ 以比特权重
-    input [79:0] taps,//！ 滑窗模块输入
+    input [2:0] taps,//！ 滑窗模块输入
     input state,//！选择信号，为第一个卷积层或者是第二个卷积层
-    output signed [15:0] dout,//！ 卷积输出
+    output signed [3:0] dout,//！ 卷积输出
     output ovalid,//！ 输出有效信号
     output done//！ 卷积运算完成信号
 );
@@ -32,8 +32,8 @@ reg k00, k01, k02, k03, k04,
     k20, k21, k22, k23, k24,
     k30, k15, k32, k33, k34,
     k40, k41, k42, k43, k44;//! 25个卷积核的权重，全是1bit
-wire signed [15:0] m04,m14,m24,m34,m44;
-reg signed [15:0] m00,m01,m02,m03,
+wire m04,m14,m24,m34,m44;
+reg m00,m01,m02,m03,
     m10,m11,m12,m13,
     m20,m21,m22,m23,
     m30,m15,m32,m33,
