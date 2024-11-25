@@ -27,7 +27,7 @@ reg sum_valid;
 reg sum_valid_ff;
 reg k00, k01, k02, 
     k10, k11, k12, 
-    k20, k21, k22,
+    k20, k21, k22;
 wire m02,m12,m22;
 reg m00,m01,
     m10,m11,
@@ -196,7 +196,7 @@ always @(posedge clk or negedge rstn) begin
         if((p00 == 1'b1)&&(p10 == 1'b1))
             sum000 <= 5'sd2;
         else if((p00 == 1'b0)&&(p10 == 1'b0))
-            sum000 <= 5'sd-2;
+            sum000 <= -5'sd2;
         else
             sum000 <= 5'sd0;
     end
@@ -209,7 +209,7 @@ always @(posedge clk or negedge rstn) begin
         if((p01 == 1'b1)&&(p11 == 1'b1))
             sum001 <= 5'sd2;
         else if((p01 == 1'b0)&&(p11 == 1'b0))
-            sum001 <= 5'sd-2;
+            sum001 <= -5'sd2;
         else
             sum001 <= 5'sd0;
     end
@@ -222,7 +222,7 @@ always @(posedge clk or negedge rstn) begin
         if((p02 == 1'b1)&&(p12 == 1'b1))
             sum002 <= 5'sd2;
         else if((p02 == 1'b0)&&(p12 == 1'b0))
-            sum002 <= 5'sd-2;
+            sum002 <= -5'sd2;
         else
             sum002 <= 5'sd0;
     end
@@ -235,7 +235,7 @@ always @(posedge clk or negedge rstn)begin
         if(p20 == 1'b1)
             sum010 <= 5'sd1;
         else if(p20 == 1'b0)
-            sum010 <= 5'sd-1;
+            sum010 <= -5'sd1;
         else
             sum010 <= 5'sd0;
     end
@@ -248,7 +248,7 @@ always @(posedge clk or negedge rstn)begin
         if(p21 == 1'b1)
             sum011 <= 5'sd1;
         else if(p21 == 1'b0)
-            sum011 <= 5'sd-1;
+            sum011 <= -5'sd1;
         else
             sum011 <= 5'sd0;
     end
@@ -261,7 +261,7 @@ always @(posedge clk or negedge rstn)begin
         if(p22 == 1'b1)
             sum012 <= 5'sd1;
         else if(p22 == 1'b0)
-            sum012 <= 5'sd-1;
+            sum012 <= -5'sd1;
         else
             sum012 <= 5'sd0;
     end
@@ -274,8 +274,8 @@ always @(posedge clk) begin
 end
 //------------------------流水线第四级---------------------------------
 always @(posedge clk) begin
-    sum200 <= sum100 + sum110;
-    sum201 <= sum101;
+    sum200 <= sum100 + sum101;
+    sum201 <= sum102;
 end
 //------------------------流水线第五级---------------------------------
 always @(posedge clk) begin
@@ -304,7 +304,7 @@ always @(posedge clk) begin
         sum_valid <= 1'b0;
     else begin
         case (state)
-            1'b0:if(cnt1 == 20'd828)
+            1'b0:if(cnt1 == 20'd814)
                     sum_valid <= 1'b0;
                 else if(cnt1 == 20'd90)
                     sum_valid <= 1'b1;

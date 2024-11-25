@@ -11,7 +11,7 @@ module conv_tb();
     reg weight_en;
     reg weight_c;
     reg weight;
-    wire [4:0] conv_result;
+    wire signed [4:0] conv_result;
     wire conv_done;
     wire conv_ovalid;
 
@@ -20,7 +20,7 @@ module conv_tb();
 
     reg [10:0] cnt_line;
     reg [10:0] cnt_conv;
-    reg signed [15:0] conv_result_r [0:599];
+    reg signed [4:0] conv_result_r [0:700];
     
     conv conv_inst(
         .clk(clk),
@@ -36,22 +36,22 @@ module conv_tb();
     );
     window window_inst(
         .clk(clk),
-        .start(start_window),
+        .start(start_conv),
         .din(image_in),
         .state(state),
         .taps(taps)
     );
 
-    string dump_file;
-    initial begin
-    `ifdef DUMP
-        if($value$plusargs("FSDB=%s",dump_file))
-            $display("dump_file = %s",dump_file);
-        $fsdbDumpfile(dump_file);        
-        $fsdbDumpvars(0, conv_tb);
-        $fsdbDumpMDA();
-    `endif
-    end
+//    string dump_file;
+//    initial begin
+//    `ifdef DUMP
+//        if($value$plusargs("FSDB=%s",dump_file))
+//            $display("dump_file = %s",dump_file);
+//        $fsdbDumpfile(dump_file);        
+//        $fsdbDumpvars(0, conv_tb);
+//        $fsdbDumpMDA();
+//    `endif
+//    end
     initial begin
         clk = 1;
         rstn = 0;
@@ -74,7 +74,7 @@ module conv_tb();
     integer w_i;
     integer count_r;
     initial begin
-        w_i = $fopen("/home/ygl/code/BNN_accelerator/train/test_array/test_conv1_weight_txt.txt", "r");
+        w_i = $fopen("/home/curry/code/BNN_accelerator/train/test_array/test_conv1_weight_txt.txt", "r");
     end
     always @(posedge clk) begin
         if(weight_en == 1)begin
@@ -90,11 +90,11 @@ module conv_tb();
     end
 
     initial begin
-        fp_i = $fopen("/home/ygl/code/BNN_accelerator/train/test_array/test_image_b_txt.txt", "r");
+        fp_i = $fopen("/home/curry/code/BNN_accelerator/train/test_array/test_image_b_txt.txt", "r");
     end
 
     always @(posedge clk) begin
-        if(start_window == 1)
+        if(start_conv == 1)
         begin
             count_w <= $fscanf(fp_i,"%b",image_in);
             cnt_line <= cnt_line + 1;
