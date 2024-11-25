@@ -4,14 +4,14 @@ module conv_tb();
     reg clk;
     reg rstn;
     reg start_conv;
-    reg signed[15:0] image_in;
+    reg image_in;
     reg start_window;
     reg state;
-    wire [79:0] taps;
+    wire [2:0] taps;
     reg weight_en;
     reg weight_c;
     reg weight;
-    wire [15:0] conv_result;
+    wire [4:0] conv_result;
     wire conv_done;
     wire conv_ovalid;
 
@@ -42,16 +42,16 @@ module conv_tb();
         .taps(taps)
     );
 
-//    string dump_file;
-//    initial begin
-//    `ifdef DUMP
-//        if($value$plusargs("FSDB=%s",dump_file))
-//            $display("dump_file = %s",dump_file);
-//        $fsdbDumpfile(dump_file);        
-//        $fsdbDumpvars(0, conv_tb);
-//        $fsdbDumpMDA();
-//    `endif
-//    end
+    string dump_file;
+    initial begin
+    `ifdef DUMP
+        if($value$plusargs("FSDB=%s",dump_file))
+            $display("dump_file = %s",dump_file);
+        $fsdbDumpfile(dump_file);        
+        $fsdbDumpvars(0, conv_tb);
+        $fsdbDumpMDA();
+    `endif
+    end
     initial begin
         clk = 1;
         rstn = 0;
@@ -61,8 +61,10 @@ module conv_tb();
         #20;
         rstn = 1;
         start_conv = 1;
+        weight_en = 0;
+        #(30*cycle);
         weight_en = 1;
-        #(cycle*25);
+        #(9*cycle);
         weight_en = 0;
     end
     always @(*) begin
@@ -72,7 +74,7 @@ module conv_tb();
     integer w_i;
     integer count_r;
     initial begin
-        w_i = $fopen("/home/curry/code/BNN_accelerator/ic2/ic2/test_conv1_weight_txt.txt", "r");
+        w_i = $fopen("/home/ygl/code/BNN_accelerator/train/test_array/test_conv1_weight_txt.txt", "r");
     end
     always @(posedge clk) begin
         if(weight_en == 1)begin
@@ -88,7 +90,7 @@ module conv_tb();
     end
 
     initial begin
-        fp_i = $fopen("/home/curry/code/BNN_accelerator/ic2/ic2/test_image_txt.txt", "r");
+        fp_i = $fopen("/home/ygl/code/BNN_accelerator/train/test_array/test_image_b_txt.txt", "r");
     end
 
     always @(posedge clk) begin
@@ -116,13 +118,13 @@ module conv_tb();
 				$display("conv complete");
 				if(state == 0)
 				begin
-					for(i=0;i<576;i=i+1)
+					for(i=0;i<676;i=i+1)
 					begin 
 						if(i == 0) $write("%d :", display_line);
 						
 						$write("%d ", conv_result_r[i]); // $write 不会自动换行
 						
-						if((i+1)%24 == 0)// 添加行号并换行
+						if((i+1)%26 == 0)// 添加行号并换行
 						begin
 							$display(" "); // 每行 24 个数据
 							display_line = display_line + 1;

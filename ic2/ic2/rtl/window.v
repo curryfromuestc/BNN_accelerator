@@ -1,13 +1,13 @@
 module window (
     input wire clk,
     input wire start,
-    input wire signed[15:0] din,
+    input wire din,
     input wire state,
-    output wire [79:0]taps
+    output wire [2:0]taps
 );
 
 // 声明一个ram
-reg signed[15:0] mem [0:139];
+reg mem [0:83];
 always @(posedge clk) begin
     if (start) begin
         mem[0] <= din;
@@ -94,65 +94,9 @@ always @(posedge clk) begin
         mem[81] <= mem[80];
         mem[82] <= mem[81];
         mem[83] <= mem[82];
-        mem[84] <= mem[83];
-        mem[85] <= mem[84];
-        mem[86] <= mem[85];
-        mem[87] <= mem[86];
-        mem[88] <= mem[87];
-        mem[89] <= mem[88];
-        mem[90] <= mem[89];
-        mem[91] <= mem[90];
-        mem[92] <= mem[91];
-        mem[93] <= mem[92];
-        mem[94] <= mem[93];
-        mem[95] <= mem[94];
-        mem[96] <= mem[95];
-        mem[97] <= mem[96];
-        mem[98] <= mem[97];
-        mem[99] <= mem[98];
-        mem[100] <= mem[99];
-        mem[101] <= mem[100];
-        mem[102] <= mem[101];
-        mem[103] <= mem[102];
-        mem[104] <= mem[103];
-        mem[105] <= mem[104];
-        mem[106] <= mem[105];
-        mem[107] <= mem[106];
-        mem[108] <= mem[107];
-        mem[109] <= mem[108];
-        mem[110] <= mem[109];
-        mem[111] <= mem[110];
-        mem[112] <= mem[111];
-        mem[113] <= mem[112];
-        mem[114] <= mem[113];
-        mem[115] <= mem[114];
-        mem[116] <= mem[115];
-        mem[117] <= mem[116];
-        mem[118] <= mem[117];
-        mem[119] <= mem[118];
-        mem[120] <= mem[119];
-        mem[121] <= mem[120];
-        mem[122] <= mem[121];
-        mem[123] <= mem[122];
-        mem[124] <= mem[123];
-        mem[125] <= mem[124];
-        mem[126] <= mem[125]; 
-        mem[127] <= mem[126];
-        mem[128] <= mem[127];
-        mem[129] <= mem[128];
-        mem[130] <= mem[129];
-        mem[131] <= mem[130];
-        mem[132] <= mem[131];
-        mem[133] <= mem[132];
-        mem[134] <= mem[133];
-        mem[135] <= mem[134];
-        mem[136] <= mem[135];
-        mem[137] <= mem[136];
-        mem[138] <= mem[137];
-        mem[139] <= mem[138];
     end
 end
 assign taps = (!state)?
-                {mem[139],mem[111],mem[83],mem[55],mem[27]}
-                :{mem[59],mem[47],mem[35],mem[23],mem[11]};    
+                {mem[83],mem[55],mem[27]}
+                :{mem[35],mem[23],mem[11]};    
 endmodule
