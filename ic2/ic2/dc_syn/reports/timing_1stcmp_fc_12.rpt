@@ -1,0 +1,304 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 100
+        -sort_by slack
+Design : fc_12
+Version: K-2015.06
+Date   : Thu Nov 28 20:15:40 2024
+****************************************
+
+Operating Conditions: ss_v1p08_125c   Library: scc55nll_vhs_rvt_ss_v1p08_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: dout_r_reg_12_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[12] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_12_/CK (DRNQVHSV1)            0.00       0.00 r
+  dout_r_reg_12_/Q (DRNQVHSV1)             0.30       0.30 r
+  U666/ZN (INVHSV1)                        0.30       0.60 f
+  U651/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[12] (out)                           0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_7_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_7_/Q (DRNQVHSV1)              0.30       0.30 r
+  U664/ZN (INVHSV1)                        0.30       0.60 f
+  U647/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[7] (out)                            0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_6_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_6_/Q (DRNQVHSV1)              0.30       0.30 r
+  U663/ZN (INVHSV1)                        0.30       0.60 f
+  U646/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[6] (out)                            0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_5_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_5_/Q (DRNQVHSV1)              0.30       0.30 r
+  U669/ZN (INVHSV1)                        0.30       0.60 f
+  U648/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[5] (out)                            0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[4] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_4_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_4_/Q (DRNQVHSV1)              0.30       0.30 r
+  U662/ZN (INVHSV1)                        0.30       0.60 f
+  U645/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[4] (out)                            0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[3] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_3_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_3_/Q (DRNQVHSV1)              0.30       0.30 r
+  U661/ZN (INVHSV1)                        0.30       0.60 f
+  U644/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[3] (out)                            0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_2_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_2_/Q (DRNQVHSV1)              0.30       0.30 r
+  U660/ZN (INVHSV1)                        0.30       0.60 f
+  U643/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[2] (out)                            0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_14_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[14] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_14_/CK (DRNQVHSV1)            0.00       0.00 r
+  dout_r_reg_14_/Q (DRNQVHSV1)             0.30       0.30 r
+  U667/ZN (INVHSV1)                        0.30       0.60 f
+  U652/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[14] (out)                           0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_13_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[13] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_13_/CK (DRNQVHSV1)            0.00       0.00 r
+  dout_r_reg_13_/Q (DRNQVHSV1)             0.30       0.30 r
+  U674/ZN (INVHSV1)                        0.30       0.60 f
+  U655/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[13] (out)                           0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_11_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[11] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_11_/CK (DRNQVHSV1)            0.00       0.00 r
+  dout_r_reg_11_/Q (DRNQVHSV1)             0.30       0.30 r
+  U672/ZN (INVHSV1)                        0.30       0.60 f
+  U642/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[11] (out)                           0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_10_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[10] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_10_/CK (DRNQVHSV1)            0.00       0.00 r
+  dout_r_reg_10_/Q (DRNQVHSV1)             0.30       0.30 r
+  U671/ZN (INVHSV1)                        0.30       0.60 f
+  U653/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[10] (out)                           0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[9] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_9_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_9_/Q (DRNQVHSV1)              0.30       0.30 r
+  U665/ZN (INVHSV1)                        0.30       0.60 f
+  U649/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[9] (out)                            0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[8] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_8_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_8_/Q (DRNQVHSV1)              0.30       0.30 r
+  U670/ZN (INVHSV1)                        0.30       0.60 f
+  U633/ZN (LVT_INVHSV64)                   1.30       1.90 r
+  dout[8] (out)                            0.00       1.90 r
+  data arrival time                                   1.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_15_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[15] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_15_/CK (DRNQVHSV1)            0.00       0.00 r
+  dout_r_reg_15_/Q (DRNQVHSV1)             0.29       0.29 r
+  U675/ZN (INVHSV1)                        0.29       0.57 f
+  U632/ZN (LVT_INVHSV64)                   1.30       1.88 r
+  dout[15] (out)                           0.00       1.88 r
+  data arrival time                                   1.88
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: dout_r_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[1] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  dout_r_reg_1_/CK (DRNQVHSV1)             0.00       0.00 r
+  dout_r_reg_1_/Q (DRNQVHSV1)              0.29       0.29 r
+  U659/ZN (INVHSV1)                        0.29       0.57 f
+  U631/ZN (LVT_INVHSV64)                   1.30       1.88 r
+  dout[1] (out)                            0.00       1.88 r
+  data arrival time                                   1.88
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: osign_reg (rising edge-triggered flip-flop)
+  Endpoint: ovalid (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  osign_reg/CK (EDRNQVHSV1)                0.00       0.00 r
+  osign_reg/Q (EDRNQVHSV1)                 0.19       0.19 r
+  U668/ZN (INVHSV1)                        0.28       0.47 f
+  U630/ZN (LVT_INVHSV64)                   1.30       1.77 r
+  ovalid (out)                             0.00       1.77 r
+  data arrival time                                   1.77
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

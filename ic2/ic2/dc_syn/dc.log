@@ -23,7 +23,7 @@ Initializing...
 #clear and reset
 ###############################################################################
 set date_start [sh date]
-Sat Nov 23 08:57:36 CST 2024
+Thu Nov 28 20:13:04 CST 2024
 remove_design -all
 1
 set RESULTS_DIR outputs
@@ -132,17 +132,14 @@ set_svf  ${RESULTS_DIR}/${TOP}.svf
 ###############################################################################
 #generate the HTML log file in dc_shell, before reading in the design
 set_app_var html_log_enable true
-Warning: HTML log file will be overwritten: '/home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/default.html'
-	If this is not desired then please use the following variable to rename the HTML file: html_log_filename (DCSH-019)
 true
 set_app_var html_log_filename ${TOP}.html
-conv.html
+fc_12.html
 set RTL_FILE [subst [sh cat ${FILE_LIST}]]
-../rtl/conv.v
+../rtl/fc_12.v
 analyze -format verilog   ${RTL_FILE}
 Running PRESTO HDLC
-Compiling source file ../rtl/conv.v
-Warning:  ../rtl/conv.v:22: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file ../rtl/fc_12.v
 Presto compilation completed successfully.
 Loading db file '/app/synopsys/dc1506/libraries/syn/dw_foundation.sldb'
 1
@@ -163,642 +160,167 @@ Loading db file '/app/synopsys/dc1506/libraries/syn/standard.sldb'
   Loading link library 'sum8x1024_ff_1.32_-40'
   Loading link library 'gtech'
 Running PRESTO HDLC
-Warning:  ../rtl/conv.v:56: signed to unsigned assignment occurs. (VER-318)
-Warning:  ../rtl/conv.v:59: unsigned to signed assignment occurs. (VER-318)
-Warning:  ../rtl/conv.v:60: unsigned to signed assignment occurs. (VER-318)
-Warning:  ../rtl/conv.v:61: unsigned to signed assignment occurs. (VER-318)
-Warning:  ../rtl/conv.v:62: unsigned to signed assignment occurs. (VER-318)
-Warning:  ../rtl/conv.v:63: unsigned to signed assignment occurs. (VER-318)
-Warning:  ../rtl/conv.v:569: signed to unsigned assignment occurs. (VER-318)
-Warning:  ../rtl/conv.v:610: unsigned to signed assignment occurs. (VER-318)
 
-Statistics for case statements in always block at line 589 in file
-	'../rtl/conv.v'
+Statistics for case statements in always block at line 122 in file
+	'../rtl/fc_12.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           593            |    auto/auto     |
+|           124            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 306 in file
+	'../rtl/fc_12.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           309            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine conv line 65 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 39 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       m41_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m42_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m43_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m40_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m15_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m00_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m03_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m02_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m01_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m10_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m13_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m12_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m11_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m20_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m23_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m22_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m21_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m30_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m33_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|       m32_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cnt_fc_reg      | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 73 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 65 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|   weight_addr_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cnt_w_reg      | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 90 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 80 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k00_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   ivalid_ff_1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   ivalid_ff_0_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   ivalid_ff_4_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   ivalid_ff_3_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   ivalid_ff_2_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 100 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 106 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k01_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   weight_addr_reg   | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 111 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 122 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k02_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        w_reg        | Flip-flop |  144  |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 122 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 306 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k03_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      csign_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p8_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p7_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p6_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p5_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p4_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p3_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p2_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p1_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p0_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p11_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p10_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       p9_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 133 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 498 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k04_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      sum03_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      sum04_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      sum01_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      sum02_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      sum05_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      sum00_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 144 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 548 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k10_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      sum11_reg      | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+|      sum12_reg      | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+|      sum10_reg      | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 155 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 561 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k11_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      sum20_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      sum21_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 166 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 572 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k12_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       sum_reg       | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 177 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 580 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k13_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     dout_r_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine conv line 188 in file
-		'../rtl/conv.v'.
+	in routine fc_12 line 594 in file
+		'../rtl/fc_12.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       k14_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 199 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k20_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 210 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k21_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 221 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k22_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 232 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k23_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 243 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k24_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 254 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k30_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 265 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k15_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 276 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k32_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 287 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k33_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 298 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k34_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 309 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k40_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 320 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k41_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 331 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k42_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 342 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k43_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 353 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       k44_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 365 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p00_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 371 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p01_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 377 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p02_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 383 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p03_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 389 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p04_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 395 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p10_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 401 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p11_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 407 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p12_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 413 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p13_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 419 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p14_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 425 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p20_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 431 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p21_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 437 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p22_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 443 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p23_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 449 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p24_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 455 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p30_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 461 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p15_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 467 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p32_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 473 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p33_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 479 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p34_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 485 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p40_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 491 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p41_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 497 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p42_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 503 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p43_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 509 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       p44_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 518 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     sum000_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum001_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum002_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum003_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum004_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum010_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum011_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum012_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum013_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum014_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum020_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum021_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum022_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum023_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum024_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 536 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     sum100_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum101_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum102_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum103_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum104_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum110_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum111_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum112_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum113_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum114_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 549 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     sum200_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum201_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum202_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum203_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|     sum204_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 557 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      sum30_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|      sum21_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|      sum32_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 563 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      sum40_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-|      sum41_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 568 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     wt_data_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 572 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      cnt1_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 578 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      cnt2_reg       | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 589 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    sum_valid_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine conv line 605 in file
-		'../rtl/conv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  sum_valid_ff_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      osign_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Elaborated 1 design.
-Current design is now 'conv'.
+Current design is now 'fc_12'.
 1
 current_design ${TOP}
-Current design is 'conv'.
-{conv}
+Current design is 'fc_12'.
+{fc_12}
 link
 
-  Linking design 'conv'
+  Linking design 'fc_12'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  conv                        /home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/conv.db
+  fc_12                       /home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/fc_12.db
   scc55nll_vhs_rvt_ss_v1p08_125c_basic (library) /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ss_v1p08_125c_basic.db
   scc55nll_vhs_lvt_ss_v1p08_125c_basic (library) /home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_LVT_V2.1/SCC55NLL_VHS_LVT_V2p1/liberty/1.2v/scc55nll_vhs_lvt_ss_v1p08_125c_basic.db
   dw_foundation.sldb (library) /app/synopsys/dc1506/libraries/syn/dw_foundation.sldb
@@ -850,19 +372,21 @@ set_load 10  [all_outputs]
 set_input_transition 1 [all_inputs]
 1
 set_clock_transition 0.3  [get_clocks {rclkmain}]
-Warning: Can't find clock 'rclkmain' in design 'conv'. (UID-95)
+Warning: Can't find clock 'rclkmain' in design 'fc_12'. (UID-95)
 Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 0
 set_max_transition 0.6             [current_design]
-Current design is 'conv'.
+Current design is 'fc_12'.
 1
 set_max_fanout     32            [current_design]
-Current design is 'conv'.
+Current design is 'fc_12'.
 1
 # set_dont_touch          [get_cells $rstgen/u_rstmux_0]
 # set_ideal_network -no_propagate [get_pins  $rstgen/u_rstmux_0/u_clkmux/Z]
 set_ideal_network [all_high_fanout -nets  -threshold 100] -no_propagate
 Warning: Transferring ideal_net attribute onto the driver pin clk of net clk. (UID-606)
+Warning: Transferring ideal_net attribute onto the driver pin weight of net weight. (UID-606)
+Warning: Transferring ideal_net attribute onto the driver pin weight_addr_reg[7]/Q of net weight_addr[7]. (UID-606)
 1
 set_max_area 0.0
 1
@@ -940,15 +464,15 @@ report_saif -hier -rtl_saif
 }
 Error: Cannot find the SAIF file (./inputs/tb.fsdb.saif). (PWR-201)
 Information: Updating design information... (UID-85)
-Warning: Design 'conv' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Design 'fc_12' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
  
 ****************************************
 Report : saif
         -hier
         -rtl_saif
-Design : conv
+Design : fc_12
 Version: K-2015.06
-Date   : Sat Nov 23 08:57:50 2024
+Date   : Thu Nov 28 20:13:17 2024
 ****************************************
 
   
@@ -958,8 +482,8 @@ Date   : Sat Nov 23 08:57:50 2024
 Object type   Annotated (%)     Activity (%)      Activity (%)       Total
 --------------------------------------------------------------------------------
   
- Ports        0(0.00%)          0(0.00%)          0(0.00%)           104
- Seq Cells    0(0.00%)          0(0.00%)          0(0.00%)           1361
+ Ports        0(0.00%)          0(0.00%)          0(0.00%)           34
+ Seq Cells    0(0.00%)          0(0.00%)          0(0.00%)           284
  Tri Cells    0(0.00%)          0(0.00%)          0(0.00%)           0
 --------------------------------------------------------------------------------
 1
@@ -976,16 +500,16 @@ check_design -summary
 ****************************************
 check_design summary:
 Version:     K-2015.06
-Date:        Sat Nov 23 08:57:50 2024
+Date:        Thu Nov 28 20:13:17 2024
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Cells                                                              26
-    Cells do not drive (LINT-1)                                    26
+Cells                                                               3
+    Cells do not drive (LINT-1)                                     3
 
-Nets                                                                2
-    Unloaded nets (LINT-2)                                          2
+Nets                                                                4
+    Unloaded nets (LINT-2)                                          4
 --------------------------------------------------------------------------------
 
 Information: Use the 'check_design' command for 
@@ -1034,7 +558,7 @@ set_fix_multiple_port_nets -all -buffer_constants  [get_designs *]
 set_cost_priority -delay
 1
 set_critical_range 0.3 [current_design]
-Current design is 'conv'.
+Current design is 'fc_12'.
 1
 set verilogout_no_tri TRUE
 TRUE
@@ -1094,7 +618,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
 
-Information: There are 28 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 7 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 Loaded alib file './alib-52/scc55nll_vhs_rvt_ss_v1p08_125c_basic.db.alib'
@@ -1103,51 +627,45 @@ Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'conv'
-Warning: The design named conv has 1361 out of 1949 cells marked size-only, which may limit optimization. (OPT-301)
- Implement Synthetic for 'conv'.
-Information: Added key list 'DesignWare' to design 'conv'. (DDB-72)
-  Processing 'SNPS_CLOCK_GATE_HIGH_conv_0'
+  Processing 'fc_12'
+Information: The register 'sum00_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum05_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum02_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum01_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum04_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum03_reg_0_' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'fc_12'.
+Information: Added key list 'DesignWare' to design 'fc_12'. (DDB-72)
+  Processing 'SNPS_CLOCK_GATE_HIGH_fc_12_0'
   Mapping integrated clock gating circuitry
-Memory usage for J1 task 1447 Mbytes -- main task 1447 Mbytes.
+Memory usage for J1 task 1470 Mbytes -- main task 1470 Mbytes.
 
   Updating timing information
 Information: Updating design information... (UID-85)
 Information: The library cell 'BUSHOLDVHS' in the library 'scc55nll_vhs_rvt_ss_v1p08_125c_basic' is not characterized for internal power. (PWR-536)
 Information: The library cell 'LVT_BUSHOLDVHS' in the library 'scc55nll_vhs_lvt_ss_v1p08_125c_basic' is not characterized for internal power. (PWR-536)
 Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
-Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_0, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DP_OP_104J1_122_8518_J1_0, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_inc_J1_0, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_inc_J1_1, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_1, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_2, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_3, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_4, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_5, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_6, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_7, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_8, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_9, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_10, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_11, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_12, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_13, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_14, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_15, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_16, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_17, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_18, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_19, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_20, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_21, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_22, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_23, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_add_J1_24, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design conv_DW01_inc_J1_2, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_1, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_2, since there are no registers. (PWR-806)
-Information: Performing clock-gating on design conv. (PWR-730)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fc_12_DW01_add_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fc_12_DW01_add_J1_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fc_12_DW01_add_J1_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fc_12_DW01_inc_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fc_12_DW01_inc_J1_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design fc_12_DW01_inc_J1_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_4, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_5, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_6, since there are no registers. (PWR-806)
+Information: Performing clock-gating on design fc_12. (PWR-730)
+Information: The register 'sum10_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum12_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum11_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum20_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum21_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'sum_reg_0_' is a constant and will be removed. (OPT-1206)
+Information: The register 'dout_r_reg_0_' is a constant and will be removed. (OPT-1206)
 
 Threshold voltage group cell usage:
 >> lvt 0.00%, rvt 100.00%
@@ -1156,13 +674,13 @@ Threshold voltage group cell usage:
   -------------------------------
 
 Threshold voltage group cell usage:
->> lvt 0.93%, rvt 99.07%
+>> lvt 3.42%, rvt 96.58%
 
   Beginning Constant Register Removal
   -----------------------------------
 
 Threshold voltage group cell usage:
->> lvt 0.93%, rvt 99.07%
+>> lvt 3.42%, rvt 96.58%
 
   Beginning Global Optimizations
   ------------------------------
@@ -1200,13 +718,13 @@ Threshold voltage group cell usage:
   Global Optimization (Phase 30)
 
 Threshold voltage group cell usage:
->> lvt 0.10%, rvt 99.90%
+>> lvt 0.84%, rvt 99.16%
 
   Beginning Isolate Ports
   -----------------------
 
 Threshold voltage group cell usage:
->> lvt 0.10%, rvt 99.90%
+>> lvt 0.84%, rvt 99.16%
 
   Beginning Delay Optimization
   ----------------------------
@@ -1215,70 +733,70 @@ Threshold voltage group cell usage:
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:49   21164.6      0.00       0.0    1642.6                              6.7520
-    0:00:49   21164.6      0.00       0.0    1642.6                              6.7520
-    0:00:49   21164.6      0.00       0.0    1642.6                              6.7520
-    0:00:50   21164.6      0.00       0.0    1642.6                              6.7520
+    0:00:53    5202.2      0.00       0.0    1503.0                              1.4847
+    0:00:53    5202.2      0.00       0.0    1503.0                              1.4847
+    0:00:53    5202.2      0.00       0.0    1503.0                              1.4847
+    0:00:53    5202.2      0.00       0.0    1503.0                              1.4847
 
 Threshold voltage group cell usage:
->> lvt 0.10%, rvt 99.90%
+>> lvt 0.84%, rvt 99.16%
 
   Beginning WLM Backend Optimization
   --------------------------------------
 
 Threshold voltage group cell usage:
->> lvt 0.10%, rvt 99.90%
+>> lvt 0.53%, rvt 99.47%
 
   Beginning Delay Optimization HSVT Pass
   --------------------------------------
-    0:00:58   21164.6      0.00       0.0    1642.6                              6.6847
-    0:00:58   21164.6      0.00       0.0    1642.6                              6.6847
-    0:00:58   21164.6      0.00       0.0    1642.6                              6.6847
-    0:00:58   21164.6      0.00       0.0    1642.6                              6.6847
-    0:01:01   21164.6      0.00       0.0    1642.6                              6.6847
-    0:01:01   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
+    0:01:01    5195.0      0.00       0.0    1503.0                              1.4599
+    0:01:01    5195.0      0.00       0.0    1503.0                              1.4599
+    0:01:01    5195.0      0.00       0.0    1503.0                              1.4599
+    0:01:01    5195.0      0.00       0.0    1503.0                              1.4599
+    0:01:04    5195.0      0.00       0.0    1503.0                              1.4599
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
 
 Threshold voltage group cell usage:
->> lvt 0.10%, rvt 99.90%
+>> lvt 0.63%, rvt 99.37%
 
   Beginning Delay Optimization
   ----------------------------
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
 
 
-  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  Beginning Design Rule Fixing  (min_capacitance)  (max_transition)  (max_capacitance)
   ----------------------------
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:01:02   21164.6      0.00       0.0    1642.7                              6.3153
+    0:01:05    5194.1      0.00       0.0    1502.8                              1.3306
   Global Optimization (Phase 31)
   Global Optimization (Phase 32)
   Global Optimization (Phase 33)
-    0:01:03   22014.7      0.00       0.0     130.2                              9.6107
-    0:01:03   22014.7      0.00       0.0     130.2                              9.6107
+    0:01:06    5964.0      0.00       0.0      91.5                              4.5078
+    0:01:06    5964.0      0.00       0.0      91.5                              4.5078
 
 Threshold voltage group cell usage:
->> lvt 6.11%, rvt 93.89%
+>> lvt 9.59%, rvt 90.41%
 
 
   Beginning Power Optimization
@@ -1288,7 +806,7 @@ Threshold voltage group cell usage:
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:01:03   22014.7      0.00       0.0     130.2                              9.6107
+    0:01:06    5964.0      0.00       0.0      91.5                              4.5078
   Global Optimization (Phase 34)
   Global Optimization (Phase 35)
   Global Optimization (Phase 36)
@@ -1302,53 +820,54 @@ Threshold voltage group cell usage:
   Global Optimization (Phase 44)
   Global Optimization (Phase 45)
   Global Optimization (Phase 46)
-  Global Optimization (Phase 47)
-    0:01:05   21750.7      0.00       0.0     130.3                              7.8365
-    0:01:05   21750.7      0.00       0.0     130.3                              7.8365
-    0:01:05   21750.7      0.00       0.0     130.3                              7.8365
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:05   21551.0      0.00       0.0     130.5                              5.7647
+    0:01:07    5729.3      0.00       0.0      91.7                              2.2904
+    0:01:07    5729.3      0.00       0.0      91.7                              2.2904
+    0:01:07    5729.3      0.00       0.0      91.7                              2.2904
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:07    5570.4      0.00       0.0      91.8                              1.7287
+    0:01:08    5590.6      0.00       0.0      95.4                              1.7591
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:01:06   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:06   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:06   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:06   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:07   21551.0      0.00       0.0     130.5                              5.7647
+    0:01:08    5590.6      0.00       0.0      95.4                              1.7591
+    0:01:08    5590.6      0.00       0.0      95.4                              1.7591
+    0:01:08    5590.6      0.00       0.0      95.4                              1.7591
+    0:01:08    5590.6      0.00       0.0      95.4                              1.7591
+    0:01:09    5590.6      0.00       0.0      95.4                              1.7591
 
 Threshold voltage group cell usage:
->> lvt 0.03%, rvt 99.97%
+>> lvt 0.49%, rvt 99.51%
 
   Beginning Delay Optimization HSVT Pass
   --------------------------------------
-    0:01:09   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:09   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:09   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:09   21551.0      0.00       0.0     130.5                              5.7647
-    0:01:12   21545.3      0.00       0.0     130.5                              5.7632
-    0:01:12   21545.3      0.00       0.0     130.5                              5.7632
-    0:01:13   21545.3      0.00       0.0     130.5                              5.7632
-    0:01:13   21545.3      0.00       0.0     130.5                              5.7632
+    0:01:11    5590.6      0.00       0.0      95.4                              1.7591
+    0:01:11    5590.6      0.00       0.0      95.4                              1.7591
+    0:01:11    5590.6      0.00       0.0      95.4                              1.7591
+    0:01:11    5590.6      0.00       0.0      95.4                              1.7591
+    0:01:14    5556.0      0.00       0.0      95.4                              1.7385
+    0:01:14    5556.0      0.00       0.0      95.4                              1.7385
+    0:01:14    5556.0      0.00       0.0      95.4                              1.7385
+    0:01:14    5556.0      0.00       0.0      95.4                              1.7385
+    0:01:15    5543.0      0.00       0.0      95.4                              1.7096
 Loading db file '/home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ss_v1p08_125c_basic.db'
 Loading db file '/home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_LVT_V2.1/SCC55NLL_VHS_LVT_V2p1/liberty/1.2v/scc55nll_vhs_lvt_ss_v1p08_125c_basic.db'
 Loading db file '/home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ff_v1p32_-40c_basic.db'
@@ -1368,8 +887,6 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-Warning: Design 'conv' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-     Net 'clk_gate_k00_reg/CLK': 1331 load(s), 1 driver(s)
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 1
@@ -1379,7 +896,7 @@ Information: Performing power optimization. (PWR-850)
 Alib files are up-to-date.
 Information: Running optimization using a maximum of 8 cores. (OPT-1500)
 
-Information: There are 3 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 7 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 Loaded alib file './alib-52/scc55nll_vhs_rvt_ss_v1p08_125c_basic.db.alib'
@@ -1394,30 +911,35 @@ Information: Updating design information... (UID-85)
 Information: The library cell 'BUSHOLDVHS' in the library 'scc55nll_vhs_rvt_ss_v1p08_125c_basic' is not characterized for internal power. (PWR-536)
 Information: The library cell 'LVT_BUSHOLDVHS' in the library 'scc55nll_vhs_lvt_ss_v1p08_125c_basic' is not characterized for internal power. (PWR-536)
 Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
-Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_0, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_2, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_conv_1, since there are no registers. (PWR-806)
-Information: Performing clock-gating on design conv. (PWR-730)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_6, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_4, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_fc_12_5, since there are no registers. (PWR-806)
+Information: Performing clock-gating on design fc_12. (PWR-730)
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:08   21567.4      0.00       0.0     130.5                              5.7979
-    0:00:08   21567.4      0.00       0.0     130.5                              5.7979
+    0:00:06    5543.0      0.00       0.0      95.4                              1.7096
+    0:00:06    5543.0      0.00       0.0      95.4                              1.7096
 
 Threshold voltage group cell usage:
->> lvt 0.16%, rvt 99.84%
+>> lvt 0.50%, rvt 99.50%
 
   Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
   -------------------------------
 
   Beginning Incremental Implementation Selection
   ----------------------------------------------
-    0:00:11   21567.4      0.00       0.0     130.5                              5.7979
-    0:00:12   21567.4      0.00       0.0     130.5                              5.7979
-    0:00:12   21567.4      0.00       0.0     130.5                              5.7979
-    0:00:12   21567.4      0.00       0.0     130.5                              5.7979
+    0:00:10    5522.9      0.00       0.0      91.8                              1.6793
+    0:00:10    5522.9      0.00       0.0      91.8                              1.6793
+    0:00:10    5522.9      0.00       0.0      91.8                              1.6793
+    0:00:10    5522.9      0.00       0.0      91.8                              1.6793
+  Global Optimization (Phase 47)
   Global Optimization (Phase 48)
   Global Optimization (Phase 49)
   Global Optimization (Phase 50)
@@ -1432,46 +954,45 @@ Threshold voltage group cell usage:
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:12   21566.9      0.00       0.0     130.5                              5.7976
-    0:00:12   21566.9      0.00       0.0     130.5                              5.7976
-    0:00:12   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
+    0:00:10    5509.9      0.00       0.0      91.8                              1.6756
+    0:00:10    5509.9      0.00       0.0      91.8                              1.6756
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
 
 Threshold voltage group cell usage:
->> lvt 0.06%, rvt 99.94%
+>> lvt 0.51%, rvt 99.49%
 
   Beginning Delay Optimization
   ----------------------------
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
 
 
-  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  Beginning Design Rule Fixing  (min_capacitance)  (max_transition)  (max_capacitance)
   ----------------------------
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:13   21566.9      0.00       0.0     130.5                              5.7904
-    0:00:14   21944.2      0.00       0.0     129.4 taps[77]                    10.8430
-    0:00:14   21944.2      0.00       0.0     129.4                             10.8430
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
+    0:00:11    5509.9      0.00       0.0      91.8                              1.6711
+    0:00:12    5684.2      0.00       0.0      90.8                              6.1777
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
 
 
   Beginning Critical Range Optimization
@@ -1481,10 +1002,10 @@ Threshold voltage group cell usage:
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
 
 Threshold voltage group cell usage:
->> lvt 0.59%, rvt 99.41%
+>> lvt 2.01%, rvt 97.99%
 
 
   Beginning Power Optimization
@@ -1494,37 +1015,37 @@ Threshold voltage group cell usage:
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:15   21854.9      0.00       0.0     129.5                              9.7310
-    0:00:16   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:16   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:16   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:16   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:16   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:16   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:17   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:17   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:17   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:17   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:17   21544.8      0.00       0.0     129.5                              9.6544
+    0:00:13    5599.7      0.00       0.0      90.9                              5.1340
+    0:00:13    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5511.4      0.00       0.0      90.9                              5.1101
+    0:00:14    5531.5      0.00       0.0      94.7                              5.3555
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:17   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:17   21544.8      0.00       0.0     129.5                              9.6544
+    0:00:14    5531.5      0.00       0.0      94.7                              5.3555
+    0:00:14    5531.5      0.00       0.0      94.7                              5.3555
 
 Threshold voltage group cell usage:
->> lvt 0.60%, rvt 99.40%
+>> lvt 2.13%, rvt 97.87%
 
   Beginning Delay Optimization HSVT Pass
   --------------------------------------
-    0:00:19   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:19   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:19   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:19   21544.8      0.00       0.0     129.5                              9.6544
-    0:00:24   21545.3      0.00       0.0     129.5                              9.6521
-    0:00:24   21545.3      0.00       0.0     129.5                              9.6521
+    0:00:17    5531.5      0.00       0.0      94.7                              5.3555
+    0:00:17    5531.5      0.00       0.0      94.7                              5.3555
+    0:00:17    5531.5      0.00       0.0      94.7                              5.3555
+    0:00:17    5531.5      0.00       0.0      94.7                              5.3555
+    0:00:22    5531.5      0.00       0.0      94.7                              5.3538
+    0:00:22    5531.5      0.00       0.0      94.7                              5.3538
 Loading db file '/home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ss_v1p08_125c_basic.db'
 Loading db file '/home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_LVT_V2.1/SCC55NLL_VHS_LVT_V2p1/liberty/1.2v/scc55nll_vhs_lvt_ss_v1p08_125c_basic.db'
 Loading db file '/home/app/PDK/SMIC/SMIC55LL/Stdcell/SCC55NLL_VHS_RVT_V2.1/SCC55NLL_VHS_RVT_V2p1/liberty/1.2v/scc55nll_vhs_rvt_ff_v1p32_-40c_basic.db'
@@ -1544,8 +1065,6 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-Warning: Design 'conv' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-     Net 'clk_gate_cnt2_reg_9_/CLK': 1305 load(s), 1 driver(s)
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 1
@@ -1559,721 +1078,101 @@ change_names -rules verilog -verbose -hierarchy
 
 Design          Type    Object                  New Name
 --------------------------------------------------------------------------------
-conv            cell    intadd_23/U2            intadd_23_U2
-conv            cell    intadd_23/U3            intadd_23_U3
-conv            cell    intadd_23/U4            intadd_23_U4
-conv            cell    intadd_23/U5            intadd_23_U5
-conv            cell    intadd_23/U6            intadd_23_U6
-conv            cell    intadd_23/U7            intadd_23_U7
-conv            cell    intadd_23/U8            intadd_23_U8
-conv            cell    intadd_23/U9            intadd_23_U9
-conv            cell    intadd_23/U10           intadd_23_U10
-conv            cell    intadd_23/U11           intadd_23_U11
-conv            cell    intadd_23/U12           intadd_23_U12
-conv            cell    intadd_23/U13           intadd_23_U13
-conv            cell    intadd_23/U15           intadd_23_U15
-conv            cell    intadd_22/U2            intadd_22_U2
-conv            cell    intadd_22/U3            intadd_22_U3
-conv            cell    intadd_22/U4            intadd_22_U4
-conv            cell    intadd_22/U5            intadd_22_U5
-conv            cell    intadd_22/U6            intadd_22_U6
-conv            cell    intadd_22/U7            intadd_22_U7
-conv            cell    intadd_22/U8            intadd_22_U8
-conv            cell    intadd_22/U9            intadd_22_U9
-conv            cell    intadd_22/U10           intadd_22_U10
-conv            cell    intadd_22/U11           intadd_22_U11
-conv            cell    intadd_22/U12           intadd_22_U12
-conv            cell    intadd_22/U14           intadd_22_U14
-conv            cell    intadd_22/U15           intadd_22_U15
-conv            cell    intadd_21/U2            intadd_21_U2
-conv            cell    intadd_21/U3            intadd_21_U3
-conv            cell    intadd_21/U4            intadd_21_U4
-conv            cell    intadd_21/U5            intadd_21_U5
-conv            cell    intadd_21/U6            intadd_21_U6
-conv            cell    intadd_21/U7            intadd_21_U7
-conv            cell    intadd_21/U8            intadd_21_U8
-conv            cell    intadd_21/U9            intadd_21_U9
-conv            cell    intadd_21/U10           intadd_21_U10
-conv            cell    intadd_21/U11           intadd_21_U11
-conv            cell    intadd_21/U13           intadd_21_U13
-conv            cell    intadd_21/U14           intadd_21_U14
-conv            cell    intadd_21/U15           intadd_21_U15
-conv            cell    intadd_20/U2            intadd_20_U2
-conv            cell    intadd_20/U3            intadd_20_U3
-conv            cell    intadd_20/U4            intadd_20_U4
-conv            cell    intadd_20/U5            intadd_20_U5
-conv            cell    intadd_20/U6            intadd_20_U6
-conv            cell    intadd_20/U7            intadd_20_U7
-conv            cell    intadd_20/U8            intadd_20_U8
-conv            cell    intadd_20/U9            intadd_20_U9
-conv            cell    intadd_20/U10           intadd_20_U10
-conv            cell    intadd_20/U12           intadd_20_U12
-conv            cell    intadd_20/U13           intadd_20_U13
-conv            cell    intadd_20/U14           intadd_20_U14
-conv            cell    intadd_20/U15           intadd_20_U15
-conv            cell    intadd_19/U2            intadd_19_U2
-conv            cell    intadd_19/U3            intadd_19_U3
-conv            cell    intadd_19/U4            intadd_19_U4
-conv            cell    intadd_19/U5            intadd_19_U5
-conv            cell    intadd_19/U6            intadd_19_U6
-conv            cell    intadd_19/U7            intadd_19_U7
-conv            cell    intadd_19/U8            intadd_19_U8
-conv            cell    intadd_19/U9            intadd_19_U9
-conv            cell    intadd_19/U11           intadd_19_U11
-conv            cell    intadd_19/U12           intadd_19_U12
-conv            cell    intadd_19/U13           intadd_19_U13
-conv            cell    intadd_19/U14           intadd_19_U14
-conv            cell    intadd_19/U15           intadd_19_U15
-conv            cell    intadd_18/U2            intadd_18_U2
-conv            cell    intadd_18/U3            intadd_18_U3
-conv            cell    intadd_18/U4            intadd_18_U4
-conv            cell    intadd_18/U5            intadd_18_U5
-conv            cell    intadd_18/U6            intadd_18_U6
-conv            cell    intadd_18/U7            intadd_18_U7
-conv            cell    intadd_18/U8            intadd_18_U8
-conv            cell    intadd_18/U10           intadd_18_U10
-conv            cell    intadd_18/U11           intadd_18_U11
-conv            cell    intadd_18/U12           intadd_18_U12
-conv            cell    intadd_18/U13           intadd_18_U13
-conv            cell    intadd_18/U14           intadd_18_U14
-conv            cell    intadd_18/U15           intadd_18_U15
-conv            cell    intadd_17/U2            intadd_17_U2
-conv            cell    intadd_17/U3            intadd_17_U3
-conv            cell    intadd_17/U4            intadd_17_U4
-conv            cell    intadd_17/U5            intadd_17_U5
-conv            cell    intadd_17/U6            intadd_17_U6
-conv            cell    intadd_17/U7            intadd_17_U7
-conv            cell    intadd_17/U9            intadd_17_U9
-conv            cell    intadd_17/U10           intadd_17_U10
-conv            cell    intadd_17/U11           intadd_17_U11
-conv            cell    intadd_17/U12           intadd_17_U12
-conv            cell    intadd_17/U13           intadd_17_U13
-conv            cell    intadd_17/U14           intadd_17_U14
-conv            cell    intadd_17/U15           intadd_17_U15
-conv            cell    intadd_16/U2            intadd_16_U2
-conv            cell    intadd_16/U3            intadd_16_U3
-conv            cell    intadd_16/U4            intadd_16_U4
-conv            cell    intadd_16/U5            intadd_16_U5
-conv            cell    intadd_16/U6            intadd_16_U6
-conv            cell    intadd_16/U8            intadd_16_U8
-conv            cell    intadd_16/U9            intadd_16_U9
-conv            cell    intadd_16/U10           intadd_16_U10
-conv            cell    intadd_16/U11           intadd_16_U11
-conv            cell    intadd_16/U12           intadd_16_U12
-conv            cell    intadd_16/U13           intadd_16_U13
-conv            cell    intadd_16/U14           intadd_16_U14
-conv            cell    intadd_16/U15           intadd_16_U15
-conv            cell    intadd_15/U2            intadd_15_U2
-conv            cell    intadd_15/U3            intadd_15_U3
-conv            cell    intadd_15/U4            intadd_15_U4
-conv            cell    intadd_15/U5            intadd_15_U5
-conv            cell    intadd_15/U7            intadd_15_U7
-conv            cell    intadd_15/U8            intadd_15_U8
-conv            cell    intadd_15/U9            intadd_15_U9
-conv            cell    intadd_15/U10           intadd_15_U10
-conv            cell    intadd_15/U11           intadd_15_U11
-conv            cell    intadd_15/U12           intadd_15_U12
-conv            cell    intadd_15/U13           intadd_15_U13
-conv            cell    intadd_15/U14           intadd_15_U14
-conv            cell    intadd_15/U15           intadd_15_U15
-conv            cell    intadd_14/U2            intadd_14_U2
-conv            cell    intadd_14/U3            intadd_14_U3
-conv            cell    intadd_14/U4            intadd_14_U4
-conv            cell    intadd_14/U6            intadd_14_U6
-conv            cell    intadd_14/U7            intadd_14_U7
-conv            cell    intadd_14/U8            intadd_14_U8
-conv            cell    intadd_14/U9            intadd_14_U9
-conv            cell    intadd_14/U10           intadd_14_U10
-conv            cell    intadd_14/U11           intadd_14_U11
-conv            cell    intadd_14/U12           intadd_14_U12
-conv            cell    intadd_14/U13           intadd_14_U13
-conv            cell    intadd_14/U14           intadd_14_U14
-conv            cell    intadd_14/U15           intadd_14_U15
-conv            cell    intadd_13/U2            intadd_13_U2
-conv            cell    intadd_13/U3            intadd_13_U3
-conv            cell    intadd_13/U4            intadd_13_U4
-conv            cell    intadd_13/U5            intadd_13_U5
-conv            cell    intadd_13/U6            intadd_13_U6
-conv            cell    intadd_13/U7            intadd_13_U7
-conv            cell    intadd_13/U8            intadd_13_U8
-conv            cell    intadd_13/U9            intadd_13_U9
-conv            cell    intadd_13/U10           intadd_13_U10
-conv            cell    intadd_13/U11           intadd_13_U11
-conv            cell    intadd_13/U12           intadd_13_U12
-conv            cell    intadd_13/U13           intadd_13_U13
-conv            cell    intadd_13/U15           intadd_13_U15
-conv            cell    intadd_12/U2            intadd_12_U2
-conv            cell    intadd_12/U3            intadd_12_U3
-conv            cell    intadd_12/U4            intadd_12_U4
-conv            cell    intadd_12/U5            intadd_12_U5
-conv            cell    intadd_12/U6            intadd_12_U6
-conv            cell    intadd_12/U7            intadd_12_U7
-conv            cell    intadd_12/U8            intadd_12_U8
-conv            cell    intadd_12/U9            intadd_12_U9
-conv            cell    intadd_12/U10           intadd_12_U10
-conv            cell    intadd_12/U11           intadd_12_U11
-conv            cell    intadd_12/U12           intadd_12_U12
-conv            cell    intadd_12/U14           intadd_12_U14
-conv            cell    intadd_12/U15           intadd_12_U15
-conv            cell    intadd_11/U2            intadd_11_U2
-conv            cell    intadd_11/U3            intadd_11_U3
-conv            cell    intadd_11/U4            intadd_11_U4
-conv            cell    intadd_11/U5            intadd_11_U5
-conv            cell    intadd_11/U6            intadd_11_U6
-conv            cell    intadd_11/U7            intadd_11_U7
-conv            cell    intadd_11/U8            intadd_11_U8
-conv            cell    intadd_11/U9            intadd_11_U9
-conv            cell    intadd_11/U10           intadd_11_U10
-conv            cell    intadd_11/U11           intadd_11_U11
-conv            cell    intadd_11/U13           intadd_11_U13
-conv            cell    intadd_11/U14           intadd_11_U14
-conv            cell    intadd_11/U15           intadd_11_U15
-conv            cell    intadd_10/U2            intadd_10_U2
-conv            cell    intadd_10/U3            intadd_10_U3
-conv            cell    intadd_10/U4            intadd_10_U4
-conv            cell    intadd_10/U5            intadd_10_U5
-conv            cell    intadd_10/U6            intadd_10_U6
-conv            cell    intadd_10/U7            intadd_10_U7
-conv            cell    intadd_10/U8            intadd_10_U8
-conv            cell    intadd_10/U9            intadd_10_U9
-conv            cell    intadd_10/U10           intadd_10_U10
-conv            cell    intadd_10/U12           intadd_10_U12
-conv            cell    intadd_10/U13           intadd_10_U13
-conv            cell    intadd_10/U14           intadd_10_U14
-conv            cell    intadd_10/U15           intadd_10_U15
-conv            cell    intadd_9/U2             intadd_9_U2
-conv            cell    intadd_9/U3             intadd_9_U3
-conv            cell    intadd_9/U4             intadd_9_U4
-conv            cell    intadd_9/U5             intadd_9_U5
-conv            cell    intadd_9/U6             intadd_9_U6
-conv            cell    intadd_9/U7             intadd_9_U7
-conv            cell    intadd_9/U8             intadd_9_U8
-conv            cell    intadd_9/U9             intadd_9_U9
-conv            cell    intadd_9/U11            intadd_9_U11
-conv            cell    intadd_9/U12            intadd_9_U12
-conv            cell    intadd_9/U13            intadd_9_U13
-conv            cell    intadd_9/U14            intadd_9_U14
-conv            cell    intadd_9/U15            intadd_9_U15
-conv            cell    intadd_8/U2             intadd_8_U2
-conv            cell    intadd_8/U3             intadd_8_U3
-conv            cell    intadd_8/U5             intadd_8_U5
-conv            cell    intadd_8/U6             intadd_8_U6
-conv            cell    intadd_8/U7             intadd_8_U7
-conv            cell    intadd_8/U8             intadd_8_U8
-conv            cell    intadd_8/U9             intadd_8_U9
-conv            cell    intadd_8/U10            intadd_8_U10
-conv            cell    intadd_8/U11            intadd_8_U11
-conv            cell    intadd_8/U12            intadd_8_U12
-conv            cell    intadd_8/U13            intadd_8_U13
-conv            cell    intadd_8/U14            intadd_8_U14
-conv            cell    intadd_8/U15            intadd_8_U15
-conv            cell    intadd_7/U2             intadd_7_U2
-conv            cell    intadd_7/U4             intadd_7_U4
-conv            cell    intadd_7/U5             intadd_7_U5
-conv            cell    intadd_7/U6             intadd_7_U6
-conv            cell    intadd_7/U7             intadd_7_U7
-conv            cell    intadd_7/U8             intadd_7_U8
-conv            cell    intadd_7/U9             intadd_7_U9
-conv            cell    intadd_7/U10            intadd_7_U10
-conv            cell    intadd_7/U11            intadd_7_U11
-conv            cell    intadd_7/U12            intadd_7_U12
-conv            cell    intadd_7/U13            intadd_7_U13
-conv            cell    intadd_7/U14            intadd_7_U14
-conv            cell    intadd_7/U15            intadd_7_U15
-conv            cell    intadd_6/U3             intadd_6_U3
-conv            cell    intadd_6/U4             intadd_6_U4
-conv            cell    intadd_6/U5             intadd_6_U5
-conv            cell    intadd_6/U6             intadd_6_U6
-conv            cell    intadd_6/U7             intadd_6_U7
-conv            cell    intadd_6/U8             intadd_6_U8
-conv            cell    intadd_6/U9             intadd_6_U9
-conv            cell    intadd_6/U10            intadd_6_U10
-conv            cell    intadd_6/U11            intadd_6_U11
-conv            cell    intadd_6/U12            intadd_6_U12
-conv            cell    intadd_6/U13            intadd_6_U13
-conv            cell    intadd_6/U14            intadd_6_U14
-conv            cell    intadd_6/U15            intadd_6_U15
-conv            cell    intadd_5/U2             intadd_5_U2
-conv            cell    intadd_5/U3             intadd_5_U3
-conv            cell    intadd_5/U4             intadd_5_U4
-conv            cell    intadd_5/U5             intadd_5_U5
-conv            cell    intadd_5/U6             intadd_5_U6
-conv            cell    intadd_5/U7             intadd_5_U7
-conv            cell    intadd_5/U8             intadd_5_U8
-conv            cell    intadd_5/U9             intadd_5_U9
-conv            cell    intadd_5/U10            intadd_5_U10
-conv            cell    intadd_5/U11            intadd_5_U11
-conv            cell    intadd_5/U12            intadd_5_U12
-conv            cell    intadd_5/U13            intadd_5_U13
-conv            cell    intadd_5/U14            intadd_5_U14
-conv            cell    intadd_5/U15            intadd_5_U15
-conv            cell    intadd_4/U2             intadd_4_U2
-conv            cell    intadd_4/U3             intadd_4_U3
-conv            cell    intadd_4/U4             intadd_4_U4
-conv            cell    intadd_4/U5             intadd_4_U5
-conv            cell    intadd_4/U6             intadd_4_U6
-conv            cell    intadd_4/U7             intadd_4_U7
-conv            cell    intadd_4/U8             intadd_4_U8
-conv            cell    intadd_4/U9             intadd_4_U9
-conv            cell    intadd_4/U10            intadd_4_U10
-conv            cell    intadd_4/U11            intadd_4_U11
-conv            cell    intadd_4/U12            intadd_4_U12
-conv            cell    intadd_4/U13            intadd_4_U13
-conv            cell    intadd_4/U14            intadd_4_U14
-conv            cell    intadd_3/U2             intadd_3_U2
-conv            cell    intadd_3/U3             intadd_3_U3
-conv            cell    intadd_3/U4             intadd_3_U4
-conv            cell    intadd_3/U5             intadd_3_U5
-conv            cell    intadd_3/U6             intadd_3_U6
-conv            cell    intadd_3/U7             intadd_3_U7
-conv            cell    intadd_3/U8             intadd_3_U8
-conv            cell    intadd_3/U9             intadd_3_U9
-conv            cell    intadd_3/U10            intadd_3_U10
-conv            cell    intadd_3/U11            intadd_3_U11
-conv            cell    intadd_3/U12            intadd_3_U12
-conv            cell    intadd_3/U13            intadd_3_U13
-conv            cell    intadd_3/U15            intadd_3_U15
-conv            cell    intadd_2/U2             intadd_2_U2
-conv            cell    intadd_2/U3             intadd_2_U3
-conv            cell    intadd_2/U4             intadd_2_U4
-conv            cell    intadd_2/U5             intadd_2_U5
-conv            cell    intadd_2/U6             intadd_2_U6
-conv            cell    intadd_2/U7             intadd_2_U7
-conv            cell    intadd_2/U8             intadd_2_U8
-conv            cell    intadd_2/U9             intadd_2_U9
-conv            cell    intadd_2/U10            intadd_2_U10
-conv            cell    intadd_2/U11            intadd_2_U11
-conv            cell    intadd_2/U12            intadd_2_U12
-conv            cell    intadd_2/U14            intadd_2_U14
-conv            cell    intadd_2/U15            intadd_2_U15
-conv            cell    intadd_1/U2             intadd_1_U2
-conv            cell    intadd_1/U3             intadd_1_U3
-conv            cell    intadd_1/U4             intadd_1_U4
-conv            cell    intadd_1/U5             intadd_1_U5
-conv            cell    intadd_1/U6             intadd_1_U6
-conv            cell    intadd_1/U7             intadd_1_U7
-conv            cell    intadd_1/U8             intadd_1_U8
-conv            cell    intadd_1/U9             intadd_1_U9
-conv            cell    intadd_1/U10            intadd_1_U10
-conv            cell    intadd_1/U12            intadd_1_U12
-conv            cell    intadd_1/U13            intadd_1_U13
-conv            cell    intadd_1/U14            intadd_1_U14
-conv            cell    intadd_1/U15            intadd_1_U15
-conv            cell    intadd_23/U14           intadd_23_U14
-conv            cell    intadd_22/U13           intadd_22_U13
-conv            cell    intadd_21/U12           intadd_21_U12
-conv            cell    intadd_20/U11           intadd_20_U11
-conv            cell    intadd_19/U10           intadd_19_U10
-conv            cell    intadd_18/U9            intadd_18_U9
-conv            cell    intadd_17/U8            intadd_17_U8
-conv            cell    intadd_16/U7            intadd_16_U7
-conv            cell    intadd_15/U6            intadd_15_U6
-conv            cell    intadd_14/U5            intadd_14_U5
-conv            cell    intadd_13/U14           intadd_13_U14
-conv            cell    intadd_12/U13           intadd_12_U13
-conv            cell    intadd_11/U12           intadd_11_U12
-conv            cell    intadd_10/U11           intadd_10_U11
-conv            cell    intadd_9/U10            intadd_9_U10
-conv            cell    intadd_8/U4             intadd_8_U4
-conv            cell    intadd_7/U3             intadd_7_U3
-conv            cell    intadd_6/U2             intadd_6_U2
-conv            cell    intadd_4/U15            intadd_4_U15
-conv            cell    intadd_3/U14            intadd_3_U14
-conv            cell    intadd_2/U13            intadd_2_U13
-conv            cell    intadd_1/U11            intadd_1_U11
-conv            cell    intadd_0/U15            intadd_0_U15
-conv            cell    intadd_0/U14            intadd_0_U14
-conv            cell    intadd_0/U13            intadd_0_U13
-conv            cell    intadd_0/U12            intadd_0_U12
-conv            cell    intadd_0/U11            intadd_0_U11
-conv            cell    intadd_0/U10            intadd_0_U10
-conv            cell    intadd_0/U9             intadd_0_U9
-conv            cell    intadd_0/U8             intadd_0_U8
-conv            cell    intadd_0/U7             intadd_0_U7
-conv            cell    intadd_0/U6             intadd_0_U6
-conv            cell    intadd_0/U5             intadd_0_U5
-conv            cell    intadd_0/U4             intadd_0_U4
-conv            cell    intadd_0/U3             intadd_0_U3
-conv            cell    intadd_0/U2             intadd_0_U2
-conv            net     N216                    taps[64]
-conv            net     N381                    taps[48]
-conv            net     N546                    taps[32]
-conv            net     N711                    taps[16]
-conv            net     N876                    taps[0]
-conv            net     intadd_0/CI             intadd_0_CI
-conv            net     intadd_0/n14            intadd_0_n14
-conv            net     intadd_0/n13            intadd_0_n13
-conv            net     intadd_0/n12            intadd_0_n12
-conv            net     intadd_0/n11            intadd_0_n11
-conv            net     intadd_0/n10            intadd_0_n10
-conv            net     intadd_0/n9             intadd_0_n9
-conv            net     intadd_0/n8             intadd_0_n8
-conv            net     intadd_0/n7             intadd_0_n7
-conv            net     intadd_0/n6             intadd_0_n6
-conv            net     intadd_0/n5             intadd_0_n5
-conv            net     intadd_0/n4             intadd_0_n4
-conv            net     intadd_0/n3             intadd_0_n3
-conv            net     intadd_0/n2             intadd_0_n2
-conv            net     intadd_0/n1             intadd_0_n1
-conv            net     intadd_1/CI             intadd_1_CI
-conv            net     intadd_1/n14            intadd_1_n14
-conv            net     intadd_1/n13            intadd_1_n13
-conv            net     intadd_1/n12            intadd_1_n12
-conv            net     intadd_1/n11            intadd_1_n11
-conv            net     intadd_1/n10            intadd_1_n10
-conv            net     intadd_1/n9             intadd_1_n9
-conv            net     intadd_1/n8             intadd_1_n8
-conv            net     intadd_1/n7             intadd_1_n7
-conv            net     intadd_1/n6             intadd_1_n6
-conv            net     intadd_1/n5             intadd_1_n5
-conv            net     intadd_1/n4             intadd_1_n4
-conv            net     intadd_1/n3             intadd_1_n3
-conv            net     intadd_1/n2             intadd_1_n2
-conv            net     intadd_1/n1             intadd_1_n1
-conv            net     intadd_2/CI             intadd_2_CI
-conv            net     intadd_2/n14            intadd_2_n14
-conv            net     intadd_2/n13            intadd_2_n13
-conv            net     intadd_2/n12            intadd_2_n12
-conv            net     intadd_2/n11            intadd_2_n11
-conv            net     intadd_2/n10            intadd_2_n10
-conv            net     intadd_2/n9             intadd_2_n9
-conv            net     intadd_2/n8             intadd_2_n8
-conv            net     intadd_2/n7             intadd_2_n7
-conv            net     intadd_2/n6             intadd_2_n6
-conv            net     intadd_2/n5             intadd_2_n5
-conv            net     intadd_2/n4             intadd_2_n4
-conv            net     intadd_2/n3             intadd_2_n3
-conv            net     intadd_2/n2             intadd_2_n2
-conv            net     intadd_2/n1             intadd_2_n1
-conv            net     intadd_3/CI             intadd_3_CI
-conv            net     intadd_3/n14            intadd_3_n14
-conv            net     intadd_3/n13            intadd_3_n13
-conv            net     intadd_3/n12            intadd_3_n12
-conv            net     intadd_3/n11            intadd_3_n11
-conv            net     intadd_3/n10            intadd_3_n10
-conv            net     intadd_3/n9             intadd_3_n9
-conv            net     intadd_3/n8             intadd_3_n8
-conv            net     intadd_3/n7             intadd_3_n7
-conv            net     intadd_3/n6             intadd_3_n6
-conv            net     intadd_3/n5             intadd_3_n5
-conv            net     intadd_3/n4             intadd_3_n4
-conv            net     intadd_3/n3             intadd_3_n3
-conv            net     intadd_3/n2             intadd_3_n2
-conv            net     intadd_3/n1             intadd_3_n1
-conv            net     intadd_4/CI             intadd_4_CI
-conv            net     intadd_4/n14            intadd_4_n14
-conv            net     intadd_4/n13            intadd_4_n13
-conv            net     intadd_4/n12            intadd_4_n12
-conv            net     intadd_4/n11            intadd_4_n11
-conv            net     intadd_4/n10            intadd_4_n10
-conv            net     intadd_4/n9             intadd_4_n9
-conv            net     intadd_4/n8             intadd_4_n8
-conv            net     intadd_4/n7             intadd_4_n7
-conv            net     intadd_4/n6             intadd_4_n6
-conv            net     intadd_4/n5             intadd_4_n5
-conv            net     intadd_4/n4             intadd_4_n4
-conv            net     intadd_4/n3             intadd_4_n3
-conv            net     intadd_4/n2             intadd_4_n2
-conv            net     intadd_4/n1             intadd_4_n1
-conv            net     intadd_5/CI             intadd_5_CI
-conv            net     intadd_5/n14            intadd_5_n14
-conv            net     intadd_5/n13            intadd_5_n13
-conv            net     intadd_5/n12            intadd_5_n12
-conv            net     intadd_5/n11            intadd_5_n11
-conv            net     intadd_5/n10            intadd_5_n10
-conv            net     intadd_5/n9             intadd_5_n9
-conv            net     intadd_5/n8             intadd_5_n8
-conv            net     intadd_5/n7             intadd_5_n7
-conv            net     intadd_5/n6             intadd_5_n6
-conv            net     intadd_5/n5             intadd_5_n5
-conv            net     intadd_5/n4             intadd_5_n4
-conv            net     intadd_5/n3             intadd_5_n3
-conv            net     intadd_5/n2             intadd_5_n2
-conv            net     intadd_5/n1             intadd_5_n1
-conv            net     intadd_6/CI             intadd_6_CI
-conv            net     intadd_6/n14            intadd_6_n14
-conv            net     intadd_6/n13            intadd_6_n13
-conv            net     intadd_6/n12            intadd_6_n12
-conv            net     intadd_6/n11            intadd_6_n11
-conv            net     intadd_6/n10            intadd_6_n10
-conv            net     intadd_6/n9             intadd_6_n9
-conv            net     intadd_6/n8             intadd_6_n8
-conv            net     intadd_6/n7             intadd_6_n7
-conv            net     intadd_6/n6             intadd_6_n6
-conv            net     intadd_6/n5             intadd_6_n5
-conv            net     intadd_6/n4             intadd_6_n4
-conv            net     intadd_6/n3             intadd_6_n3
-conv            net     intadd_6/n2             intadd_6_n2
-conv            net     intadd_6/n1             intadd_6_n1
-conv            net     intadd_7/CI             intadd_7_CI
-conv            net     intadd_7/n14            intadd_7_n14
-conv            net     intadd_7/n13            intadd_7_n13
-conv            net     intadd_7/n12            intadd_7_n12
-conv            net     intadd_7/n11            intadd_7_n11
-conv            net     intadd_7/n10            intadd_7_n10
-conv            net     intadd_7/n9             intadd_7_n9
-conv            net     intadd_7/n8             intadd_7_n8
-conv            net     intadd_7/n7             intadd_7_n7
-conv            net     intadd_7/n6             intadd_7_n6
-conv            net     intadd_7/n5             intadd_7_n5
-conv            net     intadd_7/n4             intadd_7_n4
-conv            net     intadd_7/n3             intadd_7_n3
-conv            net     intadd_7/n2             intadd_7_n2
-conv            net     intadd_7/n1             intadd_7_n1
-conv            net     intadd_8/CI             intadd_8_CI
-conv            net     intadd_8/n14            intadd_8_n14
-conv            net     intadd_8/n13            intadd_8_n13
-conv            net     intadd_8/n12            intadd_8_n12
-conv            net     intadd_8/n11            intadd_8_n11
-conv            net     intadd_8/n10            intadd_8_n10
-conv            net     intadd_8/n9             intadd_8_n9
-conv            net     intadd_8/n8             intadd_8_n8
-conv            net     intadd_8/n7             intadd_8_n7
-conv            net     intadd_8/n6             intadd_8_n6
-conv            net     intadd_8/n5             intadd_8_n5
-conv            net     intadd_8/n4             intadd_8_n4
-conv            net     intadd_8/n3             intadd_8_n3
-conv            net     intadd_8/n2             intadd_8_n2
-conv            net     intadd_8/n1             intadd_8_n1
-conv            net     intadd_9/CI             intadd_9_CI
-conv            net     intadd_9/n14            intadd_9_n14
-conv            net     intadd_9/n13            intadd_9_n13
-conv            net     intadd_9/n12            intadd_9_n12
-conv            net     intadd_9/n11            intadd_9_n11
-conv            net     intadd_9/n10            intadd_9_n10
-conv            net     intadd_9/n9             intadd_9_n9
-conv            net     intadd_9/n8             intadd_9_n8
-conv            net     intadd_9/n7             intadd_9_n7
-conv            net     intadd_9/n6             intadd_9_n6
-conv            net     intadd_9/n5             intadd_9_n5
-conv            net     intadd_9/n4             intadd_9_n4
-conv            net     intadd_9/n3             intadd_9_n3
-conv            net     intadd_9/n2             intadd_9_n2
-conv            net     intadd_9/n1             intadd_9_n1
-conv            net     intadd_10/CI            intadd_10_CI
-conv            net     intadd_10/n14           intadd_10_n14
-conv            net     intadd_10/n13           intadd_10_n13
-conv            net     intadd_10/n12           intadd_10_n12
-conv            net     intadd_10/n11           intadd_10_n11
-conv            net     intadd_10/n10           intadd_10_n10
-conv            net     intadd_10/n9            intadd_10_n9
-conv            net     intadd_10/n8            intadd_10_n8
-conv            net     intadd_10/n7            intadd_10_n7
-conv            net     intadd_10/n6            intadd_10_n6
-conv            net     intadd_10/n5            intadd_10_n5
-conv            net     intadd_10/n4            intadd_10_n4
-conv            net     intadd_10/n3            intadd_10_n3
-conv            net     intadd_10/n2            intadd_10_n2
-conv            net     intadd_10/n1            intadd_10_n1
-conv            net     intadd_11/CI            intadd_11_CI
-conv            net     intadd_11/n14           intadd_11_n14
-conv            net     intadd_11/n13           intadd_11_n13
-conv            net     intadd_11/n12           intadd_11_n12
-conv            net     intadd_11/n11           intadd_11_n11
-conv            net     intadd_11/n10           intadd_11_n10
-conv            net     intadd_11/n9            intadd_11_n9
-conv            net     intadd_11/n8            intadd_11_n8
-conv            net     intadd_11/n7            intadd_11_n7
-conv            net     intadd_11/n6            intadd_11_n6
-conv            net     intadd_11/n5            intadd_11_n5
-conv            net     intadd_11/n4            intadd_11_n4
-conv            net     intadd_11/n3            intadd_11_n3
-conv            net     intadd_11/n2            intadd_11_n2
-conv            net     intadd_11/n1            intadd_11_n1
-conv            net     intadd_12/CI            intadd_12_CI
-conv            net     intadd_12/n14           intadd_12_n14
-conv            net     intadd_12/n13           intadd_12_n13
-conv            net     intadd_12/n12           intadd_12_n12
-conv            net     intadd_12/n11           intadd_12_n11
-conv            net     intadd_12/n10           intadd_12_n10
-conv            net     intadd_12/n9            intadd_12_n9
-conv            net     intadd_12/n8            intadd_12_n8
-conv            net     intadd_12/n7            intadd_12_n7
-conv            net     intadd_12/n6            intadd_12_n6
-conv            net     intadd_12/n5            intadd_12_n5
-conv            net     intadd_12/n4            intadd_12_n4
-conv            net     intadd_12/n3            intadd_12_n3
-conv            net     intadd_12/n2            intadd_12_n2
-conv            net     intadd_12/n1            intadd_12_n1
-conv            net     intadd_13/CI            intadd_13_CI
-conv            net     intadd_13/n14           intadd_13_n14
-conv            net     intadd_13/n13           intadd_13_n13
-conv            net     intadd_13/n12           intadd_13_n12
-conv            net     intadd_13/n11           intadd_13_n11
-conv            net     intadd_13/n10           intadd_13_n10
-conv            net     intadd_13/n9            intadd_13_n9
-conv            net     intadd_13/n8            intadd_13_n8
-conv            net     intadd_13/n7            intadd_13_n7
-conv            net     intadd_13/n6            intadd_13_n6
-conv            net     intadd_13/n5            intadd_13_n5
-conv            net     intadd_13/n4            intadd_13_n4
-conv            net     intadd_13/n3            intadd_13_n3
-conv            net     intadd_13/n2            intadd_13_n2
-conv            net     intadd_13/n1            intadd_13_n1
-conv            net     intadd_14/CI            intadd_14_CI
-conv            net     intadd_14/n14           intadd_14_n14
-conv            net     intadd_14/n13           intadd_14_n13
-conv            net     intadd_14/n12           intadd_14_n12
-conv            net     intadd_14/n11           intadd_14_n11
-conv            net     intadd_14/n10           intadd_14_n10
-conv            net     intadd_14/n9            intadd_14_n9
-conv            net     intadd_14/n8            intadd_14_n8
-conv            net     intadd_14/n7            intadd_14_n7
-conv            net     intadd_14/n6            intadd_14_n6
-conv            net     intadd_14/n5            intadd_14_n5
-conv            net     intadd_14/n4            intadd_14_n4
-conv            net     intadd_14/n3            intadd_14_n3
-conv            net     intadd_14/n2            intadd_14_n2
-conv            net     intadd_14/n1            intadd_14_n1
-conv            net     intadd_15/CI            intadd_15_CI
-conv            net     intadd_15/n14           intadd_15_n14
-conv            net     intadd_15/n13           intadd_15_n13
-conv            net     intadd_15/n12           intadd_15_n12
-conv            net     intadd_15/n11           intadd_15_n11
-conv            net     intadd_15/n10           intadd_15_n10
-conv            net     intadd_15/n9            intadd_15_n9
-conv            net     intadd_15/n8            intadd_15_n8
-conv            net     intadd_15/n7            intadd_15_n7
-conv            net     intadd_15/n6            intadd_15_n6
-conv            net     intadd_15/n5            intadd_15_n5
-conv            net     intadd_15/n4            intadd_15_n4
-conv            net     intadd_15/n3            intadd_15_n3
-conv            net     intadd_15/n2            intadd_15_n2
-conv            net     intadd_15/n1            intadd_15_n1
-conv            net     intadd_16/CI            intadd_16_CI
-conv            net     intadd_16/n14           intadd_16_n14
-conv            net     intadd_16/n13           intadd_16_n13
-conv            net     intadd_16/n12           intadd_16_n12
-conv            net     intadd_16/n11           intadd_16_n11
-conv            net     intadd_16/n10           intadd_16_n10
-conv            net     intadd_16/n9            intadd_16_n9
-conv            net     intadd_16/n8            intadd_16_n8
-conv            net     intadd_16/n7            intadd_16_n7
-conv            net     intadd_16/n6            intadd_16_n6
-conv            net     intadd_16/n5            intadd_16_n5
-conv            net     intadd_16/n4            intadd_16_n4
-conv            net     intadd_16/n3            intadd_16_n3
-conv            net     intadd_16/n2            intadd_16_n2
-conv            net     intadd_16/n1            intadd_16_n1
-conv            net     intadd_17/CI            intadd_17_CI
-conv            net     intadd_17/n14           intadd_17_n14
-conv            net     intadd_17/n13           intadd_17_n13
-conv            net     intadd_17/n12           intadd_17_n12
-conv            net     intadd_17/n11           intadd_17_n11
-conv            net     intadd_17/n10           intadd_17_n10
-conv            net     intadd_17/n9            intadd_17_n9
-conv            net     intadd_17/n8            intadd_17_n8
-conv            net     intadd_17/n7            intadd_17_n7
-conv            net     intadd_17/n6            intadd_17_n6
-conv            net     intadd_17/n5            intadd_17_n5
-conv            net     intadd_17/n4            intadd_17_n4
-conv            net     intadd_17/n3            intadd_17_n3
-conv            net     intadd_17/n2            intadd_17_n2
-conv            net     intadd_17/n1            intadd_17_n1
-conv            net     intadd_18/CI            intadd_18_CI
-conv            net     intadd_18/n14           intadd_18_n14
-conv            net     intadd_18/n13           intadd_18_n13
-conv            net     intadd_18/n12           intadd_18_n12
-conv            net     intadd_18/n11           intadd_18_n11
-conv            net     intadd_18/n10           intadd_18_n10
-conv            net     intadd_18/n9            intadd_18_n9
-conv            net     intadd_18/n8            intadd_18_n8
-conv            net     intadd_18/n7            intadd_18_n7
-conv            net     intadd_18/n6            intadd_18_n6
-conv            net     intadd_18/n5            intadd_18_n5
-conv            net     intadd_18/n4            intadd_18_n4
-conv            net     intadd_18/n3            intadd_18_n3
-conv            net     intadd_18/n2            intadd_18_n2
-conv            net     intadd_18/n1            intadd_18_n1
-conv            net     intadd_19/CI            intadd_19_CI
-conv            net     intadd_19/n14           intadd_19_n14
-conv            net     intadd_19/n13           intadd_19_n13
-conv            net     intadd_19/n12           intadd_19_n12
-conv            net     intadd_19/n11           intadd_19_n11
-conv            net     intadd_19/n10           intadd_19_n10
-conv            net     intadd_19/n9            intadd_19_n9
-conv            net     intadd_19/n8            intadd_19_n8
-conv            net     intadd_19/n7            intadd_19_n7
-conv            net     intadd_19/n6            intadd_19_n6
-conv            net     intadd_19/n5            intadd_19_n5
-conv            net     intadd_19/n4            intadd_19_n4
-conv            net     intadd_19/n3            intadd_19_n3
-conv            net     intadd_19/n2            intadd_19_n2
-conv            net     intadd_19/n1            intadd_19_n1
-conv            net     intadd_20/CI            intadd_20_CI
-conv            net     intadd_20/n14           intadd_20_n14
-conv            net     intadd_20/n13           intadd_20_n13
-conv            net     intadd_20/n12           intadd_20_n12
-conv            net     intadd_20/n11           intadd_20_n11
-conv            net     intadd_20/n10           intadd_20_n10
-conv            net     intadd_20/n9            intadd_20_n9
-conv            net     intadd_20/n8            intadd_20_n8
-conv            net     intadd_20/n7            intadd_20_n7
-conv            net     intadd_20/n6            intadd_20_n6
-conv            net     intadd_20/n5            intadd_20_n5
-conv            net     intadd_20/n4            intadd_20_n4
-conv            net     intadd_20/n3            intadd_20_n3
-conv            net     intadd_20/n2            intadd_20_n2
-conv            net     intadd_20/n1            intadd_20_n1
-conv            net     intadd_21/CI            intadd_21_CI
-conv            net     intadd_21/n14           intadd_21_n14
-conv            net     intadd_21/n13           intadd_21_n13
-conv            net     intadd_21/n12           intadd_21_n12
-conv            net     intadd_21/n11           intadd_21_n11
-conv            net     intadd_21/n10           intadd_21_n10
-conv            net     intadd_21/n9            intadd_21_n9
-conv            net     intadd_21/n8            intadd_21_n8
-conv            net     intadd_21/n7            intadd_21_n7
-conv            net     intadd_21/n6            intadd_21_n6
-conv            net     intadd_21/n5            intadd_21_n5
-conv            net     intadd_21/n4            intadd_21_n4
-conv            net     intadd_21/n3            intadd_21_n3
-conv            net     intadd_21/n2            intadd_21_n2
-conv            net     intadd_21/n1            intadd_21_n1
-conv            net     intadd_22/CI            intadd_22_CI
-conv            net     intadd_22/n14           intadd_22_n14
-conv            net     intadd_22/n13           intadd_22_n13
-conv            net     intadd_22/n12           intadd_22_n12
-conv            net     intadd_22/n11           intadd_22_n11
-conv            net     intadd_22/n10           intadd_22_n10
-conv            net     intadd_22/n9            intadd_22_n9
-conv            net     intadd_22/n8            intadd_22_n8
-conv            net     intadd_22/n7            intadd_22_n7
-conv            net     intadd_22/n6            intadd_22_n6
-conv            net     intadd_22/n5            intadd_22_n5
-conv            net     intadd_22/n4            intadd_22_n4
-conv            net     intadd_22/n3            intadd_22_n3
-conv            net     intadd_22/n2            intadd_22_n2
-conv            net     intadd_22/n1            intadd_22_n1
-conv            net     intadd_23/CI            intadd_23_CI
-conv            net     intadd_23/n14           intadd_23_n14
-conv            net     intadd_23/n13           intadd_23_n13
-conv            net     intadd_23/n12           intadd_23_n12
-conv            net     intadd_23/n11           intadd_23_n11
-conv            net     intadd_23/n10           intadd_23_n10
-conv            net     intadd_23/n9            intadd_23_n9
-conv            net     intadd_23/n8            intadd_23_n8
-conv            net     intadd_23/n7            intadd_23_n7
-conv            net     intadd_23/n6            intadd_23_n6
-conv            net     intadd_23/n5            intadd_23_n5
-conv            net     intadd_23/n4            intadd_23_n4
-conv            net     intadd_23/n3            intadd_23_n3
-conv            net     intadd_23/n2            intadd_23_n2
-conv            net     intadd_23/n1            intadd_23_n1
-SNPS_CLOCK_GATE_HIGH_conv_2 net n2              CLK
-SNPS_CLOCK_GATE_HIGH_conv_1 net n2              CLK
+fc_12           cell    intadd_4/U2             intadd_4_U2
+fc_12           cell    intadd_4/U3             intadd_4_U3
+fc_12           cell    intadd_5/U2             intadd_5_U2
+fc_12           cell    intadd_5/U3             intadd_5_U3
+fc_12           cell    intadd_3/U2             intadd_3_U2
+fc_12           cell    intadd_3/U3             intadd_3_U3
+fc_12           cell    intadd_2/U2             intadd_2_U2
+fc_12           cell    intadd_2/U3             intadd_2_U3
+fc_12           cell    intadd_2/U4             intadd_2_U4
+fc_12           cell    intadd_2/U5             intadd_2_U5
+fc_12           cell    intadd_1/U2             intadd_1_U2
+fc_12           cell    intadd_1/U3             intadd_1_U3
+fc_12           cell    intadd_1/U4             intadd_1_U4
+fc_12           cell    intadd_1/U5             intadd_1_U5
+fc_12           cell    intadd_1/U6             intadd_1_U6
+fc_12           cell    intadd_0/U14            intadd_0_U14
+fc_12           cell    intadd_0/U13            intadd_0_U13
+fc_12           cell    intadd_0/U12            intadd_0_U12
+fc_12           cell    intadd_0/U11            intadd_0_U11
+fc_12           cell    intadd_0/U10            intadd_0_U10
+fc_12           cell    intadd_0/U9             intadd_0_U9
+fc_12           cell    intadd_0/U8             intadd_0_U8
+fc_12           cell    intadd_0/U5             intadd_0_U5
+fc_12           cell    intadd_0/U4             intadd_0_U4
+fc_12           cell    intadd_0/U6             intadd_0_U6
+fc_12           cell    intadd_0/U3             intadd_0_U3
+fc_12           cell    intadd_0/U7             intadd_0_U7
+fc_12           cell    intadd_0/U2             intadd_0_U2
+fc_12           net     intadd_0/CI             intadd_0_CI
+fc_12           net     intadd_0/n13            intadd_0_n13
+fc_12           net     intadd_0/n12            intadd_0_n12
+fc_12           net     intadd_0/n11            intadd_0_n11
+fc_12           net     intadd_0/n10            intadd_0_n10
+fc_12           net     intadd_0/n9             intadd_0_n9
+fc_12           net     intadd_0/n8             intadd_0_n8
+fc_12           net     intadd_0/n7             intadd_0_n7
+fc_12           net     intadd_0/n6             intadd_0_n6
+fc_12           net     intadd_0/n5             intadd_0_n5
+fc_12           net     intadd_0/n4             intadd_0_n4
+fc_12           net     intadd_0/n3             intadd_0_n3
+fc_12           net     intadd_0/n2             intadd_0_n2
+fc_12           net     intadd_0/n1             intadd_0_n1
+fc_12           net     intadd_1/SUM[5]         intadd_1_SUM_5_
+fc_12           net     intadd_1/SUM[4]         intadd_1_SUM_4_
+fc_12           net     intadd_1/SUM[3]         intadd_1_SUM_3_
+fc_12           net     intadd_1/SUM[2]         intadd_1_SUM_2_
+fc_12           net     intadd_1/SUM[1]         intadd_1_SUM_1_
+fc_12           net     intadd_1/n6             intadd_1_n6
+fc_12           net     intadd_1/n5             intadd_1_n5
+fc_12           net     intadd_1/n4             intadd_1_n4
+fc_12           net     intadd_1/n3             intadd_1_n3
+fc_12           net     intadd_1/n2             intadd_1_n2
+fc_12           net     intadd_1/n1             intadd_1_n1
+fc_12           net     intadd_2/SUM[4]         intadd_2_SUM_4_
+fc_12           net     intadd_2/SUM[3]         intadd_2_SUM_3_
+fc_12           net     intadd_2/SUM[2]         intadd_2_SUM_2_
+fc_12           net     intadd_2/SUM[1]         intadd_2_SUM_1_
+fc_12           net     intadd_2/n5             intadd_2_n5
+fc_12           net     intadd_2/n4             intadd_2_n4
+fc_12           net     intadd_2/n3             intadd_2_n3
+fc_12           net     intadd_2/n2             intadd_2_n2
+fc_12           net     intadd_2/n1             intadd_2_n1
+fc_12           net     intadd_3/SUM[2]         intadd_3_SUM_2_
+fc_12           net     intadd_3/SUM[1]         intadd_3_SUM_1_
+fc_12           net     intadd_3/n3             intadd_3_n3
+fc_12           net     intadd_3/n2             intadd_3_n2
+fc_12           net     intadd_3/n1             intadd_3_n1
+fc_12           net     intadd_4/SUM[2]         intadd_4_SUM_2_
+fc_12           net     intadd_4/SUM[1]         intadd_4_SUM_1_
+fc_12           net     intadd_4/n3             intadd_4_n3
+fc_12           net     intadd_4/n2             intadd_4_n2
+fc_12           net     intadd_4/n1             intadd_4_n1
+fc_12           net     intadd_5/SUM[2]         intadd_5_SUM_2_
+fc_12           net     intadd_5/SUM[1]         intadd_5_SUM_1_
+fc_12           net     intadd_5/n3             intadd_5_n3
+fc_12           net     intadd_5/n2             intadd_5_n2
+fc_12           net     intadd_5/n1             intadd_5_n1
+SNPS_CLOCK_GATE_HIGH_fc_12_6 net n2             CLK
+SNPS_CLOCK_GATE_HIGH_fc_12_1 net n2             CLK
+SNPS_CLOCK_GATE_HIGH_fc_12_2 net n2             CLK
+SNPS_CLOCK_GATE_HIGH_fc_12_3 net n2             CLK
+SNPS_CLOCK_GATE_HIGH_fc_12_4 net n2             CLK
+SNPS_CLOCK_GATE_HIGH_fc_12_5 net n2             CLK
 1
 write -f ddc -hierarchy     -output ${RESULTS_DIR}/${TOP}_mapped.ddc
-Writing ddc file 'outputs/conv_mapped.ddc'.
+Writing ddc file 'outputs/fc_12_mapped.ddc'.
 1
 write -f verilog -hierarchy -output ${RESULTS_DIR}/${TOP}.v
-Writing verilog file '/home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/outputs/conv.v'.
+Writing verilog file '/home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/outputs/fc_12.v'.
 1
 # Write parasitics data from Design Compiler Topographical placement for static timing analysis
 # Write SDF backannotation data from Design Compiler Topographical placement for static timing analysis
 write_sdf ${RESULTS_DIR}/${TOP}_mapped.sdf
 Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
-Information: Writing timing information to file '/home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/outputs/conv_mapped.sdf'. (WT-3)
+Information: Writing timing information to file '/home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/outputs/fc_12_mapped.sdf'. (WT-3)
 1
 write_sdc  -nosplit                 ${RESULTS_DIR}/${TOP}_mapped.sdc
 1
@@ -2281,7 +1180,7 @@ write_sdc  -nosplit                 ${RESULTS_DIR}/${TOP}_mapped.sdc
 if {[info exists SAIF_FILE]} {
 saif_map -type ptpx -write_map ${RESULTS_DIR}/${TOP}_mapped.SAIF.namemap
 }
-Information: Writing SAIF name mapping information into the PT-PX name mapping file 'outputs/conv_mapped.SAIF.namemap'. (PWR-636)
+Information: Writing SAIF name mapping information into the PT-PX name mapping file 'outputs/fc_12_mapped.SAIF.namemap'. (PWR-636)
 1
 write_script -output                ${RESULTS_DIR}/${TOP}_mapped.tcl
 1
@@ -2307,13 +1206,13 @@ report_power -hier -nosplit -hier_level 2 -verbose -analysis_effort medium > ${R
 set_svf -off
 1
 set date_end [sh date]
-Sat Nov 23 09:00:15 CST 2024
+Thu Nov 28 20:15:41 CST 2024
 puts "DC start from ${date_start} to ${date_end}"
-DC start from Sat Nov 23 08:57:36 CST 2024 to Sat Nov 23 09:00:15 CST 2024
+DC start from Thu Nov 28 20:13:04 CST 2024 to Thu Nov 28 20:15:41 CST 2024
 exit
 
-Memory usage for main task 1553 Mbytes.
-Memory usage for this session 1553 Mbytes.
-CPU usage for this session 153 seconds ( 0.04 hours ).
+Memory usage for main task 1545 Mbytes.
+Memory usage for this session 1545 Mbytes.
+CPU usage for this session 145 seconds ( 0.04 hours ).
 
 Thank you...

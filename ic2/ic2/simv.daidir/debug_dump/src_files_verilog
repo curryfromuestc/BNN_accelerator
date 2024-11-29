@@ -1,4 +1,3 @@
-/home/ygl/code/BNN_accelerator/ic2/ic2/rtl/conv.v
-/home/ygl/code/BNN_accelerator/ic2/ic2/rtl/window.v
-/home/ygl/code/BNN_accelerator/ic2/ic2/testbench/conv_tb.v
+/home/ygl/code/BNN_accelerator/ic2/ic2/rtl/fc_12.v
+/home/ygl/code/BNN_accelerator/ic2/ic2/testbench/fc_12_tb.v
 /home/ygl/code/BNN_accelerator/ic2/ic2/tsk/timescale.v

@@ -15,7 +15,7 @@ Logic Library #1:
     Leakage power unit        1uW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:47 2024
+Check date and time           Thu Nov 28 20:13:14 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -66,7 +66,7 @@ Logic Library #1:
     Leakage power unit        1uW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:47 2024
+Check date and time           Thu Nov 28 20:13:15 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -117,7 +117,7 @@ Logic Library #1:
     Leakage power unit        1uW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:47 2024
+Check date and time           Thu Nov 28 20:13:15 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -168,7 +168,7 @@ Logic Library #1:
     Leakage power unit        1uW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -219,7 +219,7 @@ Logic Library #1:
     Leakage power unit        1uW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -285,7 +285,7 @@ Logic Library #1:
     Leakage power unit        1uW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -352,7 +352,7 @@ Logic Library #1:
     Leakage power unit        1mW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -419,7 +419,7 @@ Logic Library #1:
     Leakage power unit        1mW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -486,7 +486,7 @@ Logic Library #1:
     Leakage power unit        1mW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -553,7 +553,7 @@ Logic Library #1:
     Leakage power unit        1mW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -620,7 +620,7 @@ Logic Library #1:
     Leakage power unit        1mW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF
@@ -687,7 +687,7 @@ Logic Library #1:
     Leakage power unit        1mW
     Current unit              1mA
 check_library options        Version                       K-2015.06
-Check date and time           Sat Nov 23 08:57:48 2024
+Check date and time           Thu Nov 28 20:13:16 2024
 
 
 #BEGIN_LIBSCREEN_UPF

@@ -1,0 +1,217 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : fc_12
+Version: K-2015.06
+Date   : Thu Nov 28 20:15:40 2024
+****************************************
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   ovalid                       0.60           2.14          -1.54  (VIOLATED)
+       PORT :  ovalid           0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U630/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[1]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[1]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U631/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[15]                     0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[15]         0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U632/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[8]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[8]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U633/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[9]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[9]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U649/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[10]                     0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[10]         0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U653/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[11]                     0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[11]         0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U642/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[13]                     0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[13]         0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U655/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[14]                     0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[14]         0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U652/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[2]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[2]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U643/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[3]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[3]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U644/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[4]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[4]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U645/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[5]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[5]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U648/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[6]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[6]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U646/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[7]                      0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[7]          0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U647/ZN          0.60           2.14          -1.54  (VIOLATED)
+   dout[12]                     0.60           2.14          -1.54  (VIOLATED)
+       PORT :  dout[12]         0.60           2.14          -1.54  (VIOLATED)
+       PIN :   U651/ZN          0.60           2.14          -1.54  (VIOLATED)
+   din_0                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1212/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U628/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_0            0.60           1.00          -0.40  (VIOLATED)
+   din_1                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1072/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U627/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_1            0.60           1.00          -0.40  (VIOLATED)
+   din_2                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1092/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U657/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_2            0.60           1.00          -0.40  (VIOLATED)
+   din_3                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1272/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U626/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_3            0.60           1.00          -0.40  (VIOLATED)
+   din_4                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1052/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U625/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_4            0.60           1.00          -0.40  (VIOLATED)
+   din_5                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1252/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U624/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_5            0.60           1.00          -0.40  (VIOLATED)
+   din_6                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1232/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U623/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_6            0.60           1.00          -0.40  (VIOLATED)
+   din_7                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1112/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U622/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_7            0.60           1.00          -0.40  (VIOLATED)
+   din_8                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1152/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U621/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_8            0.60           1.00          -0.40  (VIOLATED)
+   din_9                        0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1172/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U620/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_9            0.60           1.00          -0.40  (VIOLATED)
+   din_10                       0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1192/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U619/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_10           0.60           1.00          -0.40  (VIOLATED)
+   din_11                       0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U1132/A1         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U654/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  din_11           0.60           1.00          -0.40  (VIOLATED)
+   ivalid                       0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U629/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  ivalid           0.60           1.00          -0.40  (VIOLATED)
+       PIN :   clk_gate_p8_reg/latch/E
+                                0.60           1.00          -0.40  (VIOLATED)
+   rstn                         0.60           1.00          -0.40  (VIOLATED)
+       PIN :   ivalid_ff_0_reg/SDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   ivalid_ff_2_reg/SDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_w_reg_8_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_w_reg_4_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_w_reg_2_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_fc_reg_1_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_fc_reg_3_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_fc_reg_5_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_fc_reg_6_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_fc_reg_7_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_fc_reg_8_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   cnt_w_reg_6_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   dout_r_reg_15_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   dout_r_reg_13_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   dout_r_reg_11_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   dout_r_reg_10_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   dout_r_reg_8_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   dout_r_reg_5_/RDN
+                                0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U656/I           0.60           1.00          -0.40  (VIOLATED)
+       PORT :  rstn             0.60           1.00          -0.40  (VIOLATED)
+   weight_en                    0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U868/A2          0.60           1.00          -0.40  (VIOLATED)
+       PIN :   U920/A2          0.60           1.00          -0.40  (VIOLATED)
+       PORT :  weight_en        0.60           1.00          -0.40  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      31                -30.60  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   dout[0]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[1]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[2]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[3]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[4]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[5]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[6]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[7]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[8]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[9]                      6.23          10.00          -3.77  (VIOLATED)
+   dout[10]                     6.23          10.00          -3.77  (VIOLATED)
+   dout[11]                     6.23          10.00          -3.77  (VIOLATED)
+   dout[12]                     6.23          10.00          -3.77  (VIOLATED)
+   dout[13]                     6.23          10.00          -3.77  (VIOLATED)
+   dout[14]                     6.23          10.00          -3.77  (VIOLATED)
+   dout[15]                     6.23          10.00          -3.77  (VIOLATED)
+   ovalid                       6.23          10.00          -3.77  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      17                -64.08  
+
+   min_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   weight_addr[7] (dont_touch)
+                                0.00           0.00           0.00  (VIOLATED: increase significant digits)
+
+   -----------------------------------------------------------------
+   Total                      1                  -0.00  
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   fc_12                        0.00        5531.52       -5531.52  (VIOLATED)
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   fc_12                        0.00           3.01          -3.01  (VIOLATED)
+
+
+1

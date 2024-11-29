@@ -2,11 +2,11 @@ Magic 271485
 Revision Verdi_O-2018.09-SP2
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 27 1280 450 100 65
+viewPort 0 27 900 254 100 65
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
-openDirFile -d / "" "/home/ygl/code/ic2/fsdb/RTL.fsdb"
+openDirFile -d / "" "/home/ygl/code/BNN_accelerator/ic2/ic2/fsdb/RTL.fsdb"
 
 ; file time scale:
 ; fileTimeScale ### s|ms|us|ns|ps
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 403255.213309 1000597.627102
-cursor 500000.000000
+zoom 0.000000 1676600.000000
+cursor 0.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 5
+top 30
 ; marker line index
-markerPos 129
+markerPos 65
 
 ; event list
 ; addEvent event_name event_expression
@@ -46,166 +46,74 @@ curSTATUS ByChange
 
 
 addGroup "conv_inst"
-addSubGroup "conv_inst-1"
-
-CMT_NODE_BEGIN
--legendcmt  "Comment"  -color ID_RED5 -h 98
-CMT_NODE_END
-activeDirFile "" "/home/ygl/code/ic2/fsdb/RTL.fsdb"
-addSignal -h 15 /conv_tb/conv_inst/Ni[7:0]
-addSignal -h 15 -holdScope clk
-addSignal -h 15 -holdScope cnt1[19:0]
-addSignal -h 15 -holdScope cnt2[9:0]
-addSignal -h 15 -holdScope done
-addSignal -h 15 -holdScope dout[31:0]
-addSignal -h 15 -holdScope k00
-addSignal -h 15 -holdScope k01
-addSignal -h 15 -holdScope k02
-addSignal -h 15 -holdScope k03
-addSignal -h 15 -holdScope k04
-addSignal -h 15 -holdScope k10
-addSignal -h 15 -holdScope k11
-addSignal -h 15 -holdScope k12
-addSignal -h 15 -holdScope k13
-addSignal -h 15 -holdScope k14
-addSignal -h 15 -holdScope k20
-addSignal -h 15 -holdScope k21
-addSignal -h 15 -holdScope k22
-addSignal -h 15 -holdScope k23
-addSignal -h 15 -holdScope k24
-addSignal -h 15 -holdScope k30
-addSignal -h 15 -holdScope k31
-addSignal -h 15 -holdScope k32
-addSignal -h 15 -holdScope k33
-addSignal -h 15 -holdScope k34
-addSignal -h 15 -holdScope k40
-addSignal -h 15 -holdScope k41
-addSignal -h 15 -holdScope k42
-addSignal -h 15 -holdScope k43
-addSignal -h 15 -holdScope k44
-addSignal -h 15 -holdScope m00[31:0]
-addSignal -h 15 -holdScope m01[31:0]
-addSignal -h 15 -holdScope m02[31:0]
-addSignal -h 15 -holdScope m03[31:0]
-addSignal -h 15 -holdScope m04[31:0]
-addSignal -h 15 -holdScope m10[31:0]
-addSignal -h 15 -holdScope m11[31:0]
-addSignal -h 15 -holdScope m12[31:0]
-addSignal -h 15 -holdScope m13[31:0]
-addSignal -h 15 -holdScope m14[31:0]
-addSignal -h 15 -holdScope m20[31:0]
-addSignal -h 15 -holdScope m21[31:0]
-addSignal -h 15 -holdScope m22[31:0]
-addSignal -h 15 -holdScope m23[31:0]
-addSignal -h 15 -holdScope m24[31:0]
-addSignal -h 15 -holdScope m30[31:0]
-addSignal -h 15 -holdScope m31[31:0]
-addSignal -h 15 -holdScope m32[31:0]
-addSignal -h 15 -holdScope m33[31:0]
-addSignal -h 15 -holdScope m34[31:0]
-addSignal -h 15 -holdScope m40[31:0]
-addSignal -h 15 -holdScope m41[31:0]
-addSignal -h 15 -holdScope m42[31:0]
-addSignal -h 15 -holdScope m43[31:0]
-addSignal -h 15 -holdScope m44[31:0]
-addSignal -h 15 -holdScope ovalid
-addSignal -h 15 -holdScope p00[31:0]
-addSignal -h 15 -holdScope p01[31:0]
-addSignal -h 15 -holdScope p02[31:0]
-addSignal -h 15 -holdScope p03[31:0]
-addSignal -h 15 -holdScope p04[31:0]
-addSignal -h 15 -holdScope p10[31:0]
-addSignal -h 15 -holdScope p11[31:0]
-addSignal -h 15 -holdScope p12[31:0]
-addSignal -h 15 -holdScope p13[31:0]
-addSignal -h 15 -holdScope p14[31:0]
-addSignal -h 15 -holdScope p20[31:0]
-addSignal -h 15 -holdScope p21[31:0]
-addSignal -h 15 -holdScope p22[31:0]
-addSignal -h 15 -holdScope p23[31:0]
-addSignal -h 15 -holdScope p24[31:0]
-addSignal -h 15 -holdScope p30[31:0]
-addSignal -h 15 -holdScope p31[31:0]
-addSignal -h 15 -holdScope p32[31:0]
-addSignal -h 15 -holdScope p33[31:0]
-addSignal -h 15 -holdScope p34[31:0]
-addSignal -h 15 -holdScope p40[31:0]
-addSignal -h 15 -holdScope p41[31:0]
-addSignal -h 15 -holdScope p42[31:0]
-addSignal -h 15 -holdScope p43[31:0]
-addSignal -h 15 -holdScope p44[31:0]
-addSignal -h 15 -holdScope rstn
-addSignal -h 15 -holdScope start
-addSignal -h 15 -holdScope state
-addSignal -h 15 -holdScope sum21[31:0]
-addSignal -h 15 -holdScope sum30[31:0]
-addSignal -h 15 -holdScope sum32[31:0]
-addSignal -h 15 -holdScope sum40[31:0]
-addSignal -h 15 -holdScope sum41[31:0]
-addSignal -h 15 -holdScope sum000[31:0]
-addSignal -h 15 -holdScope sum001[31:0]
-addSignal -h 15 -holdScope sum002[31:0]
-addSignal -h 15 -holdScope sum003[31:0]
-addSignal -h 15 -holdScope sum004[31:0]
-addSignal -h 15 -holdScope sum010[31:0]
-addSignal -h 15 -holdScope sum011[31:0]
-addSignal -h 15 -holdScope sum012[31:0]
-addSignal -h 15 -holdScope sum013[31:0]
-addSignal -h 15 -holdScope sum014[31:0]
-addSignal -h 15 -holdScope sum020[31:0]
-addSignal -h 15 -holdScope sum021[31:0]
-addSignal -h 15 -holdScope sum022[31:0]
-addSignal -h 15 -holdScope sum023[31:0]
-addSignal -h 15 -holdScope sum024[31:0]
-addSignal -h 15 -holdScope sum100[31:0]
-addSignal -h 15 -holdScope sum101[31:0]
-addSignal -h 15 -holdScope sum102[31:0]
-addSignal -h 15 -holdScope sum103[31:0]
-addSignal -h 15 -holdScope sum104[31:0]
-addSignal -h 15 -holdScope sum110[31:0]
-addSignal -h 15 -holdScope sum111[31:0]
-addSignal -h 15 -holdScope sum112[31:0]
-addSignal -h 15 -holdScope sum113[31:0]
-addSignal -h 15 -holdScope sum114[31:0]
-addSignal -h 15 -holdScope sum200[31:0]
-addSignal -h 15 -holdScope sum201[31:0]
-addSignal -h 15 -holdScope sum202[31:0]
-addSignal -h 15 -holdScope sum203[31:0]
-addSignal -h 15 -holdScope sum204[31:0]
-addSignal -h 15 -holdScope sum_valid
-addSignal -h 15 -holdScope sum_valid_ff
-addSignal -h 15 -holdScope taps[159:0]
-addSignal -h 15 -holdScope weight
-addSignal -h 15 -holdScope weight_addr[7:0]
-addSignal -h 15 -holdScope weight_en
-addSignal -h 15 -holdScope wt_data[31:0]
-endSubGroup "conv_inst-1"
+activeDirFile "" "/home/ygl/code/BNN_accelerator/ic2/ic2/fsdb/RTL.fsdb"
 addSignal -h 15 /conv_tb/conv_inst/clk
 addSignal -h 15 -holdScope rstn
 addSignal -h 15 -holdScope start
 addSignal -h 15 -holdScope weight_en
 addSignal -h 15 -holdScope weight
-addSignal -h 15 -holdScope taps[159:0]
+addSignal -h 15 -holdScope taps[2:0]
 addSignal -h 15 -holdScope state
-addSignal -h 15 -holdScope dout[31:0]
+addSignal -h 15 -holdScope dout[4:0]
 addSignal -h 15 -holdScope ovalid
 addSignal -h 15 -holdScope done
-addGroup "G2" -e FALSE
+addSignal -h 15 -holdScope clk
+addSignal -h 15 -holdScope rstn
+addSignal -h 15 -holdScope start
+addSignal -h 15 -holdScope weight_en
+addSignal -h 15 -holdScope weight
+addSignal -h 15 -holdScope taps[2:0]
+addSignal -h 15 -holdScope state
+addSignal -h 15 -holdScope dout[4:0]
+addSignal -h 15 -holdScope ovalid
+addSignal -h 15 -holdScope done
+addSignal -h 15 -holdScope Ni[7:0]
+addSignal -h 15 -holdScope weight_addr[7:0]
+addSignal -h 15 -holdScope wt_data[4:0]
+addSignal -h 15 -holdScope cnt1[19:0]
+addSignal -h 15 -holdScope cnt2[9:0]
+addSignal -h 15 -holdScope sum_valid
+addSignal -h 15 -holdScope sum_valid_ff
+addSignal -h 15 -holdScope k00
+addSignal -h 15 -holdScope k01
+addSignal -h 15 -holdScope k02
+addSignal -h 15 -holdScope k10
+addSignal -h 15 -holdScope k11
+addSignal -h 15 -holdScope k12
+addSignal -h 15 -holdScope k20
+addSignal -h 15 -holdScope k21
+addSignal -h 15 -holdScope k22
+addSignal -h 15 -holdScope m02
+addSignal -h 15 -holdScope m12
+addSignal -h 15 -holdScope m22
+addSignal -h 15 -holdScope m00
+addSignal -h 15 -holdScope m01
+addSignal -h 15 -holdScope m10
+addSignal -h 15 -holdScope m11
+addSignal -h 15 -holdScope m20
+addSignal -h 15 -holdScope m21
+addSignal -h 15 -holdScope p00
+addSignal -h 15 -holdScope p01
+addSignal -h 15 -holdScope p02
+addSignal -h 15 -holdScope p10
+addSignal -h 15 -holdScope p11
+addSignal -h 15 -holdScope p12
+addSignal -h 15 -holdScope p20
+addSignal -h 15 -holdScope p21
+addSignal -h 15 -holdScope p22
+addSignal -h 15 -holdScope sum000[4:0]
+addSignal -h 15 -holdScope sum001[4:0]
+addSignal -h 15 -holdScope sum002[4:0]
+addSignal -h 15 -holdScope sum010[4:0]
+addSignal -h 15 -holdScope sum011[4:0]
+addSignal -h 15 -holdScope sum012[4:0]
+addSignal -h 15 -holdScope sum100[4:0]
+addSignal -h 15 -holdScope sum101[4:0]
+addSignal -h 15 -holdScope sum102[4:0]
+addSignal -h 15 -holdScope sum200[4:0]
+addSignal -h 15 -holdScope sum201[4:0]
+addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
-activeDirFile "" "/home/ygl/code/ic2/fsdb/RTL.fsdb"
-
-GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
-getSignalForm close
-
-"/conv_tb"
-
-SCOPE_LIST_BEGIN
-"/conv_tb"
-"/conv_tb/conv_inst"
-SCOPE_LIST_END
-
-GETSIGNALFORM_SCOPE_HIERARCHY_END
-
 

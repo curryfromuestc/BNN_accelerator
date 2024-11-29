@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : clock_gating
+        -style
+Design : fc_12
+Version: K-2015.06
+Date   : Thu Nov 28 20:15:40 2024
+****************************************
+
+
+--------------------------------------------------------------------------------
+                             Clock Gating Style Report
+--------------------------------------------------------------------------------
+
+ Clock Gating Style 1 : (7 clock gates)
+-----------------------
+
+     STYLE :
+         sequential_cell latch
+         minimum_bitwidth 4
+         enhanced_min_bitwidth 8
+         positive_edge_logic integrated:LVT_CLKLANQVHSV2
+         negative_edge_logic integrated:LVT_CLKLAHQVHSV2
+         control_point before
+         control_signal test_mode
+         observation_point false
+         max_fanout 64
+
+     CLOCK GATES :
+         clk_gate_cnt_fc_reg_8_
+         clk_gate_cnt_w_reg_8_
+         clk_gate_weight_addr_reg_10_
+         clk_gate_w_reg_41_
+         clk_gate_w_reg_93_
+         clk_gate_p8_reg
+         clk_gate_dout_r_reg_15_
+--------------------------------------------------------------------------------
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        7         |
+          |                                       |                  |
+          |    Number of Gated registers          |   200 (73.80%)   |
+          |                                       |                  |
+          |    Number of Ungated registers        |    71 (26.20%)   |
+          |                                       |                  |
+          |    Total number of registers          |      271         |
+          ------------------------------------------------------------
+
+
+
+1

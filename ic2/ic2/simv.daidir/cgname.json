@@ -5,11 +5,11 @@
         "module",
         1
     ],
-    "conv_tb": [
-        "conv_tb",
-        "IaMsy",
+    "fc_12_tb": [
+        "fc_12_tb",
+        "vANar",
         "module",
-        3
+        2
     ],
     "...MASTER...": [
         "SIM",

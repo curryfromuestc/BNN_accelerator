@@ -20,7 +20,7 @@ module conv_tb();
 
     reg [10:0] cnt_line;
     reg [10:0] cnt_conv;
-    reg signed [15:0] conv_result_r [0:599];
+    reg signed [4:0] conv_result_r [0:700];
     
     conv conv_inst(
         .clk(clk),
@@ -36,7 +36,7 @@ module conv_tb();
     );
     window window_inst(
         .clk(clk),
-        .start(start_window),
+        .start(start_conv),
         .din(image_in),
         .state(state),
         .taps(taps)
@@ -94,7 +94,7 @@ module conv_tb();
     end
 
     always @(posedge clk) begin
-        if(start_window == 1)
+        if(start_conv == 1)
         begin
             count_w <= $fscanf(fp_i,"%b",image_in);
             cnt_line <= cnt_line + 1;

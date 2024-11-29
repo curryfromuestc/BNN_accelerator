@@ -40,7 +40,7 @@ reg signed [4:0] sum000,sum001,sum002,
 reg signed [4:0] sum100,sum101,sum102;//！ 流水线第三级
 reg signed [4:0] sum200,sum201;//！ 流水线第四级
 
-assign Ni = (state)?12:28;
+assign Ni = (state)?26:28;
 
 //----------------------------对输入矩阵进行赋值----------------------------
 assign m02 = taps[2];

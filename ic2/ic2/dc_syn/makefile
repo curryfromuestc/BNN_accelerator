@@ -1,6 +1,6 @@
 #=====================================================================
 # Variables setting
-TOP      	= conv
+TOP      	= fc_12
 SCAN     	= 0
 FILE_LIST 	= ./inputs/simfile_list.f
 TOP_SDC 	= ./inputs/$(TOP).sdc

@@ -1,7 +1,7 @@
 #!/bin/csh -f
 # V0.1 create static html files
 
-set log_dir = ".DC_log_snapshot_D20241123_085748.829482"
+set log_dir = ".DC_log_snapshot_D20241128_201316.565259"
 set html_file = "/home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/default.html"
 set make_csh = "./make.csh"
 

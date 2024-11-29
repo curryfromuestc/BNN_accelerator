@@ -1,3 +1,2 @@
-./rtl/conv.v
-./rtl/window.v
-./testbench/conv_tb.v
+./rtl/fc_12.v
+./testbench/fc_12_tb.v

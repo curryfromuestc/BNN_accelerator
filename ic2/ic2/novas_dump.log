@@ -248,7 +248,7 @@ CDS_Netlisting_Mode=Analog
 QRC_MOS_LW_PRECISION=Y
 DENALI=/app/cadence/VIPCAT113/tools/denali_64bit
 VCS_ARG_ADDED_FOR_TMP=1
-SNPS_VCS_TMPDIR=/tmp/vcs_20241125023738_29
+SNPS_VCS_TMPDIR=/tmp/vcs_20241125071853_29
 NCPROTECT_KEYDB=/app/cadence/INCISIVE151/kits/VerificationKit/misc/ip_keys
 DMS_DESIGN=/app/cadence/INCISIVE151/kits/VerificationKit/designs/socv/ams
 HOME=/home/ygl
@@ -301,8 +301,8 @@ argv[13]=-cm
 argv[14]=line+cond+fsm
 argv[15]=+notimingcheck
 302 profile - 100
-          CPU/Mem usage: 0.250 sys,  0.290 user,  250.61M mem
-303 Mon Nov 25 10:37:45 2024
+          CPU/Mem usage: 0.290 sys,  0.280 user,  252.70M mem
+303 Mon Nov 25 15:18:59 2024
 304 pliAppInit
 305 FSDB_GATE is set.
 306 FSDB_RTL is set.
@@ -327,61 +327,61 @@ argv[15]=+notimingcheck
 325 *Verdi* : Begin traversing the scope (conv_tb), layer (0).
 326 *Verdi* : End of traversing.
 327 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.270 sys,  0.290 user,  345.57M mem
-                   incr: 0.010 sys,  0.000 user,  7.20M mem
-                   accu: 0.010 sys,  0.000 user,  7.20M mem
-              accu incr: 0.010 sys,  0.000 user,  7.20M mem
+          CPU/Mem usage: 0.300 sys,  0.280 user,  347.66M mem
+                   incr: 0.000 sys,  0.000 user,  7.20M mem
+                   accu: 0.000 sys,  0.000 user,  7.20M mem
+              accu incr: 0.000 sys,  0.000 user,  7.20M mem
 
-          Count usage: 81 var,  75 idcode,  58 callback
-                 incr: 81 var,  75 idcode,  58 callback
-                 accu: 81 var,  75 idcode,  58 callback
-            accu incr: 81 var,  75 idcode,  58 callback
-328 Mon Nov 25 10:37:45 2024
+          Count usage: 81 var,  74 idcode,  58 callback
+                 incr: 81 var,  74 idcode,  58 callback
+                 accu: 81 var,  74 idcode,  58 callback
+            accu incr: 81 var,  74 idcode,  58 callback
+328 Mon Nov 25 15:19:00 2024
 329 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.270 sys,  0.290 user,  346.62M mem
+          CPU/Mem usage: 0.300 sys,  0.280 user,  348.71M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.010 sys,  0.000 user,  8.25M mem
+                   accu: 0.000 sys,  0.000 user,  8.25M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
-          Count usage: 81 var,  75 idcode,  58 callback
+          Count usage: 81 var,  74 idcode,  58 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 81 var,  75 idcode,  58 callback
+                 accu: 81 var,  74 idcode,  58 callback
             accu incr: 0 var,  0 idcode,  0 callback
-330 Mon Nov 25 10:37:45 2024
+330 Mon Nov 25 15:19:00 2024
 331 sps_call_fsdbDumpMDA_vd_main at 0 : ./testbench/conv_tb.v(52)
 332 *Verdi* : Begin traversing the MDAs, layer (0).
 333 *Verdi* : Enable +mda and +packedmda dumping.
 334 *Verdi* : End of traversing the MDAs.
 335 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.270 sys,  0.290 user,  346.62M mem
+          CPU/Mem usage: 0.300 sys,  0.280 user,  348.71M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
 
-          Count usage: 765 var,  759 idcode,  60 callback
-                 incr: 684 var,  684 idcode,  2 callback
-                 accu: 684 var,  684 idcode,  2 callback
-            accu incr: 684 var,  684 idcode,  2 callback
-336 Mon Nov 25 10:37:45 2024
+          Count usage: 866 var,  859 idcode,  60 callback
+                 incr: 785 var,  785 idcode,  2 callback
+                 accu: 785 var,  785 idcode,  2 callback
+            accu incr: 785 var,  785 idcode,  2 callback
+336 Mon Nov 25 15:19:00 2024
 337 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.270 sys,  0.290 user,  346.62M mem
+          CPU/Mem usage: 0.300 sys,  0.280 user,  348.71M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
 
-          Count usage: 765 var,  759 idcode,  60 callback
+          Count usage: 866 var,  859 idcode,  60 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 684 var,  684 idcode,  2 callback
+                 accu: 785 var,  785 idcode,  2 callback
             accu incr: 0 var,  0 idcode,  0 callback
-338 Mon Nov 25 10:37:45 2024
-339 End of simulation at 16600000
-340 Mon Nov 25 10:37:45 2024
+338 Mon Nov 25 15:19:00 2024
+339 End of simulation at 16320000
+340 Mon Nov 25 15:19:00 2024
 341 Begin FSDB profile info:
-342 FSDB Writer : bc1(61043) bcn(6314) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.021620) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+342 FSDB Writer : bc1(61016) bcn(6450) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.043939) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 343 End FSDB profile info
 344 Parallel profile    -  Flush:4 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
-345                        ProduceTime:0.587322473 ConsumerTime:0.000000000 Buffer:64MB
+345                        ProduceTime:0.606206283 ConsumerTime:0.000000000 Buffer:64MB
 346 SimExit
 347 Sim process exit

@@ -6,4 +6,304 @@ VERILOG conv_inst
 -----
 second field= DebussyLib
 third field= conv
-au time 1149.047215 15.193845 13.176913 delta 1718996992 1718996992 total 2138611712 2138611712
+type= DS_SCOPE element= 1 field= 1
+VERILOG conv_tb
+VERILOG window_inst
+-----
+second field= DebussyLib
+third field= window
+type= DS_SCOPE element= 1 field= 1
+VERILOG conv_tb
+VERILOG conv_inst
+-----
+second field= DebussyLib
+third field= conv
+type= DS_SIGNAL element= 57 field= 2
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG clk
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG rstn
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG start
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG weight_en
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG weight
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG taps[2:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG state
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG dout[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG ovalid
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG done
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG K
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG S
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG Ni[7:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG weight_addr[7:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG wt_data[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG cnt1[19:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG cnt2[9:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum_valid
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum_valid_ff
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k00
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k01
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k02
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k10
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k11
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k12
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k20
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k21
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG k22
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m02
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m12
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m22
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m00
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m01
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m10
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m11
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m20
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG m21
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p00
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p01
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p02
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p10
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p11
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p12
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p20
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p21
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG p22
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum000[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum001[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum002[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum010[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum011[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum012[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum100[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum101[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum102[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum200[4:0]
+-----
+second field= signal
+VERILOG conv_tb
+VERILOG conv_inst
+VERILOG sum201[4:0]
+-----
+second field= signal
+type= DS_STRING
+clk rstn start weight_en weight taps[2:0] state dout[4:0] ovalid done K S Ni[7:0] weight_addr[7:0] wt_data[4:0] cnt1[19:0] cnt2[9:0] sum_valid sum_valid_ff k00 k01 k02 k10 k11 k12 k20 k21 k22 m02 m12 m22 m00 m01 m10 m11 m20 m21 p00 p01 p02 p10 p11 p12 p20 p21 p22 sum000[4:0] sum001[4:0] sum002[4:0] sum010[4:0] sum011[4:0] sum012[4:0] sum100[4:0] sum101[4:0] sum102[4:0] sum200[4:0] sum201[4:0]
+au time 16168.252865 107.820540 167.988244 delta 1649831936 1649831936 total 2069446656 2069446656

@@ -304,13 +304,13 @@ always @(posedge clk) begin
         sum_valid <= 1'b0;
     else begin
         case (state)
-            1'b0:if(cnt1 == 20'd828)
+            1'b0:if(cnt1 == 20'd814)
                     sum_valid <= 1'b0;
                 else if(cnt1 == 20'd90)
                     sum_valid <= 1'b1;
             1'b1:if(cnt1 == 20'd255)
                     sum_valid <= 1'b0;
-                else if(cnt1 == 20'd160)
+                else if(cnt1 == 20'd84)
                     sum_valid <= 1'b1;
         endcase
     end

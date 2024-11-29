@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version K-2015.06 for linux64 -- May 28, 2015
-#@ # Date:   Sat Nov 23 08:57:36 2024
+#@ # Date:   Thu Nov 28 20:13:04 2024
 #@ # Run by: ygl@docker
 #@ 
 
@@ -3788,7 +3788,7 @@ source /app/synopsys/dc1506/admin/setup/.synopsys_dc.setup
 #@ }
 #@ # -- End source /app/synopsys/dc1506/admin/setup/.synopsys_dc.setup
 
-set TOP_SDC  ./inputs/conv.sdc; set TOP conv; set SCAN 0; set FILE_LIST ./inputs/simfile_list.f; set SAIF_FILE ./inputs/tb.fsdb.saif; set SAIF_INST <tb_module_name>/<instan_level_name>; 
+set TOP_SDC  ./inputs/fc_12.sdc; set TOP fc_12; set SCAN 0; set FILE_LIST ./inputs/simfile_list.f; set SAIF_FILE ./inputs/tb.fsdb.saif; set SAIF_INST <tb_module_name>/<instan_level_name>; 
 source -echo -verbose /home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/scr/dc.tcl
 #@ # -- Starting source /home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/scr/dc.tcl
 
@@ -3920,7 +3920,7 @@ source -echo -verbose /home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/scr/dc.tcl
 #@ #    Instance SDC files
 #@ ###############################################################################
 #@ source -e -v ${TOP_SDC}
-#@ # -- Starting source ./inputs/conv.sdc
+#@ # -- Starting source ./inputs/fc_12.sdc
 
 #@ set clk_main_period 40
 #@ 
@@ -3940,7 +3940,7 @@ source -echo -verbose /home/ygl/code/BNN_accelerator/ic2/ic2/dc_syn/scr/dc.tcl
 #@ # set_ideal_network -no_propagate [get_pins  $rstgen/u_rstmux_0/u_clkmux/Z]
 #@ set_ideal_network [all_high_fanout -nets  -threshold 100] -no_propagate
 #@ set_max_area 0.0
-#@ # -- End source ./inputs/conv.sdc
+#@ # -- End source ./inputs/fc_12.sdc
 
 #@ 
 #@ source -e -v scr/set_dont_use.tcl

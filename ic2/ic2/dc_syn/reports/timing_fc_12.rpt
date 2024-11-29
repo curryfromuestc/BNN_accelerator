@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : fc_12
+Version: K-2015.06
+Date   : Thu Nov 28 20:15:40 2024
+****************************************
+
+Operating Conditions: ss_v1p08_125c   Library: scc55nll_vhs_rvt_ss_v1p08_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: dout_r_reg_12_
+              (rising edge-triggered flip-flop)
+  Endpoint: dout[12] (output port)
+  Path Group: (none)
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                        Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------
+  dout_r_reg_12_/CK (DRNQVHSV1)            0.17      0.00       0.00 r    so 
+  dout_r_reg_12_/Q (DRNQVHSV1)             0.08      0.30       0.30 r    so 
+  n1019 (net)                    2                   0.00       0.30 r
+  U666/ZN (INVHSV1)                        0.44      0.30       0.60 f
+  n423 (net)                     1                   0.00       0.60 f
+  U651/ZN (LVT_INVHSV64)                   2.14      1.30       1.90 r
+  dout[12] (net)                 1                   0.00       1.90 r
+  dout[12] (out)                           2.14      0.00       1.90 r
+  data arrival time                                             1.90
+  ------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -2,7 +2,7 @@ module conv_mix(
     input wire clk,
     input wire rstn,
     input wire start,
-    input wire signed[15:0] din,
+    input wire din,
     input wire state,
     input wire weight_en,//！ 权重有效信号
     input weight,//！ 以比特权重
@@ -13,7 +13,7 @@ module conv_mix(
 
 reg start_window;
 reg [7:0] cnt;
-wire [79:0] taps;
+wire [2:0] taps;
 
 always @(posedge clk) begin
     if (!rstn) begin

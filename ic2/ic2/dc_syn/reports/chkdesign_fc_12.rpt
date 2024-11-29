@@ -1,0 +1,24 @@
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Thu Nov 28 20:13:17 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               3
+    Cells do not drive (LINT-1)                                     3
+
+Nets                                                                4
+    Unloaded nets (LINT-2)                                          4
+--------------------------------------------------------------------------------
+
+Warning: In design 'fc_12', cell 'B_182' does not drive any nets. (LINT-1)
+Warning: In design 'fc_12', cell 'B_183' does not drive any nets. (LINT-1)
+Warning: In design 'fc_12', cell 'B_184' does not drive any nets. (LINT-1)
+Warning: In design 'fc_12', net 'net544' driven by pin 'C4813/Z' has no loads. (LINT-2)
+Warning: In design 'fc_12', net 'net543' driven by pin 'C3762/Z' has no loads. (LINT-2)
+Warning: In design 'fc_12', net 'net542' driven by pin 'C3754/Z' has no loads. (LINT-2)
+Warning: In design 'fc_12', net 'net541' driven by pin 'C3747/Z' has no loads. (LINT-2)
+1
