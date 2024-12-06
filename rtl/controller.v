@@ -29,8 +29,6 @@ module controller
     //------------------------全连接控制信号----------------------------
     output wire fc_din,
     output reg fc_invalid,
-    output wire fc_weight_en,
-    output wire fc_weight,
     input wire fc_result,
     input wire fc_result_valid,
     //------------------------输出控制信号----------------------------
@@ -46,6 +44,7 @@ reg [2:0] state, next_state;
 
 reg [675:0] fmap_conv1_0, fmap_conv1_1, fmap_conv1_2;
 reg [9:0] cnt_fmap_0, cnt_fmap_1, cnt_fmap_2;
+reg [4:0] cnt_conv_weight;
 reg signed [4:0] conv2_result_sum0;
 wire conv2_result_valid;
 wire fc_done;
@@ -201,8 +200,6 @@ always @(posedge clk or negedge rstn) begin
             fc_invalid <= 1'b0;
     end
 end
-//------------------------控制fc的权重----------------------------
-
 
 
 //------------------------控制卷积的输入----------------------------
@@ -223,12 +220,36 @@ always @(posedge clk or negedge rstn) begin
     else begin
         case(stage)
         1'b0:begin
-            
+            if(conv_0_start)begin
+                if(cnt_conv_weight < 5'd9)begin
+                    weight_en_0 <= 1'b1;
+                    weight_en_1 <= 1'b0;
+                    weight_en_2 <= 1'b0;
+                end
+                else if(cnt_conv_weight < 5'd18)begin
+                    weight_en_0 <= 1'b0;
+                    
+
+
         end
         1'b1:begin
             
         end
         endcase
+    end
+end
+always @(posedge clk or negedge rstn) begin
+    if(rstn == 1'b0)begin
+        cnt_conv_weight <= 5'd0;
+    end
+    else begin
+        if(conv_0_start == 1'b1) begin
+            if(cnt_conv_weight <5'd18)
+                cnt_conv_weight <= cnt_conv_weight + 1;
+            else
+                cnt_conv_weight <= cnt_conv_weight;
+        else
+            cnt_conv_weight <= 5'd0;
     end
 end
 endmodule
