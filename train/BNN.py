@@ -19,7 +19,28 @@ def BinaryForFunc(x):   # 权值量化前向函数
 
 def BinaryWBackFunc(x, alpha=4.):   # 权值量化反向梯度函数
     return 2 * SigmoidGFunc(x, alpha)
+
+
+class SignFunc(torch.autograd.Function):
+    @staticmethod
+    def forward(ctx, input):
+        ctx.save_for_backward(input)
+        return BinaryForFunc(input)
     
+    @staticmethod
+    def backward(ctx, grad_output):
+        input, = ctx.saved_tensors
+        return grad_output * BinaryWBackFunc(input, alpha=3.)
+    
+class BinaryActivation(nn.Module):
+    def __init__(self):
+        super(BinaryActivation, self).__init__()
+        
+    def forward(self, x):
+        ba = SignFunc.apply(x)
+        return ba
+
+
 class BinaryWeight(torch.autograd.Function):
     @staticmethod
     def forward(ctx, input):
