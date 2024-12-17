@@ -52,14 +52,14 @@ RTL
 line+cond+fsm
 75
 uvm_home=/app/cadence/INCISIVE151/tools/uvm
-username=ygl
-sysc_uni_pwd=/home/ygl/code/BNN_accelerator/ic2/ic2
+username=yanggl
+sysc_uni_pwd=/home/yanggl/code/BNN_accelerator/ic2/ic2
 syn_inst=/app/EDA
 ml_uvm=/app/cadence/INCISIVE151/tools/uvm/uvm_lib/uvm_ml/sc/ml_uvm
 ml_seq_dir=/app/cadence/INCISIVE151/specman/src
 duid=1051
 dgid=1057
-cur_path=/home/ygl/code/BNN_accelerator/ic2/ic2
+cur_path=/home/yanggl/code/BNN_accelerator/ic2/ic2
 XKEYSYMDB=/app/cadence/IC617/tools/plot/etc/XKeysymDB
 VMR_MODE_FLAG=64
 VMANAGER_PATH=/app/cadence/INCISIVE151/kits/VerificationKit/soc_verification_lib:/app/cadence/INCISIVE151/kits/VerificationKit/soc_verification_lib/e_ex_lib/cdn_vm_ext/e
@@ -99,7 +99,7 @@ MAKEFLAGS=
 LC_ALL=C
 KIT_SETUP_SAVE=/app/cadence/INCISIVE151/kits/VerificationKit
 K2_VIEWER_HOME=/app/cadence/PVS151/tools/K2/Viewer
-K2_MC_DATA=/home/ygl/Projects
+K2_MC_DATA=/home/yanggl/Projects
 K2_MASKCOMPOSE_HOME=/app/cadence/PVS151/tools/K2/MaskCompose
 K2_HOME=/app/cadence/PVS151/tools/K2
 GOSU_VERSION=1.10
@@ -128,8 +128,8 @@ ARCH=amd64
 ABVIP_ISNT_DIR=/app/cadence/VIPCAT113/tools/abvip
 0
 7
-1732696713 ./testbench/fc_12_tb.v
-1732696543 ./rtl/fc_12.v
+1732795908 ./testbench/fc_12_tb.v
+1732795845 ./rtl/fc_12.v
 1732269418 ./tsk/timescale.v
 1551421444 /app/EDA/vcs_O-2018.09-SP2/include/cm_vcsd.tab
 1732696765 simfile/simfile_rtl.f
@@ -141,5 +141,5 @@ ABVIP_ISNT_DIR=/app/cadence/VIPCAT113/tools/abvip
 1551421768 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libsnpsmalloc.so
 1551421789 /app/EDA/vcs_O-2018.09-SP2/linux64/lib/libvfs.so
 1550752033 /app/EDA/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a
-1732696798 simv.daidir
+1734081332 simv.daidir
 -1 partitionlib

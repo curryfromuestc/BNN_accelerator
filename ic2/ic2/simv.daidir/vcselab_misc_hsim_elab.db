@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/home/ygl/code/BNN_accelerator/ic2/ic2/simv.daidir
+pDaiDir                            	/home/yanggl/code/BNN_accelerator/ic2/ic2/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0
