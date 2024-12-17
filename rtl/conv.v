@@ -20,8 +20,8 @@ wire [7:0] Ni;
 reg [7:0] weight_addr = 8'd0;
 reg [4:0] wt_data;
 
-reg [19:0] cnt1;//! 用于计数，工作时钟
-reg [9:0] cnt2;//！ 用于同步滑窗模块以及卷积模块
+reg [9:0] cnt1;//! 用于计数，工作时钟
+reg [4:0] cnt2;//！ 用于同步滑窗模块以及卷积模块
 
 reg sum_valid;
 reg sum_valid_ff;
@@ -286,17 +286,17 @@ always @(posedge clk) begin
     if(start)
         cnt1 <= cnt1+1'd1;
     else
-        cnt1 <= 20'd0;
+        cnt1 <= 10'd0;
 end
 always @(posedge clk) begin
     if(sum_valid)begin
         if(cnt2 == Ni-1)
-            cnt2 <= 10'd0;
+            cnt2 <= 5'd0;
         else
-            cnt2 <= cnt2 + 10'd1; 
+            cnt2 <= cnt2 + 5'd1; 
     end
     else
-        cnt2 <= 10'd0;
+        cnt2 <= 5'd0;
 end
 //------------------------输出信号有效判断---------------------------------
 always @(posedge clk) begin
@@ -304,13 +304,13 @@ always @(posedge clk) begin
         sum_valid <= 1'b0;
     else begin
         case (state)
-            1'b0:if(cnt1 == 20'd814)
+            1'b0:if(cnt1 == 10'd814)
                     sum_valid <= 1'b0;
-                else if(cnt1 == 20'd90)
+                else if(cnt1 == 10'd90)
                     sum_valid <= 1'b1;
-            1'b1:if(cnt1 == 20'd255)
+            1'b1:if(cnt1 == 10'd255)
                     sum_valid <= 1'b0;
-                else if(cnt1 == 20'd160)
+                else if(cnt1 == 10'd160)
                     sum_valid <= 1'b1;
         endcase
     end
