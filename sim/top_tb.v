@@ -138,12 +138,8 @@ integer i;
 always @(posedge clk) begin
     if(done)
     begin
-        for(i = 0; i <= 10; i = i + 1)begin
-        // $display("classes[%d] = %d", i, classes[i]);
-            $display("classes[%d] = %d", i, classes[i]);
-            if(i == 10)
-                $finish;
-        end
+        $display("classes = %d", i, classes_b[i]);
+        $finish;
     end
 end
 
