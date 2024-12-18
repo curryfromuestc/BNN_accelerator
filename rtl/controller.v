@@ -11,7 +11,7 @@ module controller
     input wire conv_result_0_valid,
     input wire conv_result_1,
     input wire conv_result_1_valid,
-    input wire[7:0] pic_din,
+    input wire pic_din,
     input wire[1:0] conv_done,
     output wire conv_din_0,
     output wire conv_0_start,
@@ -194,7 +194,7 @@ end
 
 
 //------------------------控制卷积的输入----------------------------
-assign pic_q_din=(pic_din>8'd127)?1'b1:1'b0;
+assign pic_q_din= pic_din;
 assign conv_din_0 = (state == CONV1)?pic_q_din:fmap_conv1_0[cnt_fmap_0];
 assign conv_din_1 = (state == CONV1)?pic_q_din:fmap_conv1_1[cnt_fmap_1];
 assign conv_0_start = ((state == CONV1&&start == 1'b1&&conv_done==2'b00)||(state==CONV2&&conv_done==2'b00))?1'b1:1'b0;

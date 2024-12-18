@@ -4,7 +4,7 @@ module top_tb ( );
 reg clk;
 reg rstn;
 reg start;
-wire [7;0] image_in;
+wire [7:0] image_in;
 reg weight_fc_0_in;
 reg weight_fc_1_in;
 reg weight_fc_2_in;
@@ -24,9 +24,10 @@ wire done;
 wire [3:0] classes_b;
 reg [10:0] cnt_line;
 integer count_w;
+wire pic_din;
 
 top top_inst(
-    .image_in(image_in),
+    .image_in(pic_din),
     .weight_fc_0_in(weight_fc_0_in),
     .weight_fc_1_in(weight_fc_1_in),
     .weight_fc_2_in(weight_fc_2_in),
@@ -73,7 +74,7 @@ end
 integer w_i_0,w_i_1,w_i_2,w_i_3,w_i_4,w_i_5,w_i_6,w_i_7,w_i_8,w_i_9;
 integer count_r;
 initial begin
-    w_i_0 = $fopen("weight_fc_0.txt","r");
+    w_i_0 = $fopen("weight_fc_0.txt","r");//对应test_fc1_weight_txt0.txt
     w_i_1 = $fopen("weight_fc_1.txt","r");
     w_i_2 = $fopen("weight_fc_2.txt","r");
     w_i_3 = $fopen("weight_fc_3.txt","r");
@@ -111,10 +112,12 @@ always @(posedge clk) begin
     end
 end
 
+assign pic_din = ~image_in[7];
+
 integer w_conv_i_0,w_conv_i_1;
 initial begin
-    w_conv_i = $fopen("weight_conv_0.txt","r");
-    w_conv_i = $fopen("weight_conv_1.txt","r");
+    w_conv_i_0 = $fopen("test_weight_conv_0.txt","r");
+    w_conv_i_1 = $fopen("test_weight_conv_1.txt","r");
 end
 
 always @(posedge clk) begin

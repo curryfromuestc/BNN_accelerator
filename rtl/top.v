@@ -1,5 +1,5 @@
 module top(
-    input wire[7:0] image_in,
+    input wire image_in,
     input wire weight_fc_0_in,
     input wire weight_fc_1_in,
     input wire weight_fc_2_in,
