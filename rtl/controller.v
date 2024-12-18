@@ -37,7 +37,7 @@ module controller
     input wire signed [9:0] fc_result_9,
     input wire fc_result_valid,
     //------------------------输出控制信号----------------------------
-    output wire[9:0] classes,
+    output reg[9:0] classes,
     output wire done
 );
 
@@ -244,72 +244,113 @@ end
 //------------------------排序----------------------------
 always @(posedge clk or negedge rstn) begin
     if(rstn == 1'b0)begin
-        compare_buf <= 10'd0;
+        compare_buf <= -10'sd512;
         cnt_compare <= 4'd0;
+        classes <= 10'd0;
     end
     else begin
         if(state ==CLASSES)begin
             cnt_compare <= cnt_compare + 1;
             case(cnt_compare)
             4'd0:begin
-                if(fc_result_0 > compare_buf)
+                if(fc_result_0 > compare_buf) begin
                     compare_buf <= fc_result_0;
-                else
+                    classes <= 10'b0000000001;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd1:begin
-                if(fc_result_1 > compare_buf)
+                if(fc_result_1 > compare_buf)begin
                     compare_buf <= fc_result_1;
-                else
+                    classes <= 10'b0000000010;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd2:begin
-                if(fc_result_2 > compare_buf)
+                if(fc_result_2 > compare_buf)begin
                     compare_buf <= fc_result_2;
-                else
+                    classes <= 10'b0000000100;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd3:begin
-                if(fc_result_3 > compare_buf)
+                if(fc_result_3 > compare_buf)begin
                     compare_buf <= fc_result_3;
-                else
+                    classes <= 10'b0000001000;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd4:begin
-                if(fc_result_4 > compare_buf)
+                if(fc_result_4 > compare_buf)begin
                     compare_buf <= fc_result_4;
-                else
+                    classes <= 10'b0000010000;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd5:begin
-                if(fc_result_5 > compare_buf)
+                if(fc_result_5 > compare_buf)begin
                     compare_buf <= fc_result_5;
-                else
+                    classes <= 10'b0000100000;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd6:begin
-                if(fc_result_6 > compare_buf)
+                if(fc_result_6 > compare_buf)begin
                     compare_buf <= fc_result_6;
-                else
+                    classes <= 10'b0001000000;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd7:begin
-                if(fc_result_7 > compare_buf)
+                if(fc_result_7 > compare_buf)begin
                     compare_buf <= fc_result_7;
-                else
+                    classes <= 10'b0010000000;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd8:begin
-                if(fc_result_8 > compare_buf)
+                if(fc_result_8 > compare_buf)begin
                     compare_buf <= fc_result_8;
-                else
+                    classes <= 10'b0100000000;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             4'd9:begin
-                if(fc_result_9 > compare_buf)
+                if(fc_result_9 > compare_buf)begin
                     compare_buf <= fc_result_9;
-                else
+                    classes <= 10'b1000000000;
+                end
+                else begin
                     compare_buf <= compare_buf;
+                    classes <= classes;
+                end
             end
             endcase
         end
