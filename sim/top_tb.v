@@ -16,6 +16,18 @@ reg weight_fc_7_in;
 reg weight_fc_8_in;
 reg weight_fc_9_in;
 reg weight_conv_in;
+reg [31:0] count_fc_0;
+reg [31:0] count_fc_1;
+reg [31:0] count_fc_2;
+reg [31:0] count_fc_3;
+reg [31:0] count_fc_4;
+reg [31:0] count_fc_5;
+reg [31:0] count_fc_6;
+reg [31:0] count_fc_7;
+reg [31:0] count_fc_8;
+reg [31:0] count_fc_9;
+reg [31:0] count_conv_1;
+reg [31:0] count_conv_2;
 wire weight_en_0;
 wire weight_en_1;
 reg [31:0]count_conv;
@@ -66,7 +78,7 @@ initial begin
     weight_conv_in = 0;
     cnt_line = 0;
     count_conv = 0;
-    #2o;
+    #20;
     rstn = 1;
     start = 1;
 end
@@ -87,16 +99,16 @@ initial begin
 end
 always @(posedge clk) begin
     if(fc_ivalid)begin
-        weight_fc_0_in <= $fscanf(w_i_0,"%b");
-        weight_fc_1_in <= $fscanf(w_i_1,"%b");
-        weight_fc_2_in <= $fscanf(w_i_2,"%b");
-        weight_fc_3_in <= $fscanf(w_i_3,"%b");
-        weight_fc_4_in <= $fscanf(w_i_4,"%b");
-        weight_fc_5_in <= $fscanf(w_i_5,"%b");
-        weight_fc_6_in <= $fscanf(w_i_6,"%b");
-        weight_fc_7_in <= $fscanf(w_i_7,"%b");
-        weight_fc_8_in <= $fscanf(w_i_8,"%b");
-        weight_fc_9_in <= $fscanf(w_i_9,"%b");
+        count_fc_0 <= $fscanf(w_i_0,"%b",weight_fc_0_in);
+        count_fc_1 <= $fscanf(w_i_1,"%b",weight_fc_1_in);
+        count_fc_2 <= $fscanf(w_i_2,"%b",weight_fc_2_in);
+        count_fc_3 <= $fscanf(w_i_3,"%b",weight_fc_3_in);
+        count_fc_4 <= $fscanf(w_i_4,"%b",weight_fc_4_in);
+        count_fc_5 <= $fscanf(w_i_5,"%b",weight_fc_5_in);
+        count_fc_6 <= $fscanf(w_i_6,"%b",weight_fc_6_in);
+        count_fc_7 <= $fscanf(w_i_7,"%b",weight_fc_7_in);
+        count_fc_8 <= $fscanf(w_i_8,"%b",weight_fc_8_in);
+        count_fc_9 <= $fscanf(w_i_9,"%b",weight_fc_9_in);
     end
 end
 
@@ -122,20 +134,21 @@ end
 
 always @(posedge clk) begin
     if(weight_en_0&&count_conv < 32'd9)begin
-        weight_conv_in <= $fscanf(w_conv_i_0,"%b");
+        count_conv_1 <= $fscanf(w_conv_i_0,"%b",weight_conv_in);
         count_conv <= count_conv + 1;
     end
     else if(weight_en_1&&count_conv < 32'd18)begin
-        weight_conv_in <= $fscanf(w_conv_i_0,"%b");
+        count_conv_1 <= $fscanf(w_conv_i_0,"%b",weight_conv_in);
         count_conv <= count_conv + 1;
     end
     else if(weight_en_0||weight_en_1)begin
-        weight_conv_in <= $fscanf(w_conv_i_1,"%b");
+        count_conv_2 <= $fscanf(w_conv_i_1,"%b",weight_conv_in);
+        count_conv <= count_conv;
     end
 end
 
 integer i;
-always @(posedge clk) begin
+always @(*)begin
     if(done)
     begin
         $display("classes = %d", i, classes_b[i]);

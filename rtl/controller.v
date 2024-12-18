@@ -7,9 +7,9 @@ module controller
     input wire rstn,
     input wire start,
     //------------------------卷积控制信号----------------------------
-    input wire conv_result_0,
+    input wire [4:0]conv_result_0,
     input wire conv_result_0_valid,
-    input wire conv_result_1,
+    input wire [4:0]conv_result_1,
     input wire conv_result_1_valid,
     input wire pic_din,
     input wire[1:0] conv_done,
@@ -110,12 +110,12 @@ always @(posedge clk or negedge rstn) begin
         case(stage)
         1'b0:begin
             if(conv_result_0_valid == 1'b1)
-                fmap_conv1_0[cnt_fmap_0] <= conv_result_0;
+                fmap_conv1_0[cnt_fmap_0] <= ~conv_result_0[4];
             else
                 fmap_conv1_0 <= fmap_conv1_0;
             
             if(conv_result_1_valid == 1'b1)
-                fmap_conv1_1[cnt_fmap_1] <= conv_result_1;
+                fmap_conv1_1[cnt_fmap_1] <= ~conv_result_1[4];
             else
                 fmap_conv1_1 <= fmap_conv1_1;
         end
@@ -163,12 +163,13 @@ always @(*) begin
         else
             next_state = CLASSES;
     end
+    default:next_state = IDLE;
     endcase
 end
 //------------------------控制fc的输入----------------------------
 always @(posedge clk or negedge rstn) begin
     if(rstn == 1'b0)begin
-        conv2_result_sum0 <= 6'd0;
+        conv2_result_sum0 <= 5'd0;
         maxpool_valid <= 1'b0;
     end
     else begin
@@ -179,20 +180,6 @@ always @(posedge clk or negedge rstn) begin
             maxpool_valid <= 1'b0;
     end
 end
-//assign fc_din = (conv2_result_sum0 > 6'd0)?1'b1:1'b0;
-// always @(posedge clk or negedge rstn) begin
-//     if(rstn == 1'b0)begin
-//         fc_invalid <= 1'b0;
-//     end
-//     else begin
-//         if((stage == CONV2)&&(conv_result_0_valid == 1'b1))
-//             fc_invalid <= 1'b1;
-//         else
-//             fc_invalid <= 1'b0;
-//     end
-// end
-
-
 //------------------------控制卷积的输入----------------------------
 assign pic_q_din= pic_din;
 assign conv_din_0 = (state == CONV1)?pic_q_din:fmap_conv1_0[cnt_fmap_0];
@@ -352,9 +339,13 @@ always @(posedge clk or negedge rstn) begin
                     classes <= classes;
                 end
             end
+            default:begin
+                compare_buf <= compare_buf;
+                classes <= classes;
+            end
             endcase
         end
     end
 end
-assign done = (cnt_compare == 5'd9)?1'b1:1'b0;
+assign done = (cnt_compare == 4'd9)?1'b1:1'b0;
 endmodule
