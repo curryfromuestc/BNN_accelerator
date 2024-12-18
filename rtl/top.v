@@ -24,7 +24,7 @@ wire conv_0_start,conv_1_start;
 wire [1:0]conv_done;
 wire conv_din_0,conv_din_1;
 wire state;
-wire conv_result_0,conv_result_1;
+wire [4:0]conv_result_0,conv_result_1;
 wire signed [4:0]conv_result_0_f,conv_result_1_f;
 wire conv_result_0_valid,conv_result_1_valid;
 wire conv_result_0_valid_f,conv_result_1_valid_f;
@@ -34,7 +34,6 @@ wire signed [9:0] fc_result_0,fc_result_1,fc_result_2,fc_result_3,fc_result_4,fc
 wire signed [4:0] conv2_result_sum0;
 wire maxpool_valid;
 wire[9:0] fc_ovalid;
-wire fc_din;
 
 
 controller controller_inst(

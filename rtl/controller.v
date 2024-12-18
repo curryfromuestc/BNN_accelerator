@@ -21,7 +21,7 @@ module controller
     output reg weight_en_1,
     output wire stage,
     output reg signed [4:0] conv2_result_sum0,
-    output wire maxpool_valid,
+    output reg maxpool_valid,
     //------------------------全连接控制信号----------------------------
     //output wire fc_din,
     //output reg fc_invalid,
