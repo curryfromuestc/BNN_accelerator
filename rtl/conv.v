@@ -16,8 +16,8 @@ module conv
     output done//！ 卷积运算完成信号
 );
 //------------------------变量定义----------------------------
-wire [7:0] Ni;
-reg [7:0] weight_addr = 8'd0;
+wire [4:0] Ni;
+reg [7:0] weight_addr;
 reg [4:0] wt_data;
 
 reg [9:0] cnt1;//! 用于计数，工作时钟

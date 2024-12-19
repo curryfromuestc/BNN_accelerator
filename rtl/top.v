@@ -24,10 +24,8 @@ wire conv_0_start,conv_1_start;
 wire [1:0]conv_done;
 wire conv_din_0,conv_din_1;
 wire state;
-wire [4:0]conv_result_0,conv_result_1;
-wire signed [4:0]conv_result_0_f,conv_result_1_f;
+wire signed[4:0]conv_result_0,conv_result_1;
 wire conv_result_0_valid,conv_result_1_valid;
-wire conv_result_0_valid_f,conv_result_1_valid_f;
 wire fc_din;
 wire [9:0] classes;
 wire signed [9:0] fc_result_0,fc_result_1,fc_result_2,fc_result_3,fc_result_4,fc_result_5,fc_result_6,fc_result_7,fc_result_8,fc_result_9;
@@ -78,8 +76,8 @@ conv_mix conv_mix_inst_0(
     .state(state),
     .weight_en(weight_en_0),
     .weight(weight_conv_in),
-    .dout(conv_result_0_f),
-    .ovalid(conv_result_0_valid_f),
+    .dout(conv_result_0),
+    .ovalid(conv_result_0_valid),
     .done(conv_done[0])
 );
 
@@ -91,8 +89,8 @@ conv_mix conv_mix_inst_1(
     .state(state),
     .weight_en(weight_en_1),
     .weight(weight_conv_in),
-    .dout(conv_result_1_f),
-    .ovalid(conv_result_1_valid_f),
+    .dout(conv_result_1),
+    .ovalid(conv_result_1_valid),
     .done(conv_done[1])
 );
 
