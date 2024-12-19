@@ -124,7 +124,7 @@ always @(posedge clk) begin
     end
 end
 
-assign pic_din = ~image_in[7];
+assign pic_din = (image_in > 127)? 1'b1:1'b0;
 
 integer w_conv_i_0,w_conv_i_1;
 initial begin

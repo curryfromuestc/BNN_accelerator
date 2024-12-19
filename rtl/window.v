@@ -98,5 +98,5 @@ always @(posedge clk) begin
 end
 assign taps = (!state)?
                 {mem[83],mem[55],mem[27]}
-                :{mem[35],mem[23],mem[11]};    
+                :{mem[77],mem[51],mem[25]};    
 endmodule
