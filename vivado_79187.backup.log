@@ -1,0 +1,133 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Dec 18 18:46:33 2024
+# Process ID         : 79187
+# Current directory  : /home/curry/code/BNN_accelerator
+# Command line       : vivado
+# Log file           : /home/curry/code/BNN_accelerator/vivado.log
+# Journal file       : /home/curry/code/BNN_accelerator/vivado.jou
+# Running On         : curry
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 258V
+# CPU Frequency      : 3302.399 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16500 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20795 MB
+# Available Virtual  : 19318 MB
+#-----------------------------------------------------------
+start_gui
+create_project vivado_works /home/curry/code/BNN_accelerator/vivado_works -part xc7k70tfbv676-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/curry/Xilinx/Vivado/2024.2/data/ip'.
+add_files -norecurse {/home/curry/code/BNN_accelerator/rtl/maxpool.v /home/curry/code/BNN_accelerator/rtl/top.v /home/curry/code/BNN_accelerator/rtl/window.v /home/curry/code/BNN_accelerator/rtl/conv_mix.v /home/curry/code/BNN_accelerator/rtl/onehot2b.v /home/curry/code/BNN_accelerator/rtl/fc_12.v /home/curry/code/BNN_accelerator/rtl/controller.v /home/curry/code/BNN_accelerator/rtl/conv.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/curry/code/BNN_accelerator/sim/top_tb.v
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/sim/top_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/sim/top_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/sim/top_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/sim/top_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/sim/top_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/sim/top_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/sim/top_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv_mix.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/sim/top_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/curry/code/BNN_accelerator/rtl/conv.v:]
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 18 18:50:43 2024...
