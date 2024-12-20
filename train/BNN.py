@@ -15,7 +15,7 @@ def SigmoidGFunc(x, alpha=4.):   # 带参数Sigmoid函数的导数
     return alpha * alpx * (1. - alpx)
 
 def BinaryForFunc(x):   # 权值量化前向函数
-    return torch.sign(x)
+    return torch.where(x >= 0, torch.tensor(1.), torch.tensor(-1.))
 
 def BinaryWBackFunc(x, alpha=4.):   # 权值量化反向梯度函数
     return 2 * SigmoidGFunc(x, alpha)
