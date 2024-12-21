@@ -146,12 +146,10 @@ always @(posedge clk) begin
         count_conv <= count_conv;
     end
 end
-
-integer i;
 always @(*)begin
     if(done)
     begin
-        $display("classes = %d", i, classes_b[i]);
+        $display("classes = %d", classes_b);
         $finish;
     end
 end
