@@ -170,7 +170,6 @@ always @(posedge clk) begin
         count_conv <= count_conv;
     end
 end
-
 always @(*)begin
     if(done)
     begin
