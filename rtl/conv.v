@@ -6,22 +6,23 @@ module conv
 (
     input wire clk,
     input wire rstn,
-    input wire start,//！启动信号，注意跟滑窗模块的启动信号时间不一样
-    input wire weight_en,//！ 权重有效信号
-    input weight,//！ 以比特权重
-    input [2:0] taps,//！ 滑窗模块输入
-    input state,//！选择信号，为第一个卷积层或者是第二个卷积层
-    output signed [4:0] dout,//！ 卷积输出
-    output ovalid,//！ 输出有效信号
-    output done//！ 卷积运算完成信号
+    input wire start,//锛佸惎鍔ㄤ俊鍙凤紝娉ㄦ剰璺熸粦绐楁ā鍧楃殑鍚姩淇″彿鏃堕棿涓嶄竴鏍�
+    input wire weight_en,//锛� 鏉冮噸鏈夋晥淇″彿
+    input weight,//锛� 浠ユ瘮鐗规潈閲�
+    input [2:0] taps,//锛� 婊戠獥妯″潡杈撳叆
+    input state,//锛侀�夋嫨淇″彿锛屼负绗竴涓嵎绉眰鎴栬�呮槸绗簩涓嵎绉眰
+    output signed [4:0] dout,//锛� 鍗风Н杈撳嚭
+    output ovalid,//锛� 杈撳嚭鏈夋晥淇″彿
+    output done//锛� 鍗风Н杩愮畻瀹屾垚淇″彿
 );
-//------------------------变量定义----------------------------
+//------------------------鍙橀噺瀹氫箟----------------------------
 wire [4:0] Ni;
 reg [7:0] weight_addr;
 reg [4:0] wt_data;
+reg weight_en_ff;
 
-reg [9:0] cnt1;//! 用于计数，工作时钟
-reg [4:0] cnt2;//！ 用于同步滑窗模块以及卷积模块
+reg [9:0] cnt1;//! 鐢ㄤ簬璁℃暟锛屽伐浣滄椂閽�
+reg [4:0] cnt2;//锛� 鐢ㄤ簬鍚屾婊戠獥妯″潡浠ュ強鍗风Н妯″潡
 
 reg sum_valid;
 reg sum_valid_ff;
@@ -34,32 +35,52 @@ reg m00,m01,
     m20,m21;
 reg p00,p01,p02,
     p10,p11,p12,
-    p20,p21,p22;//! 相乘的结果，流水线第一级
+    p20,p21,p22;//! 鐩镐箻鐨勭粨鏋滐紝娴佹按绾跨涓�绾�
 reg signed [4:0] sum000,sum001,sum002,
-    sum010,sum011,sum012;//！ 流水线第二级
-reg signed [4:0] sum100,sum101,sum102;//！ 流水线第三级
-reg signed [4:0] sum200,sum201;//！ 流水线第四级
+    sum010,sum011,sum012;//锛� 娴佹按绾跨浜岀骇
+reg signed [4:0] sum100,sum101,sum102;//锛� 娴佹按绾跨涓夌骇
+reg signed [4:0] sum200,sum201;//锛� 娴佹按绾跨鍥涚骇
 
 assign Ni = (state)?26:28;
 
-//----------------------------对输入矩阵进行赋值----------------------------
+//----------------------------瀵硅緭鍏ョ煩闃佃繘琛岃祴鍊�----------------------------
 assign m02 = taps[2];
 assign m12 = taps[1];
 assign m22 = taps[0];
 
-always @(posedge clk) begin
-    {m00,m01} <= {m01,m02};
-    {m10,m11} <= {m11,m12};
-    {m20,m21} <= {m21,m22};
+always @(posedge clk or negedge rstn) begin
+    if(!rstn)begin
+        m00 <= 1'b0;
+        m01 <= 1'b0;
+        m10 <= 1'b0;
+        m11 <= 1'b0;
+        m20 <= 1'b0;
+        m21 <= 1'b0;
+    end
+    else begin
+        m00 <= m01;
+        m01 <= m02;
+        m10 <= m11;
+        m11 <= m12;
+        m20 <= m21;
+        m21 <= m22;
+    end
 end
-//------------------------读取权重矩阵---------------------------------
+//------------------------璇诲彇鏉冮噸鐭╅樀---------------------------------
+always @(posedge clk or negedge rstn)begin
+    if(!rstn)begin
+        weight_en_ff <= 1'b0;
+    end
+    else
+        weight_en_ff <= weight_en;
+end
 always @(posedge clk or negedge rstn) begin
     if(!rstn)begin
         weight_addr <= 8'd0;
     end
     else begin
-        if(weight_en)begin
-            if(weight_addr == 8'd9)
+        if(weight_en_ff)begin
+            if(weight_addr == 8'd8)
                 weight_addr <= weight_addr;
             else
                 weight_addr <= weight_addr + 8'd1; 
@@ -69,12 +90,12 @@ always @(posedge clk or negedge rstn) begin
     end
 end
 
-//----------------------------权重赋值----------------------------
+//----------------------------鏉冮噸璧嬪��----------------------------
 always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k00 <= 1'b0;
     else begin
-        if(weight_addr == 8'd1)
+        if (weight_en_ff && weight_addr == 8'd0)
             k00 <= weight;
         else
             k00 <= k00;
@@ -84,7 +105,7 @@ always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k01 <= 1'b0;
     else begin
-        if(weight_addr == 8'd2)
+        if(weight_en_ff &&weight_addr == 8'd1)
             k01 <= weight;
         else
             k01 <= k01;
@@ -94,7 +115,7 @@ always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k02 <= 1'b0;
     else begin
-        if(weight_addr == 8'd3)
+        if(weight_en_ff &&weight_addr == 8'd2)
             k02 <= weight;
         else
             k02 <= k02;
@@ -104,7 +125,7 @@ always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k10 <= 1'b0;
     else begin
-        if(weight_addr == 8'd4)
+        if(weight_en_ff &&weight_addr == 8'd3)
             k10 <= weight;
         else
             k10 <= k10;
@@ -114,7 +135,7 @@ always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k11 <= 1'b0;
     else begin
-        if(weight_addr == 8'd5)
+        if(weight_en_ff &&weight_addr == 8'd4)
             k11 <= weight;
         else
             k11 <= k11;
@@ -124,7 +145,7 @@ always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k12 <= 1'b0;
     else begin
-        if(weight_addr == 8'd6)
+        if(weight_en_ff &&weight_addr == 8'd5)
             k12 <= weight;
         else
             k12 <= k12;
@@ -134,7 +155,7 @@ always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k20 <= 1'b0;
     else begin
-        if(weight_addr == 8'd7)
+        if(weight_en_ff &&weight_addr == 8'd6)
             k20 <= weight;
         else
             k20 <= k20;
@@ -144,7 +165,7 @@ always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k21 <= 1'b0;
     else begin
-        if(weight_addr == 8'd8)
+        if(weight_en_ff &&weight_addr == 8'd7)
             k21 <= weight;
         else
             k21 <= k21;
@@ -154,13 +175,13 @@ always @(posedge clk or negedge rstn)begin
     if(!rstn)
         k22 <= 1'b0;
     else begin
-        if(weight_addr == 8'd9)
+        if(weight_en_ff &&weight_addr == 8'd8)
             k22 <= weight;
         else
             k22 <= k22;
     end
 end
-//------------------------流水线第一级---------------------------------
+//------------------------娴佹按绾跨涓�绾�---------------------------------
 always @(posedge clk or negedge rstn)begin
     if(!rstn)begin
         p00 <= 1'b0;
@@ -187,7 +208,7 @@ always @(posedge clk or negedge rstn)begin
 end
         
 
-//------------------------流水线第二级---------------------------------
+//------------------------娴佹按绾跨浜岀骇---------------------------------
 always @(posedge clk or negedge rstn) begin
     if(!rstn)begin
         sum000 <= 5'sd0;
@@ -266,57 +287,82 @@ always @(posedge clk or negedge rstn)begin
             sum012 <= 5'sd0;
     end
 end
-//------------------------流水线第三级---------------------------------
+//------------------------娴佹按绾跨涓夌骇---------------------------------
 always @(posedge clk) begin
     sum100 <= sum000 + sum010;
     sum101 <= sum001 + sum011;
     sum102 <= sum002 + sum012;
 end
-//------------------------流水线第四级---------------------------------
+//------------------------娴佹按绾跨鍥涚骇---------------------------------
 always @(posedge clk) begin
     sum200 <= sum100 + sum101;
     sum201 <= sum102;
 end
-//------------------------流水线第五级---------------------------------
+//------------------------娴佹按绾跨浜旂骇---------------------------------
 always @(posedge clk) begin
     wt_data <= sum200 + sum201;
 end
-//------------------------模块工作时钟---------------------------------
-always @(posedge clk) begin
-    if(start)
-        cnt1 <= cnt1+1'd1;
-    else
+//------------------------妯″潡宸ヤ綔鏃堕挓---------------------------------
+always @(posedge clk or negedge rstn) begin
+    if(!rstn)begin
         cnt1 <= 10'd0;
-end
-always @(posedge clk) begin
-    if(sum_valid)begin
-        if(cnt2 == Ni-1)
-            cnt2 <= 5'd0;
-        else
-            cnt2 <= cnt2 + 5'd1; 
     end
-    else
-        cnt2 <= 5'd0;
-end
-//------------------------输出信号有效判断---------------------------------
-always @(posedge clk) begin
-    if(!start)
-        sum_valid <= 1'b0;
     else begin
+        if(start)begin
+            case (state)
+                1'b0:if(cnt1 == 10'd816)
+                        cnt1 <= 1'b0;
+                    else
+                        cnt1 <= cnt1+1'd1;   
+                1'b1:if(cnt1 == 10'd707)
+                        cnt1 <= 1'b0;
+                    else
+                        cnt1 <= cnt1+1'd1;    
+            endcase         
+        end
+        else
+            cnt1 <= 10'd0;
+    end
+end
+always @(posedge clk or negedge rstn) begin
+    if(!rstn)begin
+        cnt2 <= 5'd0;
+    end
+    else begin
+        if(sum_valid)begin
+            if(cnt2 == Ni-1)
+                cnt2 <= 5'd0;
+            else
+                cnt2 <= cnt2 + 5'd1; 
+        end
+        else
+            cnt2 <= 5'd0;
+    end
+end
+//------------------------杈撳嚭淇″彿鏈夋晥鍒ゆ柇---------------------------------
+always @(posedge clk or negedge rstn) begin
+    if(!rstn)
+        sum_valid <= 1'b0;
+    else if(start)begin
         case (state)
-            1'b0:if(cnt1 == 10'd814)
+            1'b0:if(cnt1 == 10'd816)
                     sum_valid <= 1'b0;
                 else if(cnt1 == 10'd90)
                     sum_valid <= 1'b1;
-            1'b1:if(cnt1 == 10'd255)
+            1'b1:if(cnt1 == 10'd707)
                     sum_valid <= 1'b0;
-                else if(cnt1 == 10'd160)
+                else if(cnt1 == 10'd85)
                     sum_valid <= 1'b1;
         endcase
     end
+    else
+        sum_valid <= 1'b0;
 end
-always @(posedge clk) begin
-    sum_valid_ff <= sum_valid;
+always @(posedge clk or negedge rstn) begin
+    if(!rstn)
+        sum_valid_ff <= 1'b0;
+    else
+        sum_valid_ff <= sum_valid;
 end
 assign done = ~sum_valid && sum_valid_ff;
 assign ovalid = (sum_valid&&cnt2<Ni-K+1)?1'b1:1'b0;

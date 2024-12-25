@@ -56,6 +56,7 @@ window window_inst(
     .clk(clk),
     .start(start),
     .din(din),
+    .rstn(rstn),
     .state(state),
     .taps(taps)
 );

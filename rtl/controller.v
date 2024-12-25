@@ -6,7 +6,7 @@ module controller
     input wire clk,
     input wire rstn,
     input wire start,
-    //------------------------卷积控制信号----------------------------
+    //------------------------鍗风Н鎺у埗淇″彿----------------------------
     input wire [4:0]conv_result_0,
     input wire conv_result_0_valid,
     input wire [4:0]conv_result_1,
@@ -22,7 +22,7 @@ module controller
     output wire stage,
     output reg signed [4:0] conv2_result_sum0,
     output reg maxpool_valid,
-    //------------------------全连接控制信号----------------------------
+    //------------------------鍏ㄨ繛鎺ユ帶鍒朵俊鍙�----------------------------
     //output wire fc_din,
     //output reg fc_invalid,
     input wire signed [9:0] fc_result_0,
@@ -36,7 +36,7 @@ module controller
     input wire signed [9:0] fc_result_8,
     input wire signed [9:0] fc_result_9,
     input wire fc_result_valid,
-    //------------------------输出控制信号----------------------------
+    //------------------------杈撳嚭鎺у埗淇″彿----------------------------
     output reg[9:0] classes,
     output wire done
 );
@@ -44,21 +44,22 @@ module controller
 parameter IDLE = 3'b000;
 parameter CONV1 = 3'b001;
 parameter CONV2 = 3'b010;
-parameter CLASSES = 3'b011;
+parameter CLASSIFY = 3'b011;
 reg [2:0] state, next_state;
 
 reg [675:0] fmap_conv1_0, fmap_conv1_1;
 reg [9:0] cnt_fmap_0, cnt_fmap_1;
 reg [4:0] cnt_conv_weight;
-//reg signed [4:0] conv2_result_sum0;
-wire conv2_result_valid;
+//reg signed [4:0] conv2_result_sum0_ff;
+//wire conv2_result_valid;
 wire fc_done;
 
 reg signed [9:0] compare_buf;
 reg [3:0] cnt_compare;
+reg maxpool_valid_ff;
 
 wire pic_q_din;
-//------------------------操作fmap读写----------------------------
+//------------------------鎿嶄綔fmap璇诲啓----------------------------
 always @(posedge clk or negedge rstn) begin
     if(rstn == 1'b0)begin
         cnt_fmap_0 <= 10'b0;
@@ -66,41 +67,45 @@ always @(posedge clk or negedge rstn) begin
     end
     else begin
         case(stage)
-        1'b0:begin//!写入 fmap
+        1'b0:begin//!鍐欏叆 fmap
             if(conv_result_0_valid == 1'b1)
                 cnt_fmap_0 <= cnt_fmap_0 + 1'b1;
-            else if(cnt_fmap_0 == 10'd675)
+            else if(cnt_fmap_0 == 10'd676)
                 cnt_fmap_0 <= 'b0;
             else
                 cnt_fmap_0 <= cnt_fmap_0;
             
             if(conv_result_1_valid == 1'b1)
                 cnt_fmap_1 <= cnt_fmap_1 + 1'b1;
-            else if(cnt_fmap_1 == 10'd675)
+            else if(cnt_fmap_1 == 10'd676)
                 cnt_fmap_1 <= 'b0;
             else
                 cnt_fmap_1 <= cnt_fmap_1;
         end
-        1'b1:begin//！从 fmap 读出
-            if(conv_0_start)
-                cnt_fmap_0 <= cnt_fmap_0 + 1'b1;
-            else if(cnt_fmap_0 == 10'd675)
+        1'b1:begin//锛佷粠 fmap 璇诲嚭
+            if(conv_0_start)begin
+                if(cnt_fmap_0 == 10'd675)
+                    cnt_fmap_0 <= cnt_fmap_0;
+                else
+                    cnt_fmap_0 <= cnt_fmap_0 + 1'b1;
+            end
+            else 
                 cnt_fmap_0 <= 'b0;
-            else
-                cnt_fmap_0 <= cnt_fmap_0;
 
-            if(conv_1_start)
-                cnt_fmap_1 <= cnt_fmap_1 + 1'b1;
-            else if(cnt_fmap_1 == 10'd675)
+            if(conv_1_start)begin
+                if(cnt_fmap_1 == 10'd675)
+                    cnt_fmap_1 <= cnt_fmap_1;
+                else
+                    cnt_fmap_1 <= cnt_fmap_1 + 1'b1;
+            end
+            else 
                 cnt_fmap_1 <= 'b0;
-            else
-                cnt_fmap_1 <= cnt_fmap_1;
         end
 
         endcase
     end
 end
-//------------------------控制卷积结果读入fmap----------------------------
+//------------------------鎺у埗鍗风Н缁撴灉璇诲叆fmap----------------------------
 always @(posedge clk or negedge rstn) begin
     if(rstn == 1'b0) begin
         fmap_conv1_0 <= 'b0;
@@ -110,12 +115,16 @@ always @(posedge clk or negedge rstn) begin
         case(stage)
         1'b0:begin
             if(conv_result_0_valid == 1'b1)
-                fmap_conv1_0[cnt_fmap_0] <= ~conv_result_0[4];
+                fmap_conv1_0[cnt_fmap_0-1] <= ~conv_result_0[4];
+            else if (cnt_fmap_0 == 10'd676 && conv_result_0_valid == 1'b0)
+                fmap_conv1_0[cnt_fmap_0-1] <= ~conv_result_0[4];
             else
                 fmap_conv1_0 <= fmap_conv1_0;
             
             if(conv_result_1_valid == 1'b1)
-                fmap_conv1_1[cnt_fmap_1] <= ~conv_result_1[4];
+                fmap_conv1_1[cnt_fmap_1-1] <= ~conv_result_1[4];
+            else if (cnt_fmap_1 == 10'd676 && conv_result_1_valid == 1'b0)
+                fmap_conv1_1[cnt_fmap_1-1] <= ~conv_result_1[4];
             else
                 fmap_conv1_1 <= fmap_conv1_1;
         end
@@ -136,7 +145,10 @@ always @(posedge clk or negedge rstn) begin
         state <= next_state;
     end
 end
-
+reg[1:0] conv_done_ff;
+always @(posedge clk)begin
+    conv_done_ff <= conv_done;
+end
 always @(*) begin
     case(state)
     IDLE:begin
@@ -153,34 +165,39 @@ always @(*) begin
     end
     CONV2:begin
         if(fc_result_valid == 1'b1)
-            next_state = CLASSES;
+            next_state = CLASSIFY;
         else
             next_state = CONV2;
     end
-    CLASSES:begin
+    CLASSIFY:begin
         if(done == 1'b1)
             next_state = IDLE;
         else
-            next_state = CLASSES;
+            next_state = CLASSIFY;
     end
     default:next_state = IDLE;
     endcase
 end
-//------------------------控制fc的输入----------------------------
+// always @(posedge clk)begin
+//     maxpool_valid <= maxpool_valid_ff;
+// end
+//------------------------鎺у埗fc鐨勮緭鍏�----------------------------
 always @(posedge clk or negedge rstn) begin
     if(rstn == 1'b0)begin
-        conv2_result_sum0 <= 5'd0;
         maxpool_valid <= 1'b0;
     end
     else begin
-        conv2_result_sum0 <= conv_result_0 + conv_result_1;
-        if(conv_result_0_valid == 1'b1 && conv_result_1_valid == 1'b1 && state == CONV2)
+        if(conv_result_0_valid == 1'b1 && conv_result_1_valid == 1'b1 && state == CONV2)begin
             maxpool_valid <= 1'b1;
-        else
+            conv2_result_sum0 <= conv_result_0 + conv_result_1;
+        end
+        else begin
             maxpool_valid <= 1'b0;
+            conv2_result_sum0 <= conv2_result_sum0;
+        end
     end
 end
-//------------------------控制卷积的输入----------------------------
+//------------------------鎺у埗鍗风Н鐨勮緭鍏�----------------------------
 assign pic_q_din= pic_din;
 assign conv_din_0 = (state == CONV1)?pic_q_din:fmap_conv1_0[cnt_fmap_0];
 assign conv_din_1 = (state == CONV1)?pic_q_din:fmap_conv1_1[cnt_fmap_1];
@@ -228,7 +245,7 @@ always @(posedge clk or negedge rstn) begin
             cnt_conv_weight <= 5'd0;
     end
 end
-//------------------------排序----------------------------
+//------------------------鎺掑簭----------------------------
 always @(posedge clk or negedge rstn) begin
     if(rstn == 1'b0)begin
         compare_buf <= -10'sd512;
@@ -236,7 +253,7 @@ always @(posedge clk or negedge rstn) begin
         classes <= 10'd0;
     end
     else begin
-        if(state ==CLASSES)begin
+        if(state ==CLASSIFY)begin
             cnt_compare <= cnt_compare + 1;
             case(cnt_compare)
             4'd0:begin

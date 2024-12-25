@@ -49,15 +49,20 @@ always@(posedge clk or negedge rstn)begin
 	end
 end
 //----------------------数据存储----------------------
-always @(posedge clk) begin
-    if(state == 1'b1)begin
-		if(ptr <= 7'd23&&ivalid)
-			data[ptr] <= din;
-		else
-			data[ptr] <= data[ptr];
-	end
-    else begin
+always @(posedge clk or negedge rstn) begin
+	if(!rstn)begin
 		data[ptr] <= 0;
+	end
+	else begin
+		if(state == 1'b1)begin
+			if(ptr <= 7'd23&&ivalid)
+				data[ptr] <= din;
+			else
+				data[ptr] <= data[ptr];
+		end
+		else begin
+			data[ptr] <= 0;
+		end
 	end
 end
 always@(posedge clk)begin

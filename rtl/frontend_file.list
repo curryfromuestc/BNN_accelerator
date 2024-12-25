@@ -1,0 +1,9 @@
+./rtl/fc_12.v
+./rtl/controller.v
+./rtl/conv_mix.v
+./rtl/conv.v
+./rtl/window.v
+./rtl/maxpool.v
+./rtl/onehot2b.v
+./rtl/top.v
+//./testbench/top_tb.v
